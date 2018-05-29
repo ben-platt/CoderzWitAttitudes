@@ -12,5 +12,6 @@ Fiona:
 
 Kayli:
 - decided on project: Island survival game
+- finished proposal.pdf
 
 
