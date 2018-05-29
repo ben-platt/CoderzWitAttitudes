@@ -1,5 +1,5 @@
 # CoderzWitAttitudes
-Straight Out of 251
+Straight Outa 251
 
 ## Island Survival Game
 
