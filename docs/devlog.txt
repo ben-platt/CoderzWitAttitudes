@@ -12,6 +12,16 @@ Fiona:
 
 Kayli:
 - decided on project: Island survival game
+
+5/29
+Ben: 
+- worked on UML
+
+Fiona:
+- worked on UML
+
+Kayli:
+- worked on UML
 - finished proposal.pdf
 
 
