@@ -14,6 +14,7 @@ public class Player {
     double height;
     double weight;
     double life;
+    double maxNutri;
     ArrayList<Stack<Plant>> plants;
     ArrayList<Stack<Animal>> animals;
     
@@ -52,6 +53,7 @@ public class Player {
 
     //Eating methods
     public double eatPlant(){
-	Plant 
+	Plant current = plants.pop();
+	
 
 } // end of class
