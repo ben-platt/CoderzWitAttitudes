@@ -10,12 +10,48 @@
 public class Player {
 
     // INSTANCE VARIABLES
-
+    int age;
+    double height;
+    double weight;
+    double life;
+    ArrayList<Stack<Plant>> plants;
+    ArrayList<Stack<Animal>> animals;
+    
 
     // CONSTRUCTOR(S)
-
-
+    //Default constructor
+    public Player{
+	age = 17;
+	height = 65.0;
+	weight = 108.0;
+	life = 42.0;
+    }
+    //PUt another construcotr based on user input later
+    
     // METHODS
     
+    //Accessor methods
+    public int getAge(){
+	return age;
+    }
+    public double getHeight(){
+	return height;
+    }
+    public double getWeight(){
+	return weight;
+    }
+    public double getLife(){
+	return life;
+    }
+    public Plant getPlant(){
+	return plants.peek();
+    }
+    public Animal getAnimal(){
+	return animals.peek();
+    }
+
+    //Eating methods
+    public double eatPlant(){
+	Plant 
 
 } // end of class
