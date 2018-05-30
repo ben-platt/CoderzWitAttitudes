@@ -1,10 +1,10 @@
 CoderzWitAttitudes
 Fiona Cai
 Kayli matsuyoshi
-<Member Blossom>
-pd <pd#>
+Ben Platt
+pd1
 ---------------------
-<Project>
+Island Survival Game
 
 
 
@@ -70,9 +70,25 @@ LESSONS LEARNED
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
-yyyy-mm-dd
+2018-05-28
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+
+Ben:  decided on project: Island survival game
+
+Fiona: decided on project: Island survival game
+
+Kayli: decided on project: Island survival game
+
 ==============================================================
+2018-05-29
+--------------------------------------------------------------
+
+Ben:  worked on UML
+
+Fiona: worked on UML
+
+Kayli: worked on UML
+finished proposal.pdf
+
+==============================================================
+
