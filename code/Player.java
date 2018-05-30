@@ -6,3 +6,16 @@
 /*****************************************************
  * class Player
  *****************************************************/
+
+public class Player {
+
+    // INSTANCE VARIABLES
+
+
+    // CONSTRUCTOR(S)
+
+
+    // METHODS
+    
+
+} // end of class
