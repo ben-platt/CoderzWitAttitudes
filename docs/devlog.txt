@@ -73,22 +73,43 @@ LESSONS LEARNED
 2018-05-28
 --------------------------------------------------------------
 
-Ben:  decided on project: Island survival game
+Ben:  
+- decided on project: Island survival game
 
-Fiona: decided on project: Island survival game
+Fiona: 
+- decided on project: Island survival game
 
-Kayli: decided on project: Island survival game
+Kayli: 
+- decided on project: Island survival game
 
 ==============================================================
 2018-05-29
 --------------------------------------------------------------
 
-Ben:  worked on UML
+Ben:  
+- worked on UML
 
-Fiona: worked on UML
+Fiona: 
+- worked on UML
 
-Kayli: worked on UML
-finished proposal.pdf
+Kayli: 
+- worked on UML
+- finished proposal.pdf
+
+==============================================================
+2018-05-30
+--------------------------------------------------------------
+
+Ben:  
+- worked on UML
+
+Fiona: 
+- worked on UML
+- started writing Player class
+
+Kayli: 
+- worked on UML
+- created skeletons for base classes
 
 ==============================================================
 
