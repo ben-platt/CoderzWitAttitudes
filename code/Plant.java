@@ -12,9 +12,7 @@ public abstract class Plant {
     // INSTANCE VARIABLES
     private boolean alive;
     private double nutrients;
-
-    // CONSTRUCTOR(S)
-
+    private double growRate;
 
     // METHODS
     //Accessor METHODS
@@ -25,7 +23,8 @@ public abstract class Plant {
       return nutrients;
     }
 
-    public abstract void photosynthesize(); //specific to each type of plants
-
+    //abstract methods
+    protected abstract void photosynthesize(); //specific to each type of plants
+    protected abstract void grow();
 
 } // end of class

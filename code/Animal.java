@@ -13,12 +13,8 @@ public abstract class Animal {
     private double nutrients;
     private double life;
 
-
-    // CONSTRUCTOR(S)
-
-
     // METHODS
-    //Accessor Methdos
+    //Accessor Methods
     public double getNutrients(){
       return nutrients;
     }
@@ -26,5 +22,9 @@ public abstract class Animal {
     public double getLife(){
       return life;
     }
+
+    //Attack method
+    public abstract void attack();
+    protected abstract void eat();
 
 } // end of class
