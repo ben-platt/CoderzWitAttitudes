@@ -103,15 +103,17 @@ Kayli:
 --------------------------------------------------------------
 
 Ben:
-
+- worked on UML, hashed out plant and animal subclasses and player functionality
 
 Fiona:
 - added more skeletons for animals
 - worked on Animal, Plant, and Island classes
 - BMI and age scale for nutrients for Player
+- worked on UML, hashed out plant and animal subclasses and player functionality
 
 
 Kayli:
+- worked on UML, hashed out plant and animal subclasses and player functionality
 
 
 ==============================================================
