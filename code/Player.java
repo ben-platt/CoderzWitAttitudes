@@ -8,7 +8,7 @@
  *****************************************************/
 
 import java.util.Stack;
-import java.util.ArrayList;
+import java.util.Queue;
 
 public class Player {
 
@@ -18,8 +18,9 @@ public class Player {
     double weight;
     double life;
     double maxNutri;
-    ArrayList<Stack<Plant>> plants;
-    ArrayList<Stack<Animal>> animals;
+    ItemQueue<Object> items;
+    Stack<Plant> plants;
+    Stack<Animal> animals;
 
     // CONSTRUCTOR(S)
     //Default constructor
@@ -49,29 +50,37 @@ public class Player {
 	return life;
     }
     public Plant getPlant(){
-	return plants.peek(); // !THIS STACK METHOD DOESN'T WORK!
+	return plants.peek();
     }
     public Animal getAnimal(){
-	return animals.peek(); // !THIS STACK METHOD DOESN'T WORK!
+	return animals.peek();
+    }
+    public ItemQueue<Object> getItems(){
+	return items;
     }
 
     // Mutator Methods
-    public int setAge( int inputAge ){
+    public void setAge( int inputAge ){
         age = inputAge;
     }
-    public double setHeight( double inputHeight ){
+    public void setHeight( double inputHeight ){
 	height = (double) inputHeight;
     }
-    public double setWeight( double inputWeight ){
+    public void setWeight( double inputWeight ){
 	weight = (double) inputWeight;
     }
-    private double setLife( double inputLife ){
+    private void setLife( double inputLife ){
 	life = inputLife;
-    }    
+    }
 
-    //Eating methods
-    public double eatPlant(){
-	Plant current = plants.pop(); // !THIS STACK METHOD DOESN'T WORK!
+    // Items
+    public void addItem( Object inputItem ) {
+	items.enqueue( inputItem );
+    }
+
+    // Eating methods
+    public void eatPlant(){
+	Plant current = plants.pop();
     }
 
 } // end of class
