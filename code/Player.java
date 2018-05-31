@@ -13,14 +13,14 @@ import java.util.Queue;
 public class Player {
 
     // INSTANCE VARIABLES
-    int age;
-    double height;
-    double weight;
-    double life;
-    double maxNutri;
-    ItemQueue<Object> items;
-    Stack<Plant> plants;
-    Stack<Animal> animals;
+    private int age;
+    private double height;
+    private double weight;
+    private double life;
+    private double maxNutri;
+    private ItemQueue<Object> items;
+    private Stack<Plant> plants;
+    private Stack<Animal> animals;
 
     // CONSTRUCTOR(S)
     //Default constructor
@@ -30,12 +30,12 @@ public class Player {
 	weight = 108.0;
 	life = 42.0;
     }
-    
+
     //PUt another construcotr based on user input later
     // Maybe we can just use these mutator methods for user input
-    
+
     // METHODS
-    
+
     //Accessor methods
     public int getAge(){
 	return age;
@@ -81,6 +81,14 @@ public class Player {
     // Eating methods
     public void eatPlant(){
 	Plant current = plants.pop();
+  //add more specifics later; how to increase nutrition and health
+    }
+
+    public void eatAnimal(){
+      Animal current = animals.pop();
+      //add more specifics later; how to increase nutrition and health
+      //decide on values for each individual animal
+
     }
 
 } // end of class

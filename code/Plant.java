@@ -10,12 +10,22 @@
 public abstract class Plant {
 
     // INSTANCE VARIABLES
-
+    private boolean alive;
+    private double nutrients;
 
     // CONSTRUCTOR(S)
 
 
     // METHODS
-    
+    //Accessor METHODS
+    public boolean getAlive(){
+      return alive;
+    }
+    public double getNutrients(){
+      return nutrients;
+    }
+
+    public abstract void photosynthesize();
+
 
 } // end of class
