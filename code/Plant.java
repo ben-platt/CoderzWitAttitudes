@@ -25,7 +25,7 @@ public abstract class Plant {
       return nutrients;
     }
 
-    public abstract void photosynthesize();
+    public abstract void photosynthesize(); //specific to each type of plants
 
 
 } // end of class

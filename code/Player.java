@@ -17,6 +17,7 @@ public class Player {
     private double height;
     private double weight;
     private double life;
+    private double health;
     private double maxNutri;
     private ItemQueue<Object> items;
     private Stack<Plant> plants;
@@ -29,6 +30,7 @@ public class Player {
 	height = 65.0;
 	weight = 108.0;
 	life = 42.0;
+  maxNutri = ((108/2.2) / (Math.pow((height/2.54), 2))) * age; //this is BMI * age
     }
 
     //PUt another construcotr based on user input later
@@ -48,6 +50,9 @@ public class Player {
     }
     public double getLife(){
 	return life;
+    }
+    public double getMaxNutri(){
+      return maxNutri;
     }
     public Plant getPlant(){
 	return plants.peek();
@@ -79,16 +84,13 @@ public class Player {
     }
 
     // Eating methods
-    public void eatPlant(){
-	Plant current = plants.pop();
-  //add more specifics later; how to increase nutrition and health
-    }
-
     public void eatAnimal(){
       Animal current = animals.pop();
+      if(current instanceof Frog){
+        health += current.getNutrients();
+      }
       //add more specifics later; how to increase nutrition and health
       //decide on values for each individual animal
-
     }
 
 } // end of class

@@ -10,12 +10,21 @@
 public abstract class Animal {
 
     // INSTANCE VARIABLES
+    private double nutrients;
+    private double life;
 
 
     // CONSTRUCTOR(S)
 
 
     // METHODS
-    
+    //Accessor Methdos
+    public double getNutrients(){
+      return nutrients;
+    }
+
+    public double getLife(){
+      return life;
+    }
 
 } // end of class
