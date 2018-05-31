@@ -1,0 +1,14 @@
+Most Crucial Jobs:
+Keeping track of the devlog
+Staying on pace to have a wel-done completed project by the due date
+Testing already built code
+Staying in compliance with protocol
+Components that constitute core functionality:
+All of the methods shown in our UML
+Components that are pre-reqs for others:
+Our abstract classes(Animal and Plant)
+Tasks to be delegated:
+Building out individual plant and animal classes
+Tasks to be collaboratively tackled:
+Working out how different classes interact with each other
+Implementing term 2 structures such as queues and stacks.
