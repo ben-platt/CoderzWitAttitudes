@@ -4,10 +4,10 @@
 // 2018-06-08f
 
 /*****************************************************
- * abstract class Plant
+ * class Petunia
  *****************************************************/
 
-public abstract class Plant {
+public  class Petunia {
 
     // INSTANCE VARIABLES
     private boolean alive;
@@ -22,15 +22,7 @@ public abstract class Plant {
     public double getNutrients(){
       return nutrients;
     }
-    public setNutrients(double nutt) {
-	nutrients = nutt;
-    }
 
-    //abstract methods
-    public void setNutrients( double inputNutrients ) {
-	nutrients = inputNutrients;
-    }
+    private void photosynthesize();
     
-    protected abstract void photosynthesize(); //specific to each type of plants
-
 } // end of class
