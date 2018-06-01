@@ -22,6 +22,9 @@ public abstract class Plant {
     public double getNutrients(){
       return nutrients;
     }
+    public setNutrients(double nutt) {
+	nutrients = nutt;
+    }
 
     //abstract methods
     protected abstract void photosynthesize(); //specific to each type of plants
