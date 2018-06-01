@@ -4,10 +4,10 @@
 // 2018-06-08f
 
 /*****************************************************
- * abstract class Plant
+ * class Fern
  *****************************************************/
 
-public abstract class Plant {
+public  class Fern {
 
     // INSTANCE VARIABLES
     private boolean alive;
@@ -23,11 +23,6 @@ public abstract class Plant {
       return nutrients;
     }
 
-    //abstract methods
-    public void setNutrients( double inputNutrients ) {
-	nutrients = inputNutrients;
-    }
+    private void photosynthesize();
     
-    protected abstract void photosynthesize(); //specific to each type of plants
-
 } // end of class

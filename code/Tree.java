@@ -4,30 +4,27 @@
 // 2018-06-08f
 
 /*****************************************************
- * abstract class Plant
+ * class Tree
  *****************************************************/
 
-public abstract class Plant {
+public class Tree {
 
     // INSTANCE VARIABLES
+    
     private boolean alive;
     private double nutrients;
     private double growRate;
 
     // METHODS
+    
     //Accessor METHODS
     public boolean getAlive(){
-      return alive;
+	return alive;
     }
     public double getNutrients(){
-      return nutrients;
+	return nutrients;
     }
 
-    //abstract methods
-    public void setNutrients( double inputNutrients ) {
-	nutrients = inputNutrients;
-    }
-    
-    protected abstract void photosynthesize(); //specific to each type of plants
+    private void photosynthesize(); 
 
 } // end of class

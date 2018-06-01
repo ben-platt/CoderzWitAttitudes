@@ -4,30 +4,19 @@
 // 2018-06-08f
 
 /*****************************************************
- * abstract class Plant
+ * class Coconut
  *****************************************************/
 
-public abstract class Plant {
+public  class Coconut {
 
     // INSTANCE VARIABLES
-    private boolean alive;
     private double nutrients;
-    private double growRate;
+    private boolean edible;
 
     // METHODS
     //Accessor METHODS
-    public boolean getAlive(){
-      return alive;
-    }
     public double getNutrients(){
       return nutrients;
     }
-
-    //abstract methods
-    public void setNutrients( double inputNutrients ) {
-	nutrients = inputNutrients;
-    }
     
-    protected abstract void photosynthesize(); //specific to each type of plants
-
 } // end of class
