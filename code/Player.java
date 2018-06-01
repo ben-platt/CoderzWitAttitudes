@@ -89,6 +89,7 @@ public class Player {
       if(current instanceof Frog){
         health += current.getNutrients();
       }
+      else if(current 
       //add more specifics later; how to increase nutrition and health
       //decide on values for each individual animal
     }
