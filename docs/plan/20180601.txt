@@ -1,0 +1,81 @@
+Animal
+DONE
+Frog
+[ ] Constructor
+[ ] Attack method
+Turkey
+[ ] Constructor
+[ ] Attack method
+Fish
+[ ] Constructor
+[ ] Attack method
+WildBoar
+[ ] Constructor
+[ ] Attack method
+Fugu
+[ ] Constructor
+[ ] Attack method
+Tuna
+Constructor
+Attack method
+Catfish
+Constructor
+Attack method
+Plant
+
+ThimbleBerry
+Edible boolean
+Edible method
+Constructor
+ThimbleBush
+Edible boolean
+Edible method
+Constructor
+Tree
+Edible boolean
+Edible method
+Constructor
+Petunia
+Edible boolean
+Edible method
+Constructor
+Fern
+Edible boolean
+Edible method
+Constructor
+Mushroom
+Edible boolean
+Edible method
+Constructor
+Leaf
+Edible boolean
+Edible method
+Constructor
+PalmLeaf
+Edible boolean
+Edible method
+Constructor
+Bark
+Edible boolean
+Edible method
+Constructor
+GuavaTree
+Edible boolean
+Edible method
+Constructor
+PalmTree
+Edible boolean
+Edible method
+Constructor
+Coconut
+Edible boolean
+Edible method
+Constructor
+Guava
+Edible boolean
+Edible method
+Constructor
+Island
+Constructor
+Player
+Constructor
