@@ -16,7 +16,6 @@ public class Player {
     private int age;
     private double height;
     private double weight;
-    private double life;
     private double health;
     private double maxNutri;
     private ItemQueue<Object> items;
@@ -29,7 +28,7 @@ public class Player {
 	age = 17;
 	height = 65.0;
 	weight = 108.0;
-	life = 42.0;
+	health = 100;
   maxNutri = ((108/2.2) / (Math.pow((height/2.54), 2))) * age; //this is BMI * age
     }
 
@@ -48,8 +47,8 @@ public class Player {
     public double getWeight(){
 	return weight;
     }
-    public double getLife(){
-	return life;
+    public double getHealth(){
+	return health;
     }
     public double getMaxNutri(){
       return maxNutri;
@@ -74,8 +73,8 @@ public class Player {
     public void setWeight( double inputWeight ){
 	weight = (double) inputWeight;
     }
-    private void setLife( double inputLife ){
-	life = inputLife;
+    private void setHealth( double inputHealth ){
+	health = inputHealth;
     }
 
     // Items
@@ -85,13 +84,17 @@ public class Player {
 
     // Eating methods
     public void eatAnimal(){
-      Animal current = animals.pop();
-      if(current instanceof Frog){
+      Animal current = animals.peek();
+      if(health + current.getNutrients() > maxNutri){
+        System.out.println("You are full! Eat later.");
+      }
+      else{
+        animals.pop();
         health += current.getNutrients();
       }
-      else if(current 
-      //add more specifics later; how to increase nutrition and health
-      //decide on values for each individual animal
     }
+
+    //Attack methods
+    public 
 
 } // end of class
