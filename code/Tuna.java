@@ -9,13 +9,27 @@
 
 public class Tuna extends Fish{
 
-    // INSTANCE VARIABLES
+        private final double power = 0.1; //Power on scale of 0.0-0.5
 
 
-    // CONSTRUCTOR(S)
+        // CONSTRUCTOR(S)
+        public Tuna(){
+    	nutrients = 40;
+    	life = 100;
+        }
 
+        public Tuna(double n, double l){
+    	nutrients = n;
+    	life = l;
+        }
 
-    // METHODS
+        // METHODS
+        //Attack method
+        public void attack(Player p){
+    	double magnitude = life * power;
+    	p.setLife(p.getLife()-magnitude);
+    	System.out.println("You touched the poisonous fugu fish spikes!  ");
+        }
 
 
 } // end of class

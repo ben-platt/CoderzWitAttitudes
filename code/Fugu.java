@@ -14,7 +14,7 @@ public class Fugu extends Fish{
 
       // CONSTRUCTOR(S)
       public Fugu(){
-  	nutrients = 50;
+  	nutrients = 30;
   	life = 100;
       }
 
