@@ -12,6 +12,11 @@ public  class Bark {
     // INSTANCE VARIABLES
     private boolean edible;
 
+    //Constructor(s)
+    public Bark {
+	edible = false;
+    }
+
     // METHODS
     public boolean isEdible() {
 	return edible;

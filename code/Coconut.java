@@ -13,10 +13,22 @@ public  class Coconut {
     private double nutrients;
     private boolean edible;
 
+    
+    //Constructor(s)
+    public Coconut {
+	edible = true;
+    }
+
+
     // METHODS
     //Accessor METHODS
     public double getNutrients(){
       return nutrients;
     }
+    public boolean isEdible() {
+	return edible;
+    }
+
+    
     
 } // end of class
