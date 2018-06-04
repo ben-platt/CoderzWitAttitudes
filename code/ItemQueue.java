@@ -1,31 +1,34 @@
-// QueenBees ( Fiona Cai and Kayli Matsuyoshi )
+// CoderzWitAttitudes ( Fiona Cai, Kayli Matsuyoshi, Ben Platt )
 // APCS2 pd1
-// HW35 -- ...Nor Do Aussies
-// 2018-04-18t
+// Final Project -- Island Survival Game
+// 2018-06-08f
 
 /*****************************************************
- * class ALQueue
+ * class ItemList
+ * a priority queue that stores the player's items
  ******************************************************/
 import java.util.ArrayList;
 
-public class ItemQueue<Object> {
+public class ItemList<Object> {
 
    // ~~ INSTANCE VARIABLES ~~
     
     private ArrayList<Object> _queue;
+    private int _size;
 
     // ~~~~ CONSTRUCTOR(S) ~~~~
 
     public ItemQueue( int size )
     {
         _queue = new ArrayList( size );
+	_size = 0;
     }
     
     // ~~~~~~~ METHODS ~~~~~~~~
     
     // means of removing an element from collection:
     // Dequeues and returns the first element of the queue.
-    public Object dequeue() {
+    public Object remove() {
 	Object removed = _queue.get( _queue.size() - 1 );
         _queue.remove( _queue.size() - 1 );
 	return removed;
@@ -33,7 +36,7 @@ public class ItemQueue<Object> {
 
     // means of adding an element to collection:
     // Enqueue an element onto the back of this queue.
-    public void enqueue( Object x ) {
+    public void add( Object x ) {
 	ArrayList temp = new ArrayList();
 	temp.add( x );
 	for( int i = 0; i < _queue.size(); i++ ) {
