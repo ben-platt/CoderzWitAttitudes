@@ -125,7 +125,7 @@ public class Player {
 	else{
 	    fishnet.add(new Catfish());
 	}
-	
     }
 
+    //CHeck vicinity mehtod prints message, then determines who to attack
 } // end of class
