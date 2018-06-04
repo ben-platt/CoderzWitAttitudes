@@ -17,7 +17,7 @@ public  class Petunia {
 
     //Constructor(s)
     public Petunia() {
-	edible = false;
+	alive = false;
     }
 
 
@@ -30,6 +30,8 @@ public  class Petunia {
       return nutrients;
     }
 
-    private void photosynthesize();
-    
+    private void photosynthesize(){
+    //to be implemented
+    }
+
 } // end of class

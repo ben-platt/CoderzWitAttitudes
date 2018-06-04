@@ -10,7 +10,7 @@
 public  class Fern {
 
     // INSTANCE VARIABLES
-    private boolean alive;
+    private boolean edible;
     private double nutrients;
     private double growRate;
     public String type = "plantFood";
@@ -23,18 +23,17 @@ public  class Fern {
 
     // METHODS
     //Accessor METHODS
-    public boolean getAlive(){
-      return alive;
-    }
     public double getNutrients(){
       return nutrients;
     }
 
-    private void photosynthesize();
+    private void photosynthesize(){
+      //tbd
+    }
 
     public boolean isEdible() {
 	return edible;
     }
 
-    
+
 } // end of class

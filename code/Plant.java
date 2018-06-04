@@ -22,15 +22,12 @@ public abstract class Plant {
     public double getNutrients(){
       return nutrients;
     }
-    public void setNutrients(double nutt) {
-	nutrients = nutt;
-    }
 
     //abstract methods
     public void setNutrients( double inputNutrients ) {
 	nutrients = inputNutrients;
     }
-    
+
     protected abstract void photosynthesize(); //specific to each type of plants
 
 } // end of class

@@ -16,7 +16,7 @@ public class ThimbleBush {
 
     //Constructor(s)
     public ThimbleBush() {
-	edible = false;
+	alive = false;
     }
 
     // METHODS
@@ -28,6 +28,8 @@ public class ThimbleBush {
       return nutrients;
     }
 
-    private void photosynthesize();
-    
+    private void photosynthesize(){
+        //to be implemented
+    }
+
 } // end of class

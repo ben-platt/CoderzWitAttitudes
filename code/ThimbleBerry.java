@@ -15,7 +15,7 @@ public class ThimbleBerry {
 
     //Constructor(s)
     public ThimbleBerry() {
-	edible = true;
+	     edible = true;
     }
 
 
@@ -23,5 +23,5 @@ public class ThimbleBerry {
     public boolean isEdible() {
 	return edible;
     }
-    
+
 } // end of class

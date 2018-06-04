@@ -9,6 +9,7 @@
 
 import java.util.Stack;
 import java.util.Queue;
+import java.util.LinkedList;
 
 public class Player {
 
@@ -18,8 +19,8 @@ public class Player {
     private double weight;
     private double health;
     private double maxNutri;
-    private LinkedList items;
-    private LinkedList fishnet;
+    private LinkedList<Object> items;
+    private LinkedList<Object> fishnet;
 
     // CONSTRUCTOR(S)
     //Default constructor
@@ -37,7 +38,7 @@ public class Player {
 	weight = w;
 	health = heal;
     }
-    
+
     // METHODS
 
     //Accessor methods
@@ -62,7 +63,7 @@ public class Player {
     public Animal getAnimal(){
 	return animals.peek();
     }
-    public ItemQueue<Object> getItems(){
+    public LinkedList<Object> getItems(){
 	return items;
     }
 
@@ -76,7 +77,7 @@ public class Player {
     public void setWeight( double inputWeight ){
 	weight = (double) inputWeight;
     }
-    private void setHealth( double inputHealth ){
+    public void setHealth( double inputHealth ){
 	health = inputHealth;
     }
 
@@ -88,7 +89,7 @@ public class Player {
     // Eating methods
     public void eatAnimal(){
       Animal current = animals.peek();
-      
+
       if(current instanceof Fugu){
 	  if(current.chanceofSurvival()){
 	      animals.pop();
@@ -99,7 +100,7 @@ public class Player {
 	      health = 0;
 	  }
       }
-      
+
       else if(health + current.getNutrients() > maxNutri){
         System.out.println("You are full! Eat later.");
       }
@@ -111,7 +112,7 @@ public class Player {
 
     //Attack methods
     public double attack(Animal prey){
-	
+
     }
 
     private void fish(){

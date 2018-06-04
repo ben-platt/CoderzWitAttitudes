@@ -16,7 +16,7 @@ public  class GuavaTree {
 
     //Constructor(s)
     public GuavaTree() {
-	edible = false;
+	alive = false;
     }
 
 
@@ -29,11 +29,9 @@ public  class GuavaTree {
       return nutrients;
     }
 
-    private void photosynthesize();
-
-    public boolean isEdible() {
-	return edible;
+    private void photosynthesize(){
+      //tbd
     }
 
-    
+
 } // end of class

@@ -9,6 +9,10 @@
 
 public class WildBoar extends Animal{
 
+      // INSTANCE VARIABLES
+      private double nutrients;
+      private double life;
+
     private final double power = 0.5; //Power on scale of 0.0-0.5
     public String type = "animalFood";
 
@@ -28,7 +32,7 @@ public class WildBoar extends Animal{
     //Attack method
     public void attack(Player p){
   	double magnitude = life * power;
-  	p.setLife(p.getLife()-magnitude);
+  	p.setHealth(p.getHealth()-magnitude);
   	System.out.println("The wild boar is goring you! ");
     }
 

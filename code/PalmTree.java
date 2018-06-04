@@ -23,6 +23,8 @@ public  class PalmTree {
       return nutrients;
     }
 
-    private void photosynthesize();
-    
+    private void photosynthesize(){
+      //to be conitnued
+    }
+
 } // end of class

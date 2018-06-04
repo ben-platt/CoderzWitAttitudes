@@ -10,13 +10,13 @@
 public class Tree {
 
     // INSTANCE VARIABLES
-    
+
     private boolean alive;
     private double nutrients;
     private double growRate;
 
     // METHODS
-    
+
     //Accessor METHODS
     public boolean getAlive(){
 	return alive;
@@ -24,7 +24,8 @@ public class Tree {
     public double getNutrients(){
 	return nutrients;
     }
-
-    private void photosynthesize(); 
+    private void photosynthesize(){
+//to be continued
+    }
 
 } // end of class
