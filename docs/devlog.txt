@@ -87,6 +87,8 @@ Kayli:
 
 Ben:
 - worked on UML
+- created plan 2018051
+-
 
 Fiona:
 - worked on UML
@@ -104,6 +106,7 @@ Kayli:
 
 Ben:
 - worked on UML, hashed out plant and animal subclasses and player functionality
+- created flowchart to show vision for how the main class should function.
 
 Fiona:
 - added more skeletons for animals
@@ -124,6 +127,9 @@ Kayli:
 Fiona:
 - Added attack methods for animals
 - Changed nutrition and power values for animals
+
+Ben:
+-
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
