@@ -28,7 +28,7 @@ public class Tuna extends Fish{
         public void attack(Player p){
     	double magnitude = life * power;
     	p.setLife(p.getLife()-magnitude);
-    	System.out.println("You touched the poisonous fugu fish spikes!  ");
+    	System.out.println("You got done gulped by the tuna!  ");
         }
 
 

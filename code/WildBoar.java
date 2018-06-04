@@ -28,7 +28,7 @@ public class WildBoar extends Animal{
       public void attack(Player p){
   	double magnitude = life * power;
   	p.setLife(p.getLife()-magnitude);
-  	System.out.println("The wild boar is attacking you! ");
+  	System.out.println("The wild boar is goring you! ");
       }
 
 } // end of class
