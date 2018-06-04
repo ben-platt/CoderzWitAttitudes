@@ -1,0 +1,8 @@
+Priorities:
+Implement term 2 structures such as the item queue for the player as well as for the thimbleBerry bush.
+Test out the animal and plant classes.
+Start working with GUI to make our island look snazzy.
+Hammer out the exact use of linked lists.
+
+
+Looking ahead to the rest of the week, we strongly desire to finish by Wednesday so we can spend all of Thursday working out any kinks in our project. We think we have enough time to do this considering the day off on Tuesday. We like where we are headed and think we're gonna end up with a bomb project (knock on wood).
