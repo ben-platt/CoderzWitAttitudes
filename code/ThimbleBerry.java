@@ -12,6 +12,12 @@ public  class ThimbleBerry {
     // INSTANCE VARIABLES
     private boolean edible;
 
+    //Constructor(s)
+    public ThimbleBerry {
+	edible = true;
+    }
+
+
     // METHODS
     public boolean isEdible() {
 	return edible;

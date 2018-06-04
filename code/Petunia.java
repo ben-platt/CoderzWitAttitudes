@@ -14,6 +14,12 @@ public  class Petunia {
     private double nutrients;
     private double growRate;
 
+    //Constructor(s)
+    public Petunia {
+	edible = false;
+    }
+
+
     // METHODS
     //Accessor METHODS
     public boolean getAlive(){

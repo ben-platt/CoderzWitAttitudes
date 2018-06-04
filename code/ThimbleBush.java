@@ -14,6 +14,12 @@ public  class ThimbleBush {
     private double nutrients;
     private double growRate;
 
+    //Constructor(s)
+    public ThimbleBush {
+	edible = false;
+    }
+
+
     // METHODS
     //Accessor METHODS
     public boolean getAlive(){
