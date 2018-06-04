@@ -18,9 +18,8 @@ public class Player {
     private double weight;
     private double health;
     private double maxNutri;
-    private ItemQueue<Object> items;
-    private Stack<Plant> plants;
-    private Stack<Animal> animals;
+    private LinkedList items;
+    private LinkedList fishnet;
 
     // CONSTRUCTOR(S)
     //Default constructor
@@ -32,9 +31,13 @@ public class Player {
   maxNutri = ((108/2.2) / (Math.pow((height/2.54), 2))) * age; //this is BMI * age
     }
 
-    //PUt another construcotr based on user input later
-    // Maybe we can just use these mutator methods for user input
-
+    public Player(int a, double h, double w, double heal){
+	age = a;
+	height = h;
+	weight = w;
+	health = heal;
+    }
+    
     // METHODS
 
     //Accessor methods
@@ -85,7 +88,19 @@ public class Player {
     // Eating methods
     public void eatAnimal(){
       Animal current = animals.peek();
-      if(health + current.getNutrients() > maxNutri){
+      
+      if(current instanceof Fugu){
+	  if(current.chanceofSurvival()){
+	      animals.pop();
+	      health += current.getNutrients();
+	  }
+	  else{
+	      System.out.println("You died from consuming the poisonous fugu");
+	      health = 0;
+	  }
+      }
+      
+      else if(health + current.getNutrients() > maxNutri){
         System.out.println("You are full! Eat later.");
       }
       else{
@@ -95,6 +110,22 @@ public class Player {
     }
 
     //Attack methods
-    public 
+    public double attack(Animal prey){
+	
+    }
+
+    private void fish(){
+	int index = (int)( Math.random() * 2);
+	if(index == 0){
+	    fishnet.add(new Fugu());
+	}
+	else if (index == 1){
+	    fishnet.add(new Tuna());
+	}
+	else{
+	    fishnet.add(new Catfish());
+	}
+	
+    }
 
 } // end of class

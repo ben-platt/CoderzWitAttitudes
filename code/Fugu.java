@@ -31,6 +31,13 @@ public class Fugu extends Fish{
   	System.out.println("You touched the poisonous fugu fish spikes!  ");
       }
 
-
+    //Chance of edible
+    public boolean chanceofSurvival(){
+	double rand = Math.random();
+	if(rand <= 0.05){
+	    return true;
+	}
+	return false;
+    }
 
 } // end of class
