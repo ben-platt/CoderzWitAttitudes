@@ -13,10 +13,20 @@ public  class Guava {
     private double nutrients;
     private boolean edible;
 
+    //Constructor(s)
+    public Guava {
+	edible = true;
+    }
+
     // METHODS
     //Accessor METHODS
     public double getNutrients(){
       return nutrients;
     }
+
+    public boolean isEdible() {
+	return edible;
+    }
+
     
 } // end of class

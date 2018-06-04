@@ -14,6 +14,12 @@ public  class Fern {
     private double nutrients;
     private double growRate;
 
+    //Constructor(s)
+    public Fern {
+	edible = true;
+    }
+
+
     // METHODS
     //Accessor METHODS
     public boolean getAlive(){
@@ -24,5 +30,10 @@ public  class Fern {
     }
 
     private void photosynthesize();
+
+    public boolean isEdible() {
+	return edible;
+    }
+
     
 } // end of class
