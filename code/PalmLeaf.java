@@ -11,9 +11,10 @@ public  class PalmLeaf {
 
     // INSTANCE VARIABLES
     private boolean edible;
+    public String type = "plant";
 
     //Constructor(s)
-    public PalmLeaf {
+    public PalmLeaf() {
 	edible = false;
     }
 

@@ -11,9 +11,10 @@ public  class Leaf {
 
     // INSTANCE VARIABLES
     private boolean edible;
+    public String type = "plant";
 
     //Constructor(s)
-    public Leaf {
+    public Leaf() {
 	edible = false;
     }
 

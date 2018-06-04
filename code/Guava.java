@@ -12,9 +12,10 @@ public  class Guava {
     // INSTANCE VARIABLES
     private double nutrients;
     private boolean edible;
+    public String type = "plantFood";
 
     //Constructor(s)
-    public Guava {
+    public Guava() {
 	edible = true;
     }
 

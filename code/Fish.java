@@ -9,13 +9,4 @@
 
 public abstract class Fish extends Animal{
 
-    // INSTANCE VARIABLES
-
-
-    // CONSTRUCTOR(S)
-
-
-    // METHODS
-
-
 } // end of class

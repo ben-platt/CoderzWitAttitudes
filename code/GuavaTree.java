@@ -15,7 +15,7 @@ public  class GuavaTree {
     private double growRate;
 
     //Constructor(s)
-    public GuavaTree {
+    public GuavaTree() {
 	edible = false;
     }
 

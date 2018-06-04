@@ -22,7 +22,7 @@ public abstract class Plant {
     public double getNutrients(){
       return nutrients;
     }
-    public setNutrients(double nutt) {
+    public void setNutrients(double nutt) {
 	nutrients = nutt;
     }
 

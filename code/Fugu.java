@@ -9,27 +9,27 @@
 
 public class Fugu extends Fish{
 
-      private final double power = 0.3; //Power on scale of 0.0-0.5
+    private final double power = 0.3; //Power on scale of 0.0-0.5
+    public String type = "animalFood";
 
-
-      // CONSTRUCTOR(S)
-      public Fugu(){
+    // CONSTRUCTOR(S)
+    public Fugu(){
   	nutrients = 30;
   	life = 100;
-      }
+    }
 
-      public Fugu(double n, double l){
+    public Fugu(double n, double l){
   	nutrients = n;
   	life = l;
-      }
+    }
 
-      // METHODS
-      //Attack method
-      public void attack(Player p){
+    // METHODS
+    //Attack method
+    public void attack(Player p){
   	double magnitude = life * power;
   	p.setLife(p.getLife()-magnitude);
   	System.out.println("You touched the poisonous fugu fish spikes!  ");
-      }
+    }
 
     //Chance of edible
     public boolean chanceofSurvival(){

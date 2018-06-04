@@ -9,27 +9,28 @@
 
 public class Tuna extends Fish{
 
-        private final double power = 0.1; //Power on scale of 0.0-0.5
+    private final double power = 0.1; //Power on scale of 0.0-0.5
+    public String type = "animalFood";
 
 
-        // CONSTRUCTOR(S)
-        public Tuna(){
+    // CONSTRUCTOR(S)
+    public Tuna(){
     	nutrients = 40;
     	life = 100;
-        }
+    }
 
-        public Tuna(double n, double l){
+    public Tuna(double n, double l){
     	nutrients = n;
     	life = l;
-        }
+    }
 
-        // METHODS
-        //Attack method
-        public void attack(Player p){
+    // METHODS
+    //Attack method
+    public void attack(Player p){
     	double magnitude = life * power;
     	p.setLife(p.getLife()-magnitude);
     	System.out.println("You got done gulped by the tuna!  ");
-        }
+    }
 
 
 } // end of class

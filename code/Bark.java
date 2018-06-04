@@ -7,13 +7,14 @@
  * class Bark
  *****************************************************/
 
-public  class Bark {
+public class Bark {
 
     // INSTANCE VARIABLES
     private boolean edible;
+    public String type = "plant";
 
     //Constructor(s)
-    public Bark {
+    public Bark() {
 	edible = false;
     }
 

@@ -9,26 +9,27 @@
 
 public class Turkey extends Animal{
 
-      private final double power = 0.2; //Power on scale of 0.0-0.5
+    private final double power = 0.2; //Power on scale of 0.0-0.5
+    public String type = "animalFood";
 
-      // CONSTRUCTOR(S)
-      public Turkey(){
+    // CONSTRUCTOR(S)
+    public Turkey(){
   	nutrients = 90;
   	life = 100;
-      }
+    }
 
-      public Turkey(double n, double l){
+    public Turkey(double n, double l){
   	nutrients = n;
   	life = l;
-      }
+    }
 
-      // METHODS
-      //Attack method
-      public void attack(Player p){
+    // METHODS
+    //Attack method
+    public void attack(Player p){
   	double magnitude = life * power;
   	p.setLife(p.getLife()-magnitude);
   	System.out.println("The turkey is gobbling over you!");
-      }
+    }
 
 
 

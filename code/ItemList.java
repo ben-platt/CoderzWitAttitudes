@@ -16,7 +16,7 @@ public class ItemList<Object> {
     // CONSTRUCTOR(S)
     public ItemList() {
 	_start = _end = null;
-	_size;
+	_size = 0;
     }
 
     // METHODS

@@ -13,9 +13,10 @@ public  class Petunia {
     private boolean alive;
     private double nutrients;
     private double growRate;
+    public String type = "plant";
 
     //Constructor(s)
-    public Petunia {
+    public Petunia() {
 	edible = false;
     }
 

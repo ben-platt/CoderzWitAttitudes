@@ -13,9 +13,10 @@ public  class Fern {
     private boolean alive;
     private double nutrients;
     private double growRate;
+    public String type = "plantFood";
 
     //Constructor(s)
-    public Fern {
+    public Fern() {
 	edible = true;
     }
 

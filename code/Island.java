@@ -8,7 +8,7 @@
  *****************************************************/
 import java.util.ArrayList;
 
-public class Island
+public class Island {
 
     // INSTANCE VARIABLES
     private ArrayList<Animal> animals;

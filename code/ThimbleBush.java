@@ -7,7 +7,7 @@
  * class ThimbleBush
  *****************************************************/
 
-public  class ThimbleBush {
+public class ThimbleBush {
 
     // INSTANCE VARIABLES
     private boolean alive;
@@ -15,10 +15,9 @@ public  class ThimbleBush {
     private double growRate;
 
     //Constructor(s)
-    public ThimbleBush {
+    public ThimbleBush() {
 	edible = false;
     }
-
 
     // METHODS
     //Accessor METHODS

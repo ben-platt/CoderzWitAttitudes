@@ -12,13 +12,13 @@ public  class Coconut {
     // INSTANCE VARIABLES
     private double nutrients;
     private boolean edible;
+    public String type = "plantFood";
 
     
     //Constructor(s)
-    public Coconut {
+    public Coconut() {
 	edible = true;
     }
-
 
     // METHODS
     //Accessor METHODS
@@ -29,6 +29,5 @@ public  class Coconut {
 	return edible;
     }
 
-    
     
 } // end of class
