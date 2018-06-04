@@ -14,6 +14,12 @@ public  class GuavaTree {
     private double nutrients;
     private double growRate;
 
+    //Constructor(s)
+    public GuavaTree {
+	edible = false;
+    }
+
+
     // METHODS
     //Accessor METHODS
     public boolean getAlive(){
@@ -24,5 +30,10 @@ public  class GuavaTree {
     }
 
     private void photosynthesize();
+
+    public boolean isEdible() {
+	return edible;
+    }
+
     
 } // end of class

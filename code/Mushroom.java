@@ -14,6 +14,12 @@ public  class Mushroom {
     private double nutrients;
     private double growRate;
 
+    //Constructor(s)
+    public Mushroom {
+	edible = true;
+    }
+
+
     // METHODS
     //Accessor METHODS
     public boolean getAlive(){
@@ -24,5 +30,10 @@ public  class Mushroom {
     }
 
     private void photosynthesize();
+
+    public boolean isEdible() {
+	return edible;
+    }
+
     
 } // end of class

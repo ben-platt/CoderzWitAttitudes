@@ -12,6 +12,12 @@ public  class Leaf {
     // INSTANCE VARIABLES
     private boolean edible;
 
+    //Constructor(s)
+    public Leaf {
+	edible = false;
+    }
+
+
     // METHODS
     public boolean isEdible() {
 	return edible;
