@@ -13,7 +13,7 @@ public class Island {
 
   // INSTANCE VARIABLES
   private ArrayList<Animal> animals;
-  private LinkedList<Fish> fishpond;
+  private LinkedList<ArrayList> fishpond;
   private ArrayList<Plant> plants;
 
 
@@ -70,18 +70,22 @@ public class Island {
   }
 
   public void addFish(){
-    int num = (int) (Math.random() * 20 );
+    int num = (int) (Math.random() * 10 ); //levels of depth of the pond
     for(int i = 0; i < num; i++ ){
-      int index = (int)( Math.random() * 2);
-      if(index == 0){
-        fishpond.add(new Fugu());
+      ArrayList<Fish> currentdepth = new ArrayList<Fish>();
+      for(int j = 0; j < (int) (Math.random() * 10); j++){
+        int index = (int)( Math.random() * 3);
+        if(index == 0){
+          currentdepth.add(new Fugu());
+        }
+        else if (index == 1){
+          currentdepth.add(new Tuna());
+        }
+        else{
+          currentdepth.add(new Catfish());
+        }
       }
-      else if (index == 1){
-        fishpond.add(new Tuna());
-      }
-      else{
-        fishpond.add(new Catfish());
-      }
+      fishpond.add(currentdepth);
     }
   }
 

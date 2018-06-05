@@ -67,15 +67,16 @@ public class Player {
   public double getMaxNutri(){
     return maxNutri;
   }
+
+/*
   public Plant getPlant(){
-    return plants.peek();
   }
+
   public Animal getAnimal(){
-    return animals.peek();
   }
-  public LinkedList<Object> getItems(){
-    return items;
-  }
+
+  //NEED A GETITEM METHOD AFTER THE ITEMLIST IS DONE!!!
+*/
 
   // Mutator Methods
   public void setAge( int inputAge ){
@@ -93,15 +94,15 @@ public class Player {
 
   // Items
   public void addItem( Object inputItem ) {
-    items.enqueue( inputItem );
+    //TO BE FILLED IN AFTER KAYLI DOES THE ITEMLIST THINGY
   }
 
-  // Eating methods
+  // Eating methods :FIX THIS METHOD BASED ON DOUBLY LINKED LIST
   public void eatAnimal(){
     Animal current = animals.peek();
 
     if(current instanceof Fugu){
-      if(current.chanceofSurvival()){
+      if(((Fugu) current).chanceofSurvival()){
         animals.pop();
         health += current.getNutrients();
       }
@@ -119,14 +120,24 @@ public class Player {
     }
   }
 
-  //Attack methods
+  //Attack method: Returns health after
   public double attack(){
     int target = checkVicinity();
     Animal prey = island.getAnimals().get(target);
-    island.removeAnimal(target);
 
+    int chance = (int) (Math.random() * 2);
+    if(chance == 0){
+      System.out.println("Darn, you didn't catch it this time!");
+    }
+    else{
+      System.out.println("Whew! You captured the " + prey);
+      island.removeAnimal(target);
+    }
+    health -= (prey.getLife() * prey.getPower());
+    return health;
   }
 
+  //checkVicinity determines which animal to hunt next; based on the closest animal
   private int checkVicinity(){
     ArrayList<Animal> tmp = island.getAnimals();
     Animal tar;
@@ -146,9 +157,9 @@ public class Player {
   private double distance(int x1, int y1, int x2, int y2){
     return (Math.sqrt(((x1-x2)*(x1-x2)) + ((y1-y2)*(y1-y2))));
   }
-  private void fish(){
 
-
+  public void fish(){
+    
   }
 
 } // end of class

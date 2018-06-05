@@ -31,6 +31,10 @@ public class Frog extends Animal{
   }
 
   // METHODS
+  public double getPower(){
+    return power;
+  }
+  
   //Attack method
   public void attack(Player p){
     double magnitude = life * power;

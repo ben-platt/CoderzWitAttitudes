@@ -46,4 +46,7 @@ public abstract class Animal {
   //Attack method
   public abstract void attack(Player p);
 
+  //getpower method
+  public abstract double getPower();
+
 } // end of class
