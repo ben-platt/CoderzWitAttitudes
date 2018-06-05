@@ -10,6 +10,7 @@
 import java.util.Stack;
 import java.util.Queue;
 import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class Player {
 
@@ -122,8 +123,7 @@ public class Player {
   public double attack(){
     int target = checkVicinity();
     Animal prey = island.getAnimals().get(target);
-    island.removeAnimal();
-    
+    island.removeAnimal(target);
 
   }
 

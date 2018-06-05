@@ -26,11 +26,11 @@ public abstract class Animal {
     return life;
   }
 
-  public double getXcor(){
+  public int getXcor(){
     return xcor;
   }
 
-  public double getYcor(){
+  public int getYcor(){
     return ycor;
   }
 

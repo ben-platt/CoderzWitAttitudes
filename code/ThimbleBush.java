@@ -19,7 +19,7 @@ public class ThimbleBush {
     //Constructor(s)
     public ThimbleBush() {
 	     alive = false;
-       
+
     }
 
     // METHODS
@@ -32,7 +32,6 @@ public class ThimbleBush {
     }
 
     private void photosynthesize(){
-        if(berries.size() )
     }
 
 } // end of class
