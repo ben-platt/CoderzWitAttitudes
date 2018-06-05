@@ -1,0 +1,11 @@
+1. Plant classes:
+- Determine growRate and nutrition values for each class
+- Fill in photosynthesize() methods
+- Implement Queue structure methods for harvesting plants
+
+2. Island class:
+- Implement Animals and Plants into Island class
+- Finish addPlants() method 
+
+3. GUI interface
+- Begin implementing stuff into GUI form
