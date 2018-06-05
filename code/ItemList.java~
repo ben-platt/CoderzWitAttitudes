@@ -7,12 +7,10 @@
  * class ItemList
  ******************************************************/
 
-import java.util.Stack;
-
-public class ItemList {
+public class ItemList<Object> {
 
     // INSTANCE VARIABLES
-    public ItemNode _start, _end;
+    public ItemNode<Object> _start, _end;
     public int _size;
 
     // CONSTRUCTOR(S)

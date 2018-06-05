@@ -7,41 +7,67 @@
  * class ItemNode
  ******************************************************/
 
-public class ItemNode<Object> {
+import java.util.Stack;
+
+public class ItemNode {
 
     // INSTANCE VARIABLES
-    private Object _item;
-    private ItemNode<Object> _prevItem;
-    private ItemNode<Object> _nextItem;
+    private String _contents; 
+    private Stack<Object> _item;
+    private ItemNode _prevItem;
+    private ItemNode _nextItem;
+    private int _quantity;
 
     // CONSTRUCTOR(S)
-    public ItemNode( Object value, ItemNode<Object> prev, ItemNode<Object> next ) {
-	_item = value;
-	_prevItem = prev;
-	_nextItem = next;
+    public ItemNode( Object value ) {
+	_item = new Stack<Object>();
+	_item.push( value );
+	_prevItem = null;
+	_nextItem = null;
+	_quantity = 1;
+	//_contents = value.name;
     }
 
     // METHODS
 
     // * Accessors *
+    public String getContents() {
+	return _contents;
+    }
+    public String getPrevContents() {
+	return _prevItem.getContents();
+    }
+    public String getNextContents() {
+	return _nextItem.getContents();
+    }/*
+    public String getType() {
+	return _item.peek().type;
+    }
+    public String getPrevType() {
+	return _prevItem.getType();
+    }
+    public String getNextType() {
+	return _nextItem.getType();
+	}*/
     public Object getItem() {
-	return _item;
+	return _item.peek();
     }
-    public ItemNode<Object> getPrev() {
-	return _prevItem;
+    public Object getPrev() {
+	return _prevItem.getItem();
     }
-    public ItemNode<Object> getNext() {
-	return _nextItem;
+    public Object getNext() {
+	return _nextItem.getItem();
     }
 
     // * Mutators *
     public void setItem( Object newValue ) {
-	_item = newValue;
+	_item = new Stack<Object>();
+	_item.push( newValue );
     }
-    public void setNext( ItemNode<Object> newNext ) {
+    public void setNext( ItemNode newNext ) {
 	_nextItem = newNext;
     }
-    public void setPrev( ItemNode<Object> newPrev ) {
+    public void setPrev( ItemNode newPrev ) {
 	_prevItem = newPrev;
     }
     
