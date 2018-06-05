@@ -97,6 +97,7 @@ public class Player {
     //TO BE FILLED IN AFTER KAYLI DOES THE ITEMLIST THINGY
   }
 
+/*
   // Eating methods :FIX THIS METHOD BASED ON DOUBLY LINKED LIST
   public void eatAnimal(){
     Animal current = animals.peek();
@@ -119,6 +120,7 @@ public class Player {
       health += current.getNutrients();
     }
   }
+*/
 
   //Attack method: Returns health after
   public double attack(){
@@ -159,8 +161,10 @@ public class Player {
     return (Math.sqrt(((x1-x2)*(x1-x2)) + ((y1-y2)*(y1-y2))));
   }
 
+/*
   public void fish(){
     if(health > )
   }
+  */
 
 } // end of class

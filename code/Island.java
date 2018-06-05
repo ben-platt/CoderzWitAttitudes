@@ -13,12 +13,16 @@ public class Island{
 
   // INSTANCE VARIABLES
   private ArrayList<Animal> animals;
-  private LinkedList<ArrayList<Fish>> fishpond;
   private ArrayList<Plant> plants;
+  private LinkedList<ArrayList<Fish>> fishpond;
+
 
 
   // CONSTRUCTOR(S)
   public Island(){
+    animals = new ArrayList<Animal>();
+    plants = new ArrayList<Plant>();
+    fishpond = new LinkedList<ArrayList<Fish>>();
     addAnimals();
     addPlants();
     addFish();
@@ -56,7 +60,7 @@ public class Island{
   public void addAnimals(){
     int num = (int) (Math.random() * 20 );
     for(int i = 0; i < num; i++){
-      if(i%5 == 0 && i%3 != 0){
+      if(i%5 == 0){
         animals.add(new WildBoar());
       }
       else if (i%3 == 0){
