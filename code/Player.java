@@ -19,8 +19,8 @@ public class Player {
     private double weight;
     private double health;
     private double maxNutri;
-    private LinkedList<Object> items;
-    private LinkedList<Object> fishnet;
+    private ItemList<Object> items;
+    private LinkedList<Fish> fishpond;
 
     // CONSTRUCTOR(S)
     //Default constructor
@@ -116,15 +116,16 @@ public class Player {
     }
 
     private void fish(){
+      
 	int index = (int)( Math.random() * 2);
 	if(index == 0){
-	    fishnet.add(new Fugu());
+	    fishpond.add(new Fugu());
 	}
 	else if (index == 1){
-	    fishnet.add(new Tuna());
+	    fishpond.add(new Tuna());
 	}
 	else{
-	    fishnet.add(new Catfish());
+	    fishpond.add(new Catfish());
 	}
     }
 

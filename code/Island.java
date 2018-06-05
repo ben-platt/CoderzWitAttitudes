@@ -13,11 +13,10 @@ public class Island {
     // INSTANCE VARIABLES
     private ArrayList<Animal> animals;
     private ArrayList<Plant> plants;
-    private ArrayList<Player> players; //??what is this for
-
+    
     // CONSTRUCTOR(S)
     public Island(){
-      
+
     }
 
     // METHODS
