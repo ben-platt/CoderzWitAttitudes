@@ -4,38 +4,42 @@
 // 2018-06-08f
 
 /*****************************************************
- * class Frog
- *****************************************************/
+* class Frog
+*****************************************************/
 
 public class Frog extends Animal{
 
 
-      // INSTANCE VARIABLES
-      private double nutrients;
-      private double life;
-      private int xcor = (int) (Math.random() * 100);
-      private int ycor = (int) (Math.random() * 100);
+  // INSTANCE VARIABLES
+  private double nutrients;
+  private double life;
+  private int xcor = (int) (Math.random() * 100);
+  private int ycor = (int) (Math.random() * 100);
 
-    private final double power = 0.05; //Power on scale of 0.0-0.5
-    public String type = "animalFood";
+  private final double power = 0.05; //Power on scale of 0.0-0.5
+  public String type = "animalFood";
 
-    // CONSTRUCTOR(S)
-    public Frog(){
-	nutrients = 50;
-	life = 100;
-    }
+  // CONSTRUCTOR(S)
+  public Frog(){
+    nutrients = 50;
+    life = 100;
+  }
 
-    public Frog(double n, double l){
-	nutrients = n;
-	life = l;
-    }
+  public Frog(double n, double l){
+    nutrients = n;
+    life = l;
+  }
 
-    // METHODS
-    //Attack method
-    public void attack(Player p){
-	double magnitude = life * power;
-	p.setHealth(p.getHealth()-magnitude);
-	System.out.println("The frog has hippity-hopped on to your face; You can't see! ");
-    }
+  // METHODS
+  //Attack method
+  public void attack(Player p){
+    double magnitude = life * power;
+    p.setHealth(p.getHealth()-magnitude);
+    System.out.println("The frog has hippity-hopped on to your face; You can't see! ");
+  }
+
+  public String toString(){
+    return "Frog: \n Nutrients: "+ nutrients;
+  }
 
 } // end of class

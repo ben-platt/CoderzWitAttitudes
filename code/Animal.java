@@ -4,38 +4,46 @@
 // 2018-06-08f
 
 /*****************************************************
- * class Animal
- *****************************************************/
+* class Animal
+*****************************************************/
 
 public abstract class Animal {
 
-    // INSTANCE VARIABLES
-    private double nutrients;
-    private double life;
-    private int xcor = (int) (Math.random() * 100);
-    private int ycor = (int) (Math.random() * 100);
+  // INSTANCE VARIABLES
+  private double nutrients;
+  private double life;
+  private int xcor = (int) (Math.random() * 100);
+  private int ycor = (int) (Math.random() * 100);
 
 
-    // METHODS
-    //Accessor Methods
-    public double getNutrients(){
-      return nutrients;
-    }
+  // METHODS
+  //Accessor Methods
+  public double getNutrients(){
+    return nutrients;
+  }
 
-    public double getLife(){
-      return life;
-    }
+  public double getLife(){
+    return life;
+  }
 
-    //Mutator Methods
-    public void setNutrients(double n){
-	nutrients = n;
-    }
+  public double getXcor(){
+    return xcor;
+  }
 
-    public void setLife(double n){
-	life = n;
-    }
+  public double getYcor(){
+    return ycor;
+  }
 
-    //Attack method
-    public abstract void attack(Player p);
+  //Mutator Methods
+  public void setNutrients(double n){
+    nutrients = n;
+  }
+
+  public void setLife(double n){
+    life = n;
+  }
+
+  //Attack method
+  public abstract void attack(Player p);
 
 } // end of class
