@@ -12,7 +12,7 @@ public abstract class Animal {
     // INSTANCE VARIABLES
     private double nutrients;
     private double life;
-    
+
 
     // METHODS
     //Accessor Methods

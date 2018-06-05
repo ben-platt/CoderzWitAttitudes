@@ -6,6 +6,7 @@
 /*****************************************************
  * class ThimbleBush
  *****************************************************/
+import java.util.Queue;
 
 public class ThimbleBush {
 
@@ -13,10 +14,12 @@ public class ThimbleBush {
     private boolean alive;
     private double nutrients;
     private double growRate;
+    private Queue<ThimbleBerry> berries;
 
     //Constructor(s)
     public ThimbleBush() {
-	alive = false;
+	     alive = false;
+       
     }
 
     // METHODS
@@ -29,7 +32,7 @@ public class ThimbleBush {
     }
 
     private void photosynthesize(){
-        //to be implemented
+        if(berries.size() )
     }
 
 } // end of class
