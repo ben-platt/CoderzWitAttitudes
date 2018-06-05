@@ -132,6 +132,7 @@ public class Player {
     else{
       System.out.println("Whew! You captured the " + prey);
       island.removeAnimal(target);
+      //ADD THE ANIMAL TO THE PLAYERS COLLECTION
     }
     health -= (prey.getLife() * prey.getPower());
     return health;
@@ -159,7 +160,7 @@ public class Player {
   }
 
   public void fish(){
-    
+    if(health > )
   }
 
 } // end of class

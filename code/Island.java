@@ -9,11 +9,11 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class Island {
+public class Island{
 
   // INSTANCE VARIABLES
   private ArrayList<Animal> animals;
-  private LinkedList<ArrayList> fishpond;
+  private LinkedList<ArrayList<Fish>> fishpond;
   private ArrayList<Plant> plants;
 
 
@@ -33,7 +33,7 @@ public class Island {
     return plants;
   }
 
-  public LinkedList<Fish> getFish(){
+  public LinkedList<ArrayList<Fish>> getFish(){
     return fishpond;
   }
 
@@ -46,6 +46,10 @@ public class Island {
   }
 
   public int getNumFish(){
+    return fishpond.size();
+  }
+
+  public int getDepth(){
     return fishpond.size();
   }
 
