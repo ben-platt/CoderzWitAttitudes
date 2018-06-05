@@ -14,18 +14,40 @@ public class Island {
     private ArrayList<Animal> animals;
     private LinkedList<Fish> fishpond;
     private ArrayList<Plant> plants;
-    private Player p;
+
 
     // CONSTRUCTOR(S)
     public Island(){
-      p = new Player();
-    }
-
-    public Island(int a, double h, double w, double heal){
-      p = new Player(int a, double h, double w, double heal);
+      addAnimals();
+      addPlants();
+      addFish();
     }
 
     // METHODS
+    public ArrayList<Animal> getAnimals(){
+      return animals;
+    }
+
+    public ArrayList<Plant> getPlants(){
+      return plants;
+    }
+
+    public LinkedList<Fish> getFish(){
+      return fishpond;
+    }
+
+    public int getNumAnimals(){
+      return animals.size();
+    }
+
+    public int getNumPlants(){
+      return plants.size();
+    }
+
+    public int getNumFish(){
+      return fishpond.size();
+    }
+
     public void addAnimals(){
       int num = (int) (Math.random() * 20 );
       for(int i = 0; i < num; i++){
@@ -43,17 +65,7 @@ public class Island {
 
     public void addPlants(){
       int num = (int) (Math.random() * 30 );
-      for(int i = 0; i < num; i++){
-        if(i%5 == 0 && i%3 != 0){
-          animals.add(new WildBoar());
-        }
-        else if (i%3 == 0){
-          animals.add(new Turkey());
-        }
-        else{
-          animals.add(new Frog()); //Frogs are most common
-        }
-      }
+    //random generatioon of plants, follow addAnimals method
     }
 
     public void addFish(){

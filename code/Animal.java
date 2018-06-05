@@ -12,6 +12,8 @@ public abstract class Animal {
     // INSTANCE VARIABLES
     private double nutrients;
     private double life;
+    private int xcor = (int) (Math.random() * 100);
+    private int ycor = (int) (Math.random() * 100);
 
 
     // METHODS

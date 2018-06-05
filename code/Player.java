@@ -20,7 +20,8 @@ public class Player {
     private double health;
     private double maxNutri;
     private ItemList<Object> items;
-    private LinkedList<Fish> fishpond;
+
+    private Island island;
 
     // CONSTRUCTOR(S)
     //Default constructor
@@ -30,6 +31,7 @@ public class Player {
 	weight = 108.0;
 	health = 100;
   maxNutri = ((108/2.2) / (Math.pow((height/2.54), 2))) * age; //this is BMI * age
+  island = new Island();
     }
 
     public Player(int a, double h, double w, double heal){
@@ -37,6 +39,7 @@ public class Player {
 	height = h;
 	weight = w;
 	health = heal;
+  island = new Island();
     }
 
     // METHODS
@@ -100,7 +103,6 @@ public class Player {
 	      health = 0;
 	  }
       }
-
       else if(health + current.getNutrients() > maxNutri){
         System.out.println("You are full! Eat later.");
       }
@@ -111,23 +113,16 @@ public class Player {
     }
 
     //Attack methods
-    public double attack(Animal prey){
+    public double attack(){
 
     }
 
-    private void fish(){
+    private Animal checkPrey(){
       
-	int index = (int)( Math.random() * 2);
-	if(index == 0){
-	    fishpond.add(new Fugu());
-	}
-	else if (index == 1){
-	    fishpond.add(new Tuna());
-	}
-	else{
-	    fishpond.add(new Catfish());
-	}
+    }
+    private void fish(){
+
+
     }
 
-    //CHeck vicinity mehtod prints message, then determines who to attack
 } // end of class
