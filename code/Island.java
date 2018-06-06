@@ -24,7 +24,7 @@ public class Island{
     plants = new ArrayList<Plant>();
     fishpond = new LinkedList<ArrayList<Fish>>();
     addAnimals();
-    addPlants();
+    //addPlants();
     addFish();
   }
 
@@ -72,11 +72,12 @@ public class Island{
     }
   }
 
+/*
   public void addPlants(){
     int num = (int) (Math.random() * 30 );
     //random generatioon of plants, follow addAnimals method
   }
-
+*/
   public void addFish(){
     int num = (int) (Math.random() * 10 ); //levels of depth of the pond
     for(int i = 0; i < num; i++ ){
