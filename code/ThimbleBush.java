@@ -15,6 +15,7 @@ public class ThimbleBush extends Plant {
     private double nutrients;
     private double growRate;
     private Queue<ThimbleBerry> berries;
+	private boolean edible;
 
     //Constructor(s)
     public ThimbleBush() {
