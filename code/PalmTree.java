@@ -13,6 +13,7 @@ public class PalmTree extends Tree {
     private boolean alive;
     private double nutrients;
     private double growRate;
+	private boolean edible;
     
     //Constructor(s)
     public PalmTree() {
@@ -34,7 +35,7 @@ public class PalmTree extends Tree {
       return nutrients;
     }
 
-    private void photosynthesize(){
+    public void photosynthesize(){
       nutrients = nutrients * growRate;
       //to be conitnued
     }
