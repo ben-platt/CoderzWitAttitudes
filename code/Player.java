@@ -141,7 +141,7 @@ public class Player {
   }
 
   //checkVicinity determines which animal to hunt next; based on the closest animal
-  private int checkVicinity(){
+  public int checkVicinity(){
     ArrayList<Animal> tmp = island.getAnimals();
     Animal tar;
     double min = distance(xcor, ycor, tmp.get(0).getXcor(), tmp.get(0).getYcor());
