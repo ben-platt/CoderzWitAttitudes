@@ -38,7 +38,7 @@ public class Petunia extends Plant {
       return nutrients;
     }
 
-    private void photosynthesize(){
+    public void photosynthesize(){
       nutrients = nutrients * growRate;
     //to be implemented
     }
