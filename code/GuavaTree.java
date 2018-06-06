@@ -13,9 +13,11 @@ public  class GuavaTree extends Tree {
     private boolean alive;
     private double nutrients;
     private double growRate;
+    private boolean edible;
 
     //Constructor(s)
     public GuavaTree() {
+      edible = false;
       alive = false;
       nutrients = 90;
       growRate = 1.45;
