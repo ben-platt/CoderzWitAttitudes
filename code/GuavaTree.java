@@ -31,7 +31,7 @@ public  class GuavaTree extends Tree {
       return nutrients;
     }
 
-    private void photosynthesize(){
+    public void photosynthesize(){
       nutrients = nutrients * growRate;
       //tbd
     }
