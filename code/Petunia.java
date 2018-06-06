@@ -13,7 +13,7 @@ public class Petunia extends Plant {
     private boolean alive;
     private double nutrients;
     private double growRate;
-    public boolean edible
+    public boolean edible;
     public String type = "plant";
     public String name = "Petunia";
 
