@@ -26,8 +26,6 @@ public class ThimbleBush extends Plant {
     }
 
 
-    }
-
     // METHODS
     //Accessor METHODS
     public boolean getAlive(){
