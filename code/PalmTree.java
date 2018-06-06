@@ -17,6 +17,8 @@ public class PalmTree extends Tree {
     //Constructor(s)
     public PalmTree() {
 	     edible = false;
+	     nutrients = 80;
+	     growRate = 1.4;
     }
 
 
@@ -33,6 +35,7 @@ public class PalmTree extends Tree {
     }
 
     private void photosynthesize(){
+      nutrients = nutrients * growRate;
       //to be conitnued
     }
 

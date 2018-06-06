@@ -19,6 +19,7 @@ public  class Coconut extends Item {
     //Constructor(s)
     public Coconut() {
       edible = true;
+      nutrients = 70;
     }
 
     // METHODS

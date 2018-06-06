@@ -18,6 +18,8 @@ public class Mushroom extends Plant {
 
     //Constructor(s)
     public Mushroom() {
+      nutrients = 25;
+      growRate = 1.25;
       edible = true;
     }
 
@@ -29,6 +31,7 @@ public class Mushroom extends Plant {
     }
 
     private void photosynthesize(){
+      nutrients = nutrients * growRate;
       //tbd
     }
 

@@ -20,6 +20,8 @@ public class ThimbleBush extends Plant {
     public ThimbleBush() {
 	     alive = false;
 	     edible = false;
+	     nutrients = 20;
+	     growRate = 1.1;
     }
 
 
@@ -35,6 +37,7 @@ public class ThimbleBush extends Plant {
     }
 
     private void photosynthesize(){
+      nutrients = nutrients * growRate;
     }
     public boolean isEdible() {
       return edible;

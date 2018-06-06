@@ -18,6 +18,8 @@ public class Tree extends Plant {
     //Constructor(s)
     public Tree() {
 	     edible = false;
+	     nutrients = 50;
+	     growRate = 1.2;
     }
 
 
@@ -31,6 +33,7 @@ public class Tree extends Plant {
       return nutrients;
     }
     private void photosynthesize(){
+      nutrients = nutrients * growRate;
     }
 //to be continued
 

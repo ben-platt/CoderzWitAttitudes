@@ -21,6 +21,8 @@ public class Petunia extends Plant {
     public Petunia() {
       alive = false;
       edible = false;
+      nutrients = 70;
+      growRate = 1.16;
     }
 
 
@@ -37,6 +39,7 @@ public class Petunia extends Plant {
     }
 
     private void photosynthesize(){
+      nutrients = nutrients * growRate;
     //to be implemented
     }
 

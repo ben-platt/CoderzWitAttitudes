@@ -19,6 +19,8 @@ public  class Fern extends Plant {
     //Constructor(s)
     public Fern() {
       edible = true;
+      nutrients = 10;
+      growRate = 1.01;
     }
 
 
@@ -29,6 +31,7 @@ public  class Fern extends Plant {
     }
 
     private void photosynthesize(){
+      nutrients = nutrients * growRate;
       //tbd
     }
 

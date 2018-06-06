@@ -18,6 +18,7 @@ public class Guava extends Item {
     //Constructor(s)
     public Guava() {
       edible = true;
+      nutrients = 60;
     }
 
     // METHODS
