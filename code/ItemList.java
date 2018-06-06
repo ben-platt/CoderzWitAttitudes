@@ -17,7 +17,7 @@ public class ItemList {
 
     // CONSTRUCTOR(S)
     public ItemList() {
-	_start = _end = null;
+	_start = null;
 	_size = 0;
     }
 
@@ -32,7 +32,7 @@ public class ItemList {
 
     public void add( Item thing ) {
 	if ( _size == 0 ) {
-	    _start.setItem( thing );
+	    _start = new ItemNode( thing );
 	    _size = 1;
 	    return;
 	}
@@ -75,6 +75,65 @@ public class ItemList {
 	    }
 	    currentItem = currentItem.getNext();
 	}
+    }
+
+    public void display() {
+
+	System.out.println( "ITEMS: " );
+	ItemNode currentItem = _start;
+	if ( _size == 0 ) {
+	    System.out.println( " empty " );
+	}
+	String currentType = _start.getType();
+	System.out.println( " " + currentType );
+	while( currentItem != null ) {
+	    if ( currentItem.getType() != currentType ) {
+	        currentType = currentItem.getType();
+		System.out.println( " " + currentType );
+	    }
+	    System.out.println( "  " + currentItem.getContents() + " (" + currentItem.getQuantity() + ") " );
+	    currentItem = currentItem.getNext();
+	}
+    }
+
+    public static void main( String[] args ) {
+
+	ItemList items = new ItemList();
+	
+	Coconut coco1 = new Coconut();
+	Coconut coco2 = new Coconut();
+	Bark bark1 = new Bark();
+	Bark bark2 = new Bark();
+	Bark bark3 = new Bark();
+	Catfish catfish1 = new Catfish();
+	
+	items.add( coco1 );
+
+	items.display();
+	
+	items.add( bark1 );
+
+	items.display();
+	
+	items.add( bark2 );
+
+	items.display();
+	
+	items.add( catfish1 );
+
+	items.display();
+
+	items.add( bark3 );
+
+	items.display();
+	
+	items.add( coco2 );
+
+	items.display();
+
+	items.remove( bark3 );
+	
+	items.display();
     }
 
 }//end ItemQueue   

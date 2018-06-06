@@ -58,6 +58,9 @@ public class ItemNode {
     public ItemNode getNext() {
 	return _nextItem;
     }
+    public int getQuantity() {
+	return _quantity;
+    }
 
     // * Mutators *
     public void setItem( Item newValue ) {
