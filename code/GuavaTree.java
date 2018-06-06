@@ -13,9 +13,11 @@ public  class GuavaTree extends Tree {
     private boolean alive;
     private double nutrients;
     private double growRate;
+    private boolean edible;
 
     //Constructor(s)
     public GuavaTree() {
+      edible = false;
       alive = false;
       nutrients = 90;
       growRate = 1.45;
@@ -31,7 +33,7 @@ public  class GuavaTree extends Tree {
       return nutrients;
     }
 
-    private void photosynthesize(){
+    public void photosynthesize(){
       nutrients = nutrients * growRate;
       //tbd
     }

@@ -24,5 +24,7 @@ public class Leaf extends Plant {
     public boolean isEdible() {
       return edible;
     }
+    public void photosynthesize() {
+    }
     
 } // end of class

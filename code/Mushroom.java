@@ -30,7 +30,7 @@ public class Mushroom extends Plant {
       return nutrients;
     }
 
-    private void photosynthesize(){
+    public void photosynthesize(){
       nutrients = nutrients * growRate;
       //tbd
     }

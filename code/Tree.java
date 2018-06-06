@@ -32,7 +32,7 @@ public class Tree extends Plant {
     public double getNutrients(){
       return nutrients;
     }
-    private void photosynthesize(){
+    public void photosynthesize(){
       nutrients = nutrients * growRate;
     }
 //to be continued
