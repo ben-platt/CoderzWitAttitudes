@@ -7,13 +7,14 @@
  * class Petunia
  *****************************************************/
 
-public  class Petunia {
+public class Petunia extends Plant {
 
     // INSTANCE VARIABLES
     private boolean alive;
     private double nutrients;
     private double growRate;
     public String type = "plant";
+    public String name = "Petunia";
 
     //Constructor(s)
     public Petunia() {

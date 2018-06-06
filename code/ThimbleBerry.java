@@ -7,11 +7,12 @@
  * class ThimbleBerry
  *****************************************************/
 
-public class ThimbleBerry {
+public class ThimbleBerry extends Item {
 
     // INSTANCE VARIABLES
     private boolean edible;
     public String type = "plantFood";
+    public String name = "ThimbleBerry";
 
     //Constructor(s)
     public ThimbleBerry() {

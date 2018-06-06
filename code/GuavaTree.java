@@ -7,7 +7,7 @@
  * class GuavaTree
  *****************************************************/
 
-public  class GuavaTree {
+public  class GuavaTree extends Tree {
 
     // INSTANCE VARIABLES
     private boolean alive;

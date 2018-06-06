@@ -20,7 +20,7 @@ public class Player {
   private double weight;
   private double health;
   private double maxNutri;
-  private ItemList items;
+  private ItemList<Object> items;
   private int xcor;
   private int ycor;
 

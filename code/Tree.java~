@@ -4,24 +4,28 @@
 // 2018-06-08f
 
 /*****************************************************
- * class Bark
+ * class Tree
  *****************************************************/
 
-public class Bark extends Item {
+public class Tree {
 
     // INSTANCE VARIABLES
-    private boolean edible;
-    public String type = "plant";
-    public String name = "Bark";
 
-    //Constructor(s)
-    public Bark() {
-	edible = false;
-    }
+    private boolean alive;
+    private double nutrients;
+    private double growRate;
 
     // METHODS
-    public boolean isEdible() {
-	return edible;
+
+    //Accessor METHODS
+    public boolean getAlive(){
+	return alive;
     }
-    
+    public double getNutrients(){
+	return nutrients;
+    }
+    private void photosynthesize(){
+//to be continued
+    }
+
 } // end of class

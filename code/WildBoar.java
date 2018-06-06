@@ -17,6 +17,7 @@ public class WildBoar extends Animal{
 
   private final double power = 0.5; //Power on scale of 0.0-0.5
   public String type = "animalFood";
+    public String name = "WildBoar";
 
 
   // CONSTRUCTOR(S)

@@ -7,12 +7,13 @@
  * class Coconut
  *****************************************************/
 
-public  class Coconut {
+public  class Coconut extends Item {
 
     // INSTANCE VARIABLES
     private double nutrients;
     private boolean edible;
     public String type = "plantFood";
+    public String name = "Coconut";
 
     
     //Constructor(s)

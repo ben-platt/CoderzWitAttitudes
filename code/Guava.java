@@ -7,12 +7,13 @@
  * class Guava
  *****************************************************/
 
-public  class Guava {
+public class Guava extends Item {
 
     // INSTANCE VARIABLES
     private double nutrients;
     private boolean edible;
     public String type = "plantFood";
+    public String name = "Guava";
 
     //Constructor(s)
     public Guava() {

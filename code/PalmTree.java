@@ -7,7 +7,7 @@
  * class PalmTree
  *****************************************************/
 
-public  class PalmTree {
+public class PalmTree extends Tree {
 
     // INSTANCE VARIABLES
     private boolean alive;

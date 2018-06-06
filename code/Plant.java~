@@ -4,37 +4,30 @@
 // 2018-06-08f
 
 /*****************************************************
- * class Mushroom
+ * abstract class Plant
  *****************************************************/
 
-public class Mushroom extends Plant {
+public abstract class Plant {
 
     // INSTANCE VARIABLES
-    private boolean edible;
+    private boolean alive;
     private double nutrients;
     private double growRate;
-    public String type = "plantFood";
-    public String name = "Mushroom";
-
-    //Constructor(s)
-    public Mushroom() {
-	edible = true;
-    }
-
 
     // METHODS
     //Accessor METHODS
+    public boolean getAlive(){
+      return alive;
+    }
     public double getNutrients(){
       return nutrients;
     }
 
-    private void photosynthesize(){
-      //tbd
+    //abstract methods
+    public void setNutrients( double inputNutrients ) {
+	nutrients = inputNutrients;
     }
 
-    public boolean isEdible() {
-	return edible;
-    }
-
+    protected abstract void photosynthesize(); //specific to each type of plants
 
 } // end of class

@@ -18,6 +18,7 @@ public class Frog extends Animal{
 
   private final double power = 0.05; //Power on scale of 0.0-0.5
   public String type = "animalFood";
+    public String name = "Frog";
 
   // CONSTRUCTOR(S)
   public Frog(){

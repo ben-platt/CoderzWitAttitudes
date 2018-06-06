@@ -4,37 +4,34 @@
 // 2018-06-08f
 
 /*****************************************************
- * class Mushroom
+ * class ThimbleBush
  *****************************************************/
+import java.util.Queue;
 
-public class Mushroom extends Plant {
+public class ThimbleBush {
 
     // INSTANCE VARIABLES
-    private boolean edible;
+    private boolean alive;
     private double nutrients;
     private double growRate;
-    public String type = "plantFood";
-    public String name = "Mushroom";
+    private Queue<ThimbleBerry> berries;
 
     //Constructor(s)
-    public Mushroom() {
-	edible = true;
-    }
+    public ThimbleBush() {
+	     alive = false;
 
+    }
 
     // METHODS
     //Accessor METHODS
+    public boolean getAlive(){
+      return alive;
+    }
     public double getNutrients(){
       return nutrients;
     }
 
     private void photosynthesize(){
-      //tbd
     }
-
-    public boolean isEdible() {
-	return edible;
-    }
-
 
 } // end of class

@@ -30,12 +30,23 @@ public class ItemList {
        4. Stacks of Animals
     */
 
-    public void add( Object thing ) {
-        
+    public void add( Item thing ) {
+	if ( _size == 0 ) {
+	    _start.setItem( thing );
+	    _size = 1;
+	    return;
+	}
+	ItemNode currentItem = _start;
+	while( currentItem.getNext() != null ) {
+	    if ( currentItem.getContents() == thing.name ) {
+		currentItem.getItem().push( thing );
+		incrementQuantity();
+	    }
+	}
     }
-    
-    public void sort() {
-	
+
+    public void remove( Object thing ) {
+
     }
 
 }//end ItemQueue   

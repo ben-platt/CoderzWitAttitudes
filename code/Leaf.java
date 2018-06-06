@@ -7,11 +7,12 @@
  * class Leaf
  *****************************************************/
 
-public  class Leaf {
+public class Leaf extends Plant {
 
     // INSTANCE VARIABLES
     private boolean edible;
     public String type = "plant";
+    public String name = "Leaf";
 
     //Constructor(s)
     public Leaf() {

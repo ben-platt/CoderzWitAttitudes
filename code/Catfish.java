@@ -16,6 +16,7 @@ public class Catfish extends Fish{
 
   private final double power = 0.4; //Power on scale of 0.0-0.5
   public String type = "animalFood";
+    public String name = "Catfish";
 
   // CONSTRUCTOR(S)
   public Catfish(){

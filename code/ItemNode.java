@@ -13,19 +13,19 @@ public class ItemNode {
 
     // INSTANCE VARIABLES
     private String _contents; 
-    private Stack<Object> _item;
+    private Stack<Item> _item;
     private ItemNode _prevItem;
     private ItemNode _nextItem;
     private int _quantity;
 
     // CONSTRUCTOR(S)
-    public ItemNode( Object value ) {
-	_item = new Stack<Object>();
+    public ItemNode( Item value ) {
+	_item = new Stack<Item>();
 	_item.push( value );
 	_prevItem = null;
 	_nextItem = null;
 	_quantity = 1;
-	//_contents = value.name;
+	_contents = value.name;
     }
 
     // METHODS
@@ -39,7 +39,7 @@ public class ItemNode {
     }
     public String getNextContents() {
 	return _nextItem.getContents();
-    }/*
+    }
     public String getType() {
 	return _item.peek().type;
     }
@@ -48,20 +48,20 @@ public class ItemNode {
     }
     public String getNextType() {
 	return _nextItem.getType();
-	}*/
-    public Object getItem() {
-	return _item.peek();
     }
-    public Object getPrev() {
-	return _prevItem.getItem();
+    public Stack<Item> getItem() {
+	return _item;
     }
-    public Object getNext() {
-	return _nextItem.getItem();
+    public ItemNode getPrev() {
+	return _prevItem;
+    }
+    public ItemNode getNext() {
+	return _nextItem;
     }
 
     // * Mutators *
-    public void setItem( Object newValue ) {
-	_item = new Stack<Object>();
+    public void setItem( Item newValue ) {
+	_item = new Stack<Item>();
 	_item.push( newValue );
     }
     public void setNext( ItemNode newNext ) {
@@ -69,6 +69,9 @@ public class ItemNode {
     }
     public void setPrev( ItemNode newPrev ) {
 	_prevItem = newPrev;
+    }
+    public void incrementQuantity() {
+	_quantity++;
     }
     
     // override inherited toString

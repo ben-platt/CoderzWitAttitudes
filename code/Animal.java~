@@ -7,7 +7,7 @@
 * class Animal
 *****************************************************/
 
-public abstract class Animal extends Item {
+public abstract class Animal {
 
   // INSTANCE VARIABLES
   private double nutrients;

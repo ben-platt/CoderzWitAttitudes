@@ -16,6 +16,7 @@ public class Fugu extends Fish{
 
   private final double power = 0.3; //Power on scale of 0.0-0.5
   public String type = "animalFood";
+    public String name = "Fugu";
 
   // CONSTRUCTOR(S)
   public Fugu(){

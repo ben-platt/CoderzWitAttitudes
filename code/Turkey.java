@@ -17,6 +17,7 @@ public class Turkey extends Animal{
 
   private final double power = 0.2; //Power on scale of 0.0-0.5
   public String type = "animalFood";
+    public String name = "Turkey";
 
   // CONSTRUCTOR(S)
   public Turkey(){

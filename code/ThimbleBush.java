@@ -8,7 +8,7 @@
  *****************************************************/
 import java.util.Queue;
 
-public class ThimbleBush {
+public class ThimbleBush extends Plant {
 
     // INSTANCE VARIABLES
     private boolean alive;

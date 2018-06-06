@@ -7,7 +7,7 @@
  * abstract class Plant
  *****************************************************/
 
-public abstract class Plant {
+public abstract class Plant extends Item {
 
     // INSTANCE VARIABLES
     private boolean alive;

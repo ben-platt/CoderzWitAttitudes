@@ -7,13 +7,14 @@
  * class Fern
  *****************************************************/
 
-public  class Fern {
+public  class Fern extends Plant {
 
     // INSTANCE VARIABLES
     private boolean edible;
     private double nutrients;
     private double growRate;
     public String type = "plantFood";
+    public String name = "Fern";
 
     //Constructor(s)
     public Fern() {
