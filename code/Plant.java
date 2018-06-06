@@ -25,7 +25,7 @@ public abstract class Plant extends Item {
 
     //abstract methods
     public void setNutrients( double inputNutrients ) {
-	nutrients = inputNutrients;
+      nutrients = inputNutrients;
     }
 
     protected abstract void photosynthesize(); //specific to each type of plants

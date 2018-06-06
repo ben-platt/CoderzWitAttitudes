@@ -13,9 +13,18 @@ public class PalmTree extends Tree {
     private boolean alive;
     private double nutrients;
     private double growRate;
+    
+    //Constructor(s)
+    public PalmTree() {
+	     edible = false;
+    }
+
 
     // METHODS
     //Accessor METHODS
+    public boolean isEdible() {
+      return edible;
+    }
     public boolean getAlive(){
       return alive;
     }

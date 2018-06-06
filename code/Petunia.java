@@ -13,17 +13,22 @@ public class Petunia extends Plant {
     private boolean alive;
     private double nutrients;
     private double growRate;
+    public boolean edible
     public String type = "plant";
     public String name = "Petunia";
 
     //Constructor(s)
     public Petunia() {
-	alive = false;
+      alive = false;
+      edible = false;
     }
 
 
     // METHODS
     //Accessor METHODS
+    public boolean isEdible() {
+      return edible;
+    }
     public boolean getAlive(){
       return alive;
     }

@@ -16,7 +16,7 @@ public  class GuavaTree extends Tree {
 
     //Constructor(s)
     public GuavaTree() {
-	alive = false;
+      alive = false;
     }
 
 
@@ -32,6 +32,10 @@ public  class GuavaTree extends Tree {
     private void photosynthesize(){
       //tbd
     }
+    public boolean isEdible() {
+      return edible;
+    }
+
 
 
 } // end of class

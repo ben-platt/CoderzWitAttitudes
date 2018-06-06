@@ -18,7 +18,7 @@ public class Mushroom extends Plant {
 
     //Constructor(s)
     public Mushroom() {
-	edible = true;
+      edible = true;
     }
 
 
@@ -33,7 +33,7 @@ public class Mushroom extends Plant {
     }
 
     public boolean isEdible() {
-	return edible;
+      return edible;
     }
 
 

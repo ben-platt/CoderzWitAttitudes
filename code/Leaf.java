@@ -16,13 +16,13 @@ public class Leaf extends Plant {
 
     //Constructor(s)
     public Leaf() {
-	edible = false;
+      edible = false;
     }
 
 
     // METHODS
     public boolean isEdible() {
-	return edible;
+      return edible;
     }
     
 } // end of class

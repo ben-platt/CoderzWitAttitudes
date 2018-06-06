@@ -14,18 +14,28 @@ public class Tree extends Plant {
     private boolean alive;
     private double nutrients;
     private double growRate;
+    private boolean edible;
+    //Constructor(s)
+    public Tree() {
+	     edible = false;
+    }
+
 
     // METHODS
 
     //Accessor METHODS
     public boolean getAlive(){
-	return alive;
+      return alive;
     }
     public double getNutrients(){
-	return nutrients;
+      return nutrients;
     }
     private void photosynthesize(){
+    }
 //to be continued
+
+public boolean isEdible() {
+      return edible;
     }
 
 } // end of class

@@ -16,13 +16,13 @@ public class PalmLeaf extends Plant {
 
     //Constructor(s)
     public PalmLeaf() {
-	edible = false;
+      edible = false;
     }
 
 
     // METHODS
     public boolean isEdible() {
-	return edible;
+      return edible;
     }
     
 } // end of class

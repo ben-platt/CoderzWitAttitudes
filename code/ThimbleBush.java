@@ -19,6 +19,9 @@ public class ThimbleBush extends Plant {
     //Constructor(s)
     public ThimbleBush() {
 	     alive = false;
+	     edible = false;
+    }
+
 
     }
 
@@ -33,5 +36,9 @@ public class ThimbleBush extends Plant {
 
     private void photosynthesize(){
     }
+    public boolean isEdible() {
+      return edible;
+    }
+
 
 } // end of class

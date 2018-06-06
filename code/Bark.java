@@ -16,12 +16,12 @@ public class Bark extends Item {
 
     //Constructor(s)
     public Bark() {
-	edible = false;
+      edible = false;
     }
 
     // METHODS
     public boolean isEdible() {
-	return edible;
+      return edible;
     }
     
 } // end of class

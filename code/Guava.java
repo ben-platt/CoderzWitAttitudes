@@ -17,7 +17,7 @@ public class Guava extends Item {
 
     //Constructor(s)
     public Guava() {
-	edible = true;
+      edible = true;
     }
 
     // METHODS
@@ -27,7 +27,7 @@ public class Guava extends Item {
     }
 
     public boolean isEdible() {
-	return edible;
+      return edible;
     }
 
     

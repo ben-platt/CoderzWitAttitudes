@@ -22,7 +22,7 @@ public class ThimbleBerry extends Item {
 
     // METHODS
     public boolean isEdible() {
-	return edible;
+      return edible;
     }
 
 } // end of class

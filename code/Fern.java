@@ -18,7 +18,7 @@ public  class Fern extends Plant {
 
     //Constructor(s)
     public Fern() {
-	edible = true;
+      edible = true;
     }
 
 
@@ -33,7 +33,7 @@ public  class Fern extends Plant {
     }
 
     public boolean isEdible() {
-	return edible;
+      return edible;
     }
 
 
