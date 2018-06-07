@@ -8,6 +8,7 @@
 - Eat method
 - fishing mehtod
 - Shelter boolean, buildShelter method
+- build fishnet
 
 4. ItemList:
 - Finish itemlist implementation for storage of items
