@@ -12,31 +12,22 @@ public class ThimbleBush extends Plant {
 
     // INSTANCE VARIABLES
     private boolean alive;
-    private double nutrients;
     private double growRate;
-    private Queue<ThimbleBerry> berries;
-	private boolean edible;
+    private GrowQueue berries;
+    private boolean edible;
 
     //Constructor(s)
     public ThimbleBush() {
-	     alive = false;
+	     alive = true;
 	     edible = false;
-	     nutrients = 20;
-	     growRate = 1.1;
+	     growRate = 3;
+	     berries = new GrowQueue();
     }
-
 
     // METHODS
     //Accessor METHODS
     public boolean getAlive(){
       return alive;
-    }
-    public double getNutrients(){
-      return nutrients;
-    }
-
-    public void photosynthesize(){
-      nutrients = nutrients * growRate;
     }
     public boolean isEdible() {
       return edible;
@@ -48,5 +39,22 @@ public class ThimbleBush extends Plant {
 	return "";
     }
 
+    // grow
+    public void photosynthesize(){
+	int count = 0;
+	while ( count < growRate ) {
+	    int chance = (int) Math.random();
+	    if ( chance == 0 ) {
+		berries.grow( new Leaf() );
+	    }
+	    else {
+		berries.grow( new ThimbleBerry() );
+	    }
+	}
+    }
+
+    public Item pluck() {
+	berries.remove();
+    }
 
 } // end of class
