@@ -30,7 +30,7 @@ public class ItemList {
        4. Stacks of Animals
     */
 
-    public void pickUp( Item thing ) {
+    public void add( Item thing ) {
 	// No items
 	if ( _size == 0 ) {
 	    _start = new ItemNode( thing );
@@ -80,7 +80,8 @@ public class ItemList {
 	_size++;
     }
 
-    public void drop( Item thing ) {
+    public void remove( Item thing ) {
+	
 	ItemNode currentItem = _start;
 	while( currentItem != null ) {
 	    if ( currentItem.getContents() == thing.getName() ) {
@@ -112,7 +113,7 @@ public class ItemList {
 	}
     }
     
-    /* MAIN METHOD    
+    /* MAIN METHOD        
     public static void main( String[] args ) {
 
 	ItemList items = new ItemList();
