@@ -41,6 +41,12 @@ public class ThimbleBush extends Plant {
     public boolean isEdible() {
       return edible;
     }
+    public String getName() {
+	return "";
+    }
+    public String getType() {
+	return "";
+    }
 
 
 } // end of class

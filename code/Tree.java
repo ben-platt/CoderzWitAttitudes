@@ -35,10 +35,17 @@ public class Tree extends Plant {
     public void photosynthesize(){
       nutrients = nutrients * growRate;
     }
+    
 //to be continued
 
 public boolean isEdible() {
       return edible;
+    }
+    public String getName() {
+	return "";
+    }
+    public String getType() {
+	return "";
     }
 
 } // end of class

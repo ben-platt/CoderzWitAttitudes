@@ -16,8 +16,8 @@ public class WildBoar extends Animal{
   private int ycor = (int) (Math.random() * 100);
 
   private final double power = 0.5; //Power on scale of 0.0-0.5
-  public String type = "animalFood";
-    public String name = "WildBoar";
+  private String type = "animalFood";
+  private String name = "WildBoar";
 
 
   // CONSTRUCTOR(S)
@@ -35,6 +35,13 @@ public class WildBoar extends Animal{
   public double getPower(){
     return power;
   }
+    public String getName() {
+	return name;
+    }
+    public String getType() {
+	return type;
+    }
+    
   //Attack method
   public void attack(Player p){
     double magnitude = life * power;

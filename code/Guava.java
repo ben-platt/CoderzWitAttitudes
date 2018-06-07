@@ -12,8 +12,8 @@ public class Guava extends Item {
     // INSTANCE VARIABLES
     private double nutrients;
     private boolean edible;
-    public String type = "plantFood";
-    public String name = "Guava";
+    private String type = "plantFood";
+    private String name = "Guava";
 
     //Constructor(s)
     public Guava() {
@@ -26,9 +26,14 @@ public class Guava extends Item {
     public double getNutrients(){
       return nutrients;
     }
-
     public boolean isEdible() {
       return edible;
+   } 
+    public String getName() {
+	return name;
+    }
+    public String getType() {
+	return type;
     }
 
     

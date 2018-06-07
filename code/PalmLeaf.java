@@ -11,8 +11,8 @@ public class PalmLeaf extends Plant {
 
     // INSTANCE VARIABLES
     private boolean edible;
-    public String type = "plant";
-    public String name = "PalmLeaf";
+    private String type = "plant";
+    private String name = "PalmLeaf";
 
     //Constructor(s)
     public PalmLeaf() {
@@ -24,6 +24,13 @@ public class PalmLeaf extends Plant {
     public boolean isEdible() {
       return edible;
     }
+    public String getName() {
+	return name;
+    }
+    public String getType() {
+	return type;
+    }
+    
     public void photosynthesize() {
     }
     

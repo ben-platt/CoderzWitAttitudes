@@ -13,8 +13,8 @@ public class Mushroom extends Plant {
     private boolean edible;
     private double nutrients;
     private double growRate;
-    public String type = "plantFood";
-    public String name = "Mushroom";
+    private String type = "plantFood";
+    private String name = "Mushroom";
 
     //Constructor(s)
     public Mushroom() {
@@ -28,6 +28,12 @@ public class Mushroom extends Plant {
     //Accessor METHODS
     public double getNutrients(){
       return nutrients;
+    }
+    public String getName() {
+	return name;
+    }
+    public String getType() {
+	return type;
     }
 
     public void photosynthesize(){

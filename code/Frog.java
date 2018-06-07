@@ -9,7 +9,6 @@
 
 public class Frog extends Animal{
 
-
   // INSTANCE VARIABLES
   private double nutrients;
   private double life;
@@ -17,8 +16,8 @@ public class Frog extends Animal{
   private int ycor = (int) (Math.random() * 100);
 
   private final double power = 0.05; //Power on scale of 0.0-0.5
-  public String type = "animalFood";
-    public String name = "Frog";
+  private String type = "animalFood";
+  private String name = "Frog";
 
   // CONSTRUCTOR(S)
   public Frog(){
@@ -35,6 +34,12 @@ public class Frog extends Animal{
   public double getPower(){
     return power;
   }
+    public String getName() {
+	return name;
+    }
+    public String getType() {
+	return type;
+    }
   
   //Attack method
   public void attack(Player p){

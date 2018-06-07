@@ -25,7 +25,10 @@ public class ItemNode {
 	_prevItem = null;
 	_nextItem = null;
 	_quantity = 1;
-	_contents = value.name;
+	_contents = value.getName();
+	System.out.println( value.getType() ); //!
+	System.out.println( value.getName() ); //!
+	System.out.println( _contents ); //!
     }
 
     // METHODS
@@ -40,14 +43,14 @@ public class ItemNode {
     public String getNextContents() {
 	return _nextItem.getContents();
     }
-    public String getType() {
-	return _item.peek().type;
+    public String getItemType() {
+	return _item.peek().getType();
     }
-    public String getPrevType() {
-	return _prevItem.getType();
+    public String getPrevItemType() {
+	return _prevItem.getItemType();
     }
-    public String getNextType() {
-	return _nextItem.getType();
+    public String getNextItemType() {
+	return _nextItem.getItemType();
     }
     public Stack<Item> getItem() {
 	return _item;

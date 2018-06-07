@@ -11,8 +11,8 @@ public class Leaf extends Plant {
 
     // INSTANCE VARIABLES
     private boolean edible;
-    public String type = "plant";
-    public String name = "Leaf";
+    private String type = "plant";
+    private String name = "Leaf";
 
     //Constructor(s)
     public Leaf() {
@@ -24,6 +24,13 @@ public class Leaf extends Plant {
     public boolean isEdible() {
       return edible;
     }
+    public String getName() {
+	return name;
+    }
+    public String getType() {
+	return type;
+    }
+    
     public void photosynthesize() {
     }
     

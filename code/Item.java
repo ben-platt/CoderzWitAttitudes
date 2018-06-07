@@ -9,7 +9,11 @@
 
 public abstract class Item {
 
-    public String name;
-    public String type;
+    private String name;
+    private String type;
 
+    // ACCESSOR METHODS
+    public abstract String getName();
+    public abstract String getType();
+    
 }

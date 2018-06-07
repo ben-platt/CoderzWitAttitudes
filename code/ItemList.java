@@ -38,7 +38,9 @@ public class ItemList {
 	}
 	ItemNode currentItem = _start;
 	while( currentItem != null ) {
-	    if ( currentItem.getContents() == thing.name ) {
+	    System.out.println( currentItem.getContents() ); //!
+	    System.out.println( thing.getName() ); //!
+	    if ( currentItem.getContents() == thing.getName() ) {
 		currentItem.getItem().push( thing );
 		currentItem.incrementQuantity();
 		return;
@@ -47,7 +49,7 @@ public class ItemList {
 	}
 	currentItem = _start;
 	while( currentItem != null ) {
-	    if ( currentItem.getType() == thing.type ) {
+	    if ( currentItem.getItemType() == thing.getType() ) {
 	        ItemNode newNext = currentItem.getNext();
 		ItemNode newItem = new ItemNode( thing );
 		currentItem.setNext( newItem );
@@ -68,7 +70,7 @@ public class ItemList {
     public void remove( Item thing ) {
 	ItemNode currentItem = _start;
 	while( currentItem != null ) {
-	    if ( currentItem.getContents() == thing.name ) {
+	    if ( currentItem.getContents() == thing.getName() ) {
 		currentItem.getItem().pop();
 		currentItem.decrementQuantity();
 		return;
@@ -83,12 +85,13 @@ public class ItemList {
 	ItemNode currentItem = _start;
 	if ( _size == 0 ) {
 	    System.out.println( " empty " );
+	    return;
 	}
-	String currentType = _start.getType();
+	String currentType = _start.getItemType();
 	System.out.println( " " + currentType );
 	while( currentItem != null ) {
-	    if ( currentItem.getType() != currentType ) {
-	        currentType = currentItem.getType();
+	    if ( currentItem.getItemType() != currentType ) {
+	        currentType = currentItem.getItemType();
 		System.out.println( " " + currentType );
 	    }
 	    System.out.println( "  " + currentItem.getContents() + " (" + currentItem.getQuantity() + ") " );
@@ -106,6 +109,8 @@ public class ItemList {
 	Bark bark2 = new Bark();
 	Bark bark3 = new Bark();
 	Catfish catfish1 = new Catfish();
+
+	items.display();
 	
 	items.add( coco1 );
 

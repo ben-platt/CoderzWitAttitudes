@@ -15,8 +15,8 @@ public class Tuna extends Fish{
   private double life;
 
   private final double power = 0.1; //Power on scale of 0.0-0.5
-  public String type = "animalFood";
-    public String name = "Tuna";
+  private String type = "animalFood";
+  private String name = "Tuna";
 
 
   // CONSTRUCTOR(S)
@@ -34,6 +34,13 @@ public class Tuna extends Fish{
   public double getPower(){
     return power;
   }
+    public String getName() {
+	return name;
+    }
+    public String getType() {
+	return type;
+    }
+    
   //Attack method
   public void attack(Player p){
     double magnitude = life * power;

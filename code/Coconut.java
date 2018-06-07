@@ -12,8 +12,8 @@ public  class Coconut extends Item {
     // INSTANCE VARIABLES
     private double nutrients;
     private boolean edible;
-    public String type = "plantFood";
-    public String name = "Coconut";
+    private String type = "plantFood";
+    private String name = "Coconut";
 
     
     //Constructor(s)
@@ -29,6 +29,12 @@ public  class Coconut extends Item {
     }
     public boolean isEdible() {
       return edible;
+    }
+    public String getName() {
+	return name;
+    }
+    public String getType() {
+	return type;
     }
 
     

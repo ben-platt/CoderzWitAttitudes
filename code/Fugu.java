@@ -15,8 +15,8 @@ public class Fugu extends Fish{
   private double life;
 
   private final double power = 0.3; //Power on scale of 0.0-0.5
-  public String type = "animalFood";
-    public String name = "Fugu";
+  private String type = "animalFood";
+    private String name = "Fugu";
 
   // CONSTRUCTOR(S)
   public Fugu(){
@@ -33,6 +33,12 @@ public class Fugu extends Fish{
   public double getPower(){
     return power;
   }
+    public String getName() {
+	return name;
+    }
+    public String getType() {
+	return type;
+    }
   
   //Attack method
   public void attack(Player p){

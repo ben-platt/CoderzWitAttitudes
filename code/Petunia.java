@@ -13,9 +13,9 @@ public class Petunia extends Plant {
     private boolean alive;
     private double nutrients;
     private double growRate;
-    public boolean edible;
-    public String type = "plant";
-    public String name = "Petunia";
+    private boolean edible;
+    private String type = "plant";
+    private String name = "Petunia";
 
     //Constructor(s)
     public Petunia() {
@@ -36,6 +36,12 @@ public class Petunia extends Plant {
     }
     public double getNutrients(){
       return nutrients;
+    }
+    public String getName() {
+	return name;
+    }
+    public String getType() {
+	return type;
     }
 
     public void photosynthesize(){
