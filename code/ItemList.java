@@ -30,16 +30,16 @@ public class ItemList {
        4. Stacks of Animals
     */
 
-    public void add( Item thing ) {
+    public void pickUp( Item thing ) {
+	// No items
 	if ( _size == 0 ) {
 	    _start = new ItemNode( thing );
 	    _size = 1;
 	    return;
 	}
+	// Checks if there is already a collection of given Item and inserts
 	ItemNode currentItem = _start;
 	while( currentItem != null ) {
-	    System.out.println( currentItem.getContents() ); //!
-	    System.out.println( thing.getName() ); //!
 	    if ( currentItem.getContents() == thing.getName() ) {
 		currentItem.getItem().push( thing );
 		currentItem.incrementQuantity();
@@ -47,8 +47,9 @@ public class ItemList {
 	    }
 	    currentItem = currentItem.getNext();
 	}
+	// Checks if there is already items of given type stored and inserts
 	currentItem = _start;
-	while( currentItem != null ) {
+	while( currentItem.getNext() != null ) {
 	    if ( currentItem.getItemType() == thing.getType() ) {
 	        ItemNode newNext = currentItem.getNext();
 		ItemNode newItem = new ItemNode( thing );
@@ -61,13 +62,25 @@ public class ItemList {
 	    }
 	    currentItem = currentItem.getNext();
 	}
-	ItemNode newPrev = currentItem.getPrev();
-	currentItem = new ItemNode( thing );
-	currentItem.setPrev( newPrev );
+	// to avoid NullPointerException
+	if ( currentItem.getItemType() == thing.getType() ) {
+	        ItemNode newNext = currentItem.getNext();
+		ItemNode newItem = new ItemNode( thing );
+		currentItem.setNext( newItem );
+		newItem.setPrev( currentItem );
+		newItem.setNext( newNext );
+		newNext.setPrev( newItem );
+		_size++;
+		return;
+	    }
+	// Puts in a new ItemNode at the end of the Double Linked List
+	ItemNode newNode = new ItemNode( thing );
+	newNode.setPrev( currentItem );
+	currentItem.setNext( newNode );
 	_size++;
     }
 
-    public void remove( Item thing ) {
+    public void drop( Item thing ) {
 	ItemNode currentItem = _start;
 	while( currentItem != null ) {
 	    if ( currentItem.getContents() == thing.getName() ) {
@@ -88,17 +101,18 @@ public class ItemList {
 	    return;
 	}
 	String currentType = _start.getItemType();
-	System.out.println( " " + currentType );
+	System.out.println( "  " + currentType );
 	while( currentItem != null ) {
 	    if ( currentItem.getItemType() != currentType ) {
 	        currentType = currentItem.getItemType();
-		System.out.println( " " + currentType );
+		System.out.println( "  " + currentType );
 	    }
-	    System.out.println( "  " + currentItem.getContents() + " (" + currentItem.getQuantity() + ") " );
+	    System.out.println( "      " + currentItem.getContents() + " (" + currentItem.getQuantity() + ") " );
 	    currentItem = currentItem.getNext();
 	}
     }
-
+    
+    /* MAIN METHOD    
     public static void main( String[] args ) {
 
 	ItemList items = new ItemList();
@@ -111,34 +125,21 @@ public class ItemList {
 	Catfish catfish1 = new Catfish();
 
 	items.display();
-	
-	items.add( coco1 );
-
+	items.pickUp( coco1 );
 	items.display();
-	
-	items.add( bark1 );
-
+       	items.pickUp( bark1 );
 	items.display();
-	
-	items.add( bark2 );
-
+	items.pickUp( bark2 );
+	items.display();	
+	items.pickUp( catfish1 );
 	items.display();
-	
-	items.add( catfish1 );
-
+	items.pickUp( bark3 );
+	items.display();	
+	items.pickUp( coco2 );
 	items.display();
-
-	items.add( bark3 );
-
-	items.display();
-	
-	items.add( coco2 );
-
-	items.display();
-
-	items.remove( bark3 );
-	
+	items.drop( bark3 );
 	items.display();
     }
-
+    */ // END OF MAIN METHOD
+    
 }//end ItemQueue   

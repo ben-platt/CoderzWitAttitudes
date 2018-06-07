@@ -26,9 +26,6 @@ public class ItemNode {
 	_nextItem = null;
 	_quantity = 1;
 	_contents = value.getName();
-	System.out.println( value.getType() ); //!
-	System.out.println( value.getName() ); //!
-	System.out.println( _contents ); //!
     }
 
     // METHODS
