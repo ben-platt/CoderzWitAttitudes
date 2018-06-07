@@ -98,22 +98,22 @@ public class Player {
     int num = 1;
     while( currentItem != null){
       if( currentItem.getItemType() == "animalFood"){
-        listplants += num + currentItem.getContents() + "/n";
+        listanimals += num + currentItem.getContents() + "/n";
       }
       currentItem = currentItem.getNext();
       num++;
     }
-    System.out.println(listplants);
+    System.out.println(listanimals);
   }
 
   // Mutator Methods
   public void setAge( int inputAge ){
     age = inputAge;
   }
-  public void setHeight( double inputHeight ){
+  public void setHeight( int inputHeight ){
     height = (double) inputHeight;
   }
-  public void setWeight( double inputWeight ){
+  public void setWeight( int inputWeight ){
     weight = (double) inputWeight;
   }
   public void setHealth( double inputHealth ){
@@ -123,7 +123,7 @@ public class Player {
   // Items
   public void addItem( Item inputItem ) {
     items.add(inputItem);
-
+  }
 
   public void removeItem(Item inputItem){
     items.remove(inputItem);
@@ -160,13 +160,13 @@ public class Player {
     int numPalmLeaves = currentItemP.getQuantity();
 
     if(numBark >= 4 && numPalmLeaves >= 3){
-      hasShelter = true;
-      for(int i = 0; i < 4; i++){
-        Bark tmp = currentItemB.pop();
-      }
-      for(int i = 0; i < 3; i++){
-        PalmLeaf blah = currentItemP.pop();
-      }
+	hasShelter = true;
+	for(int i = 0; i < 4; i++){
+	    Item tmp = currentItemB.getItem().pop();
+	}
+	for(int i = 0; i < 3; i++){
+	    Item blah = currentItemP.getItem().pop();
+	}
       System.out.println("You have successfully built a shelter. You can now sleep!");
     }
     else{
@@ -185,7 +185,7 @@ public class Player {
     if(numPalmLeaves >= 2){
       hasFishNet = true;
       for(int i = 0; i < 2; i++){
-        PalmLeaf blah = currentItemP.pop();
+	  Item blah = currentItemP.getItem().pop();
       }
       System.out.println("You have successfully built a fishnet. You can now fish!");
     }
@@ -222,17 +222,17 @@ public class Player {
     }
   }
 
-  public void eatPlant(Item plantFood){
+  public void eatPlant(Plant plantFood){
     ItemNode currentItem = items._start;
-    while(currentItem.getContents() != a.getName()){
+    while(currentItem.getContents() != plantFood.getName()){
       currentItem = currentItem.getNext();
     }
-    if(health + a.getNutrients() > maxNutri){
+    if(health + plantFood.getNutrients() > maxNutri){
       System.out.println("You are full! Eat later.");
     }
     else{
-      items.remove(a)
-      health += a.getNutrients();
+	items.remove(plantFood);
+      health += plantFood.getNutrients();
     }
   }
 
@@ -265,7 +265,7 @@ public class Player {
   //checkVicinity determines which animal to hunt next; based on the closest animal
   public int checkVicinity(){
     ArrayList<Animal> tmp = island.getAnimals();
-    if(tmp.getSize() == 0){
+    if(tmp.size() == 0){
       return -1;
     }
     else{

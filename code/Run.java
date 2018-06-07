@@ -4,6 +4,7 @@
 // 2018-06-08f
 
 import java.util.Scanner;
+//import java.io.File;
 
 public class Run {
 
@@ -23,15 +24,30 @@ public class Run {
 	}
 	return code;
     }
+    
     public static void main( String[] args ) {
 
 	Player player = new Player();
 	Scanner scanner = new Scanner(System.in);
-	System.out.println("Input");
+
+	// CREATING THE PLAYER
+	System.out.println("ISLAND SURVIVAL GAME");
+	System.out.println("Input Age (in years) : ");
+	String input = scanner.nextLine();
+	int inputAge = Integer.parseInt( input );
+	player.setAge( inputAge );
+	System.out.println("Input Height (in inches) : ");
+	input = scanner.nextLine();
+	int inputHeight = Integer.parseInt( input );
+	player.setAge( inputHeight );
+	System.out.println("Input Weight (in pounds) : ");
+	input = scanner.nextLine();
+	int inputWeight = Integer.parseInt( input );
+	player.setAge( inputWeight );
 	System.out.println("You find yourself stranded on a Tropical Island.");
+	System.out.println("You have " + player.getHealth() + " health.");
 	System.out.println("What will you do now?");
 	int code = mainMenu(scanner);
-
 
     } // end of main method
 
