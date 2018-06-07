@@ -15,6 +15,7 @@ public class ThimbleBush extends Plant {
     private double nutrients;
     private double growRate;
     private Queue<ThimbleBerry> berries;
+	private boolean edible;
 
     //Constructor(s)
     public ThimbleBush() {
@@ -25,8 +26,6 @@ public class ThimbleBush extends Plant {
     }
 
 
-    }
-
     // METHODS
     //Accessor METHODS
     public boolean getAlive(){
@@ -36,7 +35,7 @@ public class ThimbleBush extends Plant {
       return nutrients;
     }
 
-    private void photosynthesize(){
+    public void photosynthesize(){
       nutrients = nutrients * growRate;
     }
     public boolean isEdible() {

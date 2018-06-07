@@ -13,7 +13,7 @@ public class Petunia extends Plant {
     private boolean alive;
     private double nutrients;
     private double growRate;
-    public boolean edible
+    public boolean edible;
     public String type = "plant";
     public String name = "Petunia";
 
@@ -38,7 +38,7 @@ public class Petunia extends Plant {
       return nutrients;
     }
 
-    private void photosynthesize(){
+    public void photosynthesize(){
       nutrients = nutrients * growRate;
     //to be implemented
     }

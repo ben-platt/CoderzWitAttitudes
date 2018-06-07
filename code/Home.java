@@ -1,6 +1,7 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import javax.swing.border.BevelBorder;
 import javax.swing.SwingUtilities;
 import java.util.Scanner;
 import java.util.Arrays;
@@ -19,6 +20,7 @@ public class Home extends JFrame{
 
     JPanel title = new JPanel();
     JPanel header = new JPanel();
+    JPanel statusPanel = new JPanel();
 
     JLabel nameofisle = new JLabel("The Island of " + name);
 
@@ -40,11 +42,22 @@ public class Home extends JFrame{
     //---------PREPARING THE GUI-----------//
     setTitle(name);
     nameofisle.setFont(new Font("Calibri", Font.PLAIN, 36));
-    isleFrame.setLayout(new GridLayout(3,1,2,2));
+    isleFrame.setLayout(new BorderLayout());
+    isleFrame.setSize(750,750);
     isleFrame.setDefaultLookAndFeelDecorated(true);
     setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
     title.setLayout(new BorderLayout());
+
+    statusPanel.setBorder(new BevelBorder(BevelBorder.LOWERED));
+    statusPanel.setPreferredSize(new Dimension(isleFrame.getWidth(), 16));
+    statusPanel.setLayout(new BoxLayout(statusPanel, BoxLayout.X_AXIS));
+
+    statusLabel.setHorizontalAlignment(SwingConstants.LEFT);
+    statusPanel.add(statusLabel);
+
+
+
 
     //---------ADDING STUFF TO THE GUI----------//
     title.add(nameofisle, BorderLayout.CENTER);
