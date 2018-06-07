@@ -18,6 +18,10 @@ public class GrowQueue {
     
     // ~~~~~~~ METHODS ~~~~~~~~
 
+    public ArrayList<Item> getQueue() {
+	return _queue;
+    }
+    
     public Item remove() {
 	Item removed = _queue.get( _queue.size() - 1 );
         _queue.remove( _queue.size() - 1 );

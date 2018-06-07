@@ -20,7 +20,7 @@ public class ThimbleBush extends Plant {
     public ThimbleBush() {
 	     alive = true;
 	     edible = false;
-	     growRate = 3;
+	     growRate = 6;
 	     berries = new GrowQueue();
     }
 
@@ -28,6 +28,9 @@ public class ThimbleBush extends Plant {
     //Accessor METHODS
     public boolean getAlive(){
       return alive;
+    }
+    public GrowQueue getBerries() {
+	return berries;
     }
     public boolean isEdible() {
       return edible;
@@ -43,18 +46,46 @@ public class ThimbleBush extends Plant {
     public void photosynthesize(){
 	int count = 0;
 	while ( count < growRate ) {
-	    int chance = (int) Math.random();
-	    if ( chance == 0 ) {
+	    double chance = Math.random() * 2;
+	    System.out.println( chance );
+	    if ( chance < 1 ) {
 		berries.grow( new Leaf() );
 	    }
 	    else {
 		berries.grow( new ThimbleBerry() );
 	    }
+	    count++;
 	}
     }
 
     public Item pluck() {
-	berries.remove();
+	System.out.println( "It's a " + berries.peekFront().getName() + "!");
+	return berries.remove();
     }
 
+    /* MAIN METHOD
+
+       public String toString() {
+       String returned = "";
+       for ( int i = 0; i < berries.getQueue().size(); i++ ) {
+       returned += berries.getQueue().get(i).getName() + "-";
+       }
+       return returned;
+       }
+
+       public static void main( String[] args ) {
+       ThimbleBush bush = new ThimbleBush();
+       bush.photosynthesize();
+       System.out.println( bush.toString() );
+       bush.pluck();
+       System.out.println( bush.toString() );
+       bush.pluck();
+       System.out.println( bush.toString() );
+       bush.pluck();
+       System.out.println( bush.toString() );
+	
+       }
+
+    */ // end of Main Method
+    
 } // end of class

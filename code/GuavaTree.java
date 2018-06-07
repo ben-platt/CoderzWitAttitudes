@@ -14,13 +14,14 @@ public  class GuavaTree extends Tree {
     private double nutrients;
     private double growRate;
     private boolean edible;
+    private GrowQueue guavas;
 
     //Constructor(s)
     public GuavaTree() {
       edible = false;
       alive = false;
-      nutrients = 90;
-      growRate = 1.45;
+      growRate = 4;
+      guavas = new GrowQueue();
     }
 
 
@@ -32,15 +33,54 @@ public  class GuavaTree extends Tree {
     public double getNutrients(){
       return nutrients;
     }
-
-    public void photosynthesize(){
-      nutrients = nutrients * growRate;
-      //tbd
-    }
     public boolean isEdible() {
       return edible;
     }
 
+    // grow
+    public void photosynthesize(){
+	int count = 0;
+	while ( count < growRate ) {
+	    double chance = Math.random() * 2;
+	    System.out.println( chance );
+	    if ( chance < 1 ) {
+		guavas.grow( new Leaf() );
+	    }
+	    else {
+		guavas.grow( new Guava() );
+	    }
+	    count++;
+	}
+    }
+    
+    public Item pluck() {
+	System.out.println( "It's a " + guavas.peekFront().getName() + "!");
+	return guavas.remove();
+    }
 
+    /* MAIN METHOD
+
+    public String toString() {
+	String returned = "";
+	for ( int i = 0; i < guavas.getQueue().size(); i++ ) {
+	    returned += guavas.getQueue().get(i).getName() + "-";
+	}
+	return returned;
+    }
+
+    public static void main( String[] args ) {
+	GuavaTree guav = new GuavaTree();
+	guav.photosynthesize();
+	System.out.println( guav.toString() );
+	guav.pluck();
+	System.out.println( guav.toString() );
+	guav.pluck();
+	System.out.println( guav.toString() );
+	guav.pluck();
+	System.out.println( guav.toString() );
+	
+    }
+
+    */ // end of Main Method
 
 } // end of class

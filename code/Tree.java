@@ -12,33 +12,24 @@ public class Tree extends Plant {
     // INSTANCE VARIABLES
 
     private boolean alive;
-    private double nutrients;
     private double growRate;
     private boolean edible;
+    private GrowQueue leaves;
+
     //Constructor(s)
     public Tree() {
-	     edible = false;
-	     nutrients = 50;
-	     growRate = 1.2;
+	edible = false;
+	growRate = 10;
+	leaves = new GrowQueue();
     }
-
-
+    
     // METHODS
 
     //Accessor METHODS
     public boolean getAlive(){
       return alive;
     }
-    public double getNutrients(){
-      return nutrients;
-    }
-    public void photosynthesize(){
-      nutrients = nutrients * growRate;
-    }
-    
-//to be continued
-
-public boolean isEdible() {
+    public boolean isEdible() {
       return edible;
     }
     public String getName() {
@@ -46,6 +37,20 @@ public boolean isEdible() {
     }
     public String getType() {
 	return "";
+    }
+
+    // grow
+    public void photosynthesize(){
+	int count = 0;
+	while ( count < growRate ) {
+	    leaves.grow( new Leaf() );
+	    count++;
+	}
+	
+    }
+    public Item pluck() {
+	System.out.println( "It's a " + leaves.peekFront().getName() + "!");
+	return leaves.remove();
     }
 
 } // end of class
