@@ -24,7 +24,7 @@ public class Island{
     plants = new ArrayList<Plant>();
     fishpond = new LinkedList<ArrayList<Fish>>();
     addAnimals();
-    //addPlants();
+    addPlants();
     addFish();
   }
 

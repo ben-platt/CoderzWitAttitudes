@@ -24,6 +24,7 @@ public class Player {
   private ItemList items;
   private int xcor;
   private int ycor;
+  private boolean hasShelter;
 
   private Island island;
 
@@ -39,6 +40,7 @@ public class Player {
     xcor = 0;
     ycor = 0;
     items = new ItemList();
+    hasShelter = false;
   }
 
   public Player(int a, double h, double w, double heal){
@@ -114,10 +116,15 @@ public class Player {
   }
 
   // Items
-  public void addItem( Object inputItem ) {
-    //TO BE FILLED IN AFTER KAYLI DOES THE ITEMLIST THINGY
+  public void addItem( Item inputItem ) {
+    items.add(inputItem);
   }
 
+  public void removeItem(Item inputItem){
+    items.remove(inputItem);
+  }
+
+  public void buildShelter()
   // Eating methods :FIX THIS METHOD BASED ON DOUBLY LINKED LIST
   public void eatAnimal(Animal a){
     ItemNode currentItem = items._start;
@@ -126,7 +133,7 @@ public class Player {
     }
     if(a instanceof Fugu){
       if(((Fugu) a).chanceofSurvival()){
-        currentItem.pop();
+        items.remove(a);
         health += a.getNutrients();
       }
       else{
@@ -138,8 +145,9 @@ public class Player {
       System.out.println("You are full! Eat later.");
     }
     else{
-      currentItem.pop();
+      items.remove(a);
       health += a.getNutrients();
+      System.out.println("You ate a " + a.getName());
     }
   }
 
@@ -169,7 +177,7 @@ public class Player {
     else{
       System.out.println("Whew! You captured the " + prey);
       island.removeAnimal(target);
-      //ADD THE ANIMAL TO THE PLAYERS COLLECTION
+      items.add(prey);
     }
     health -= (prey.getLife() * prey.getPower());
     return health;
@@ -195,6 +203,7 @@ public class Player {
   private double distance(int x1, int y1, int x2, int y2){
     return (Math.sqrt(((x1-x2)*(x1-x2)) + ((y1-y2)*(y1-y2))));
   }
+
 
 /*
   public void fish(){
