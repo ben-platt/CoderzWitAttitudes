@@ -35,7 +35,7 @@ public class Player {
     height = 65.0;
     weight = 108.0;
     health = 100;
-    maxNutri = ((108/2.2) / (Math.pow((height/2.54), 2))) * age; //this is BMI * age
+    maxNutri = ((weight/2.2) / (Math.pow((height/2.54), 2))) * age; //this is BMI * age
     island = new Island();
     xcor = 0;
     ycor = 0;
@@ -116,8 +116,13 @@ public class Player {
   }
 
   // Items
+<<<<<<< HEAD
   public void addItem( Item inputItem ) {
     items.add(inputItem);
+=======
+  public void addItem( Object inputItem ) {
+     
+>>>>>>> 1af95f9aa843b006d2c71bceacb63ce1d177b00d
   }
 
   public void removeItem(Item inputItem){
