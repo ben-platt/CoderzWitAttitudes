@@ -81,7 +81,7 @@ public class ItemList {
     }
 
     public void remove( Item thing ) {
-	
+
 	ItemNode currentItem = _start;
 	while( currentItem != null ) {
 	    if ( currentItem.getContents() == thing.getName() ) {
@@ -112,12 +112,13 @@ public class ItemList {
 	    currentItem = currentItem.getNext();
 	}
     }
-    
-    /* MAIN METHOD        
+
+
+    /* MAIN METHOD
     public static void main( String[] args ) {
 
 	ItemList items = new ItemList();
-	
+
 	Coconut coco1 = new Coconut();
 	Coconut coco2 = new Coconut();
 	Bark bark1 = new Bark();
@@ -131,16 +132,16 @@ public class ItemList {
        	items.pickUp( bark1 );
 	items.display();
 	items.pickUp( bark2 );
-	items.display();	
+	items.display();
 	items.pickUp( catfish1 );
 	items.display();
 	items.pickUp( bark3 );
-	items.display();	
+	items.display();
 	items.pickUp( coco2 );
 	items.display();
 	items.drop( bark3 );
 	items.display();
     }
     */ // END OF MAIN METHOD
-    
-}//end ItemQueue   
+
+}//end ItemQueue

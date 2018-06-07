@@ -72,12 +72,31 @@ public class Island{
     }
   }
 
-/*
   public void addPlants(){
-    int num = (int) (Math.random() * 30 );
-    //random generatioon of plants, follow addAnimals method
+    int num = (int) (Math.random() * 50 );
+    for(int i = 0; i < num/7; i++){
+      plants.add(new Fern());
+    }
+    for(int i = num/7; i < 2*num/7; i++){
+      plants.add(new GuavaTree());
+    }
+    for(int i = 2*num/7; i < 3*num/7; i++){
+      plants.add(new Mushroom());
+    }
+    for(int i = 3*num/7; i < 4*num/7; i++){
+      plants.add(new PalmTree());
+    }
+    for(int i = 4*num/7; i < 5*num/7; i++){
+      plants.add(new Petunia());
+    }
+    for(int i = 5*num/7; i < 6*num/7; i++){
+      plants.add(new ThimbleBush());
+    }
+    for(int i = 6*num/7; i<num; i++){
+      plants.add(new Tree());
+    }
   }
-*/
+
   public void addFish(){
     int num = (int) (Math.random() * 10 ); //levels of depth of the pond
     for(int i = 0; i < num; i++ ){

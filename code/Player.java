@@ -11,6 +11,7 @@ import java.util.Stack;
 import java.util.Queue;
 import java.util.LinkedList;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Player {
 
@@ -37,6 +38,7 @@ public class Player {
     island = new Island();
     xcor = 0;
     ycor = 0;
+    items = new ItemList();
   }
 
   public Player(int a, double h, double w, double heal){
@@ -47,6 +49,7 @@ public class Player {
     island = new Island();
     xcor = 0;
     ycor = 0;
+    items = new ItemList();
   }
 
   // METHODS
@@ -68,15 +71,33 @@ public class Player {
     return maxNutri;
   }
 
-/*
-  public Plant getPlant(){
+  public void getPlantFood(){
+    ItemNode currentItem = items._start;
+    String listplants = "";
+    int num = 1;
+    while( currentItem != null){
+      if( currentItem.getItemType() == "plantFood"){
+        listplants += num + currentItem.getContents() + "/n";
+      }
+      currentItem = currentItem.getNext();
+      num++;
+    }
+    System.out.println(listplants);
   }
 
-  public Animal getAnimal(){
+  public void getAnimalFood(){
+    ItemNode currentItem = items._start;
+    String listanimals = "";
+    int num = 1;
+    while( currentItem != null){
+      if( currentItem.getItemType() == "animalFood"){
+        listplants += num + currentItem.getContents() + "/n";
+      }
+      currentItem = currentItem.getNext();
+      num++;
+    }
+    System.out.println(listplants);
   }
-
-  //NEED A GETITEM METHOD AFTER THE ITEMLIST IS DONE!!!
-*/
 
   // Mutator Methods
   public void setAge( int inputAge ){
@@ -97,30 +118,44 @@ public class Player {
     //TO BE FILLED IN AFTER KAYLI DOES THE ITEMLIST THINGY
   }
 
-/*
   // Eating methods :FIX THIS METHOD BASED ON DOUBLY LINKED LIST
-  public void eatAnimal(){
-    Animal current = animals.peek();
-
-    if(current instanceof Fugu){
-      if(((Fugu) current).chanceofSurvival()){
-        animals.pop();
-        health += current.getNutrients();
+  public void eatAnimal(Animal a){
+    ItemNode currentItem = items._start;
+    while(currentItem.getContents() != a.getName()){
+      currentItem = currentItem.getNext();
+    }
+    if(a instanceof Fugu){
+      if(((Fugu) a).chanceofSurvival()){
+        currentItem.pop();
+        health += a.getNutrients();
       }
       else{
         System.out.println("You died from consuming the poisonous fugu");
         health = 0;
       }
     }
-    else if(health + current.getNutrients() > maxNutri){
+    else if(health + a.getNutrients() > maxNutri){
       System.out.println("You are full! Eat later.");
     }
     else{
-      animals.pop();
-      health += current.getNutrients();
+      currentItem.pop();
+      health += a.getNutrients();
     }
   }
-*/
+
+  public void eatPlant(Item plantFood){
+    ItemNode currentItem = items._start;
+    while(currentItem.getContents() != a.getName()){
+      currentItem = currentItem.getNext();
+    }
+    if(health + a.getNutrients() > maxNutri){
+      System.out.println("You are full! Eat later.");
+    }
+    else{
+      currentItem.pop();
+      health += a.getNutrients();
+    }
+  }
 
   //Attack method: Returns health after
   public double attack(){
