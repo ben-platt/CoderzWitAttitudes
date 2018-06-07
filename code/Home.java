@@ -15,32 +15,29 @@ public class Home extends JFrame{
 
   public Home(String name){
     //-----------MAKE NEW ISLAND-----------//
-    Player p = new Player(); 
+    Player p = new Player();
     JFrame isleFrame = new JFrame(name);
 
     JPanel title = new JPanel();
     JPanel header = new JPanel();
     JPanel statusPanel = new JPanel();
 
-    JLabel nameofisle = new JLabel(name);
-    JLabel statusLabel = new JLabel("status");
+    JLabel nameofisle = new JLabel("The Island of " + name);
+
 
 
     JButton attackButton = new JButton("Hunt an animal");
-    JButton checkVicinityButton = new JButton("Check your vicinity for an animal");
-    
+    JButton checkVicinityButton = new JButton("Check vicinity for Animal");
 
-    //---------BUTTONS--------------------//
-    
-    //ATTACK BUTTON
+
+    //---------BUTTON IMPLEMENTATIONS---------//
     attackButton.addActionListener(new ActionListener(){
-	    public void actionPerformed(ActionEvent d){
-		double curhealth = p.attack();
-		
-	    }
+      public void actionPerformed(ActionEvent d){
+        double health = p.attack(); //returns health after attacking
+        //spit out a message; have a message box
+      }
 
-
-	});
+    });
 
     //---------PREPARING THE GUI-----------//
     setTitle(name);
@@ -59,19 +56,18 @@ public class Home extends JFrame{
     statusLabel.setHorizontalAlignment(SwingConstants.LEFT);
     statusPanel.add(statusLabel);
 
-    
+
 
 
     //---------ADDING STUFF TO THE GUI----------//
-    title.add(nameofisle, BorderLayout.NORTH);
+    title.add(nameofisle, BorderLayout.CENTER);
 
     header.add(attackButton);
+    header.add(checkVicinityButton);
 
     isleFrame.add(title);
     isleFrame.add(header);
-    isleFrame.add(statusPanel, BorderLayout.SOUTH);
-    
-
+    isleFrame.setSize(750,750);
     isleFrame.setVisible(true);
     isleFrame.setLocationRelativeTo(null);
   }
