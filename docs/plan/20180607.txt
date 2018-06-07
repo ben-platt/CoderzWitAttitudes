@@ -1,0 +1,11 @@
+1. Plant classes:
+- Implement Queue structure methods for harvesting plants
+
+2. Island class:
+- Finish addPlants() method
+
+3. Player class:
+- Implement attack method and fishing method (SOME PARTS NEED TO WAIT UNTIL ITEMLIST IS FINISHED TO BE ABLE TO ADD TO THE PLAYER'S COLLECTION OF ANIMALS AND PLANTS AND FISH)
+
+4. ItemList:
+- Finish itemlist implementation for storage of items
