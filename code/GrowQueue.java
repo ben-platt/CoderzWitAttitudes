@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class GrowQueue {
 
    // ~~ INSTANCE VARIABLES ~~
-    
+
     private ArrayList<Item> _queue;
 
     // ~~~~ CONSTRUCTOR(S) ~~~~
@@ -15,13 +15,13 @@ public class GrowQueue {
     {
         _queue = new ArrayList<Item>();
     }
-    
+
     // ~~~~~~~ METHODS ~~~~~~~~
 
     public ArrayList<Item> getQueue() {
 	return _queue;
     }
-    
+
     public Item remove() {
 	Item removed = _queue.get( _queue.size() - 1 );
         _queue.remove( _queue.size() - 1 );
@@ -47,4 +47,4 @@ public class GrowQueue {
 	return _queue.get( _queue.size() - 1 );
     }
 
-} // end class GrowQueue 
+} // end class GrowQueue
