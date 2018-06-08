@@ -165,10 +165,10 @@ public class Player {
     if(numBark >= 4 && numPalmLeaves >= 3){
 	hasShelter = true;
 	for(int i = 0; i < 4; i++){
-	    currentItemB.pop();
+	    currentItemB.getItem().pop();
 	}
 	for(int i = 0; i < 3; i++){
-	   currentItemP.pop();
+	   currentItemP.getItem().pop();
 	}
       System.out.println("You have successfully built a shelter. You can now sleep!");
     }
