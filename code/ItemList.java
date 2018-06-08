@@ -69,7 +69,6 @@ public class ItemList {
 		currentItem.setNext( newItem );
 		newItem.setPrev( currentItem );
 		newItem.setNext( newNext );
-		newNext.setPrev( newItem );
 		_size++;
 		return;
 	    }
