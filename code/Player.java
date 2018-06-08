@@ -77,6 +77,9 @@ public class Player {
   public double getMaxNutri(){
     return maxNutri;
   }
+    public boolean hasShelter() {
+	return hasShelter;
+    }
 
   public void getPlantFood(){
     ItemNode currentItem = items._start;

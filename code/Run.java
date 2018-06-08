@@ -13,9 +13,9 @@ public class Run {
 	int code = -1;		
 	String choice = "";
 	while(true) {
-	    System.out.println("1. Go to Shelter\n2. Hunt\n3. Gather Plants\n4. Fish");
+	    System.out.println("1. Go to Shelter\n2. Hunt\n3. Gather Plants\n4. Fish\n5. Eat");
 	    choice = scanner.nextLine();		
-	    if (choice.equals("1") || choice.equals("2") || choice.equals("3")) {
+	    if (choice.equals("1") || choice.equals("2") || choice.equals("3") || choice.equals("4") || choice.equals("5") ) {
 		code = Integer.parseInt(choice);
 		break;
 	    } else {
@@ -27,6 +27,7 @@ public class Run {
     
     public static void main( String[] args ) {
 
+	Island island = new Island();
 	Player player = new Player();
 	Scanner scanner = new Scanner(System.in);
 
@@ -44,11 +45,63 @@ public class Run {
 	input = scanner.nextLine();
 	int inputWeight = Integer.parseInt( input );
 	player.setAge( inputWeight );
+	// STARTING THE GAME
 	System.out.println("You find yourself stranded on a Tropical Island.");
 	System.out.println("You have " + player.getHealth() + " health.");
-	System.out.println("What will you do now?");
-	int code = mainMenu(scanner);
-
+        while( player.getHealth() != 0 ) {
+	    System.out.println("What will you do now?");
+	    int code = mainMenu(scanner);
+        
+	    if ( code == 1 ) {
+		// SHELTER
+		if ( player.hasShelter() ) {
+		    while(true) {
+			System.out.println("What will you do?");
+			System.out.println("1. Sleep\n2. Exit shelter");
+			input = scanner.nextLine();
+			if ( input == "1" ) {
+			    player.sleep();
+			    break;
+			}
+			else if ( input == "2" ) {
+			    break;
+			}
+		    }
+		}
+		else {
+		    while(true) {
+			System.out.println( "You don't have a shelter!" );
+			System.out.println("What will you do?");
+			System.out.println("1. Build a Shelter\n2. Nevermind...");
+			input = scanner.nextLine();
+			if ( input == "1" ) {
+			    player.buildShelter(); // this dont work...
+			    break;
+			}
+			else if ( input == "2" ) {
+			    break;
+			}
+		    }
+		}
+		    
+	    }
+	    else if ( code == 2 ) {
+		// HUNT
+	        player.attack();
+	    }
+	    else if ( code == 3 ) {
+		// GATHER
+	    }
+	    else if ( code == 4 ) {
+		// FISH
+	    }
+	    else if ( code == 5 ) {
+		// EAT
+	    }
+	    //break;
+	
+	}
+	
     } // end of main method
 
 } // end of class Run
