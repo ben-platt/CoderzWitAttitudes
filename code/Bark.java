@@ -29,5 +29,8 @@ public class Bark extends Item {
     public String getType() {
 	return type;
     }
+    public double getNutrients() {
+	return 0.0;
+    }
     
 } // end of class

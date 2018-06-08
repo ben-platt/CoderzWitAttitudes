@@ -11,9 +11,11 @@ public abstract class Item {
 
     private String name;
     private String type;
+    private double nutrients;
 
     // ACCESSOR METHODS
     public abstract String getName();
     public abstract String getType();
+    public abstract double getNutrients();
     
 }

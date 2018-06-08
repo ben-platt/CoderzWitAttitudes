@@ -205,7 +205,7 @@ public class Run {
 				if ( input == "1" ) {
 				    enda = animals.indexOf( "\\", starta );
 				    inputBreeda = animals.substring( starta, enda );
-				    while( currentItema.getContents() != inputBreed ){
+				    while( currentItema.getContents() != inputBreeda ){
 					currentItema = currentItema.getNext();
 				    }
 				    player.eatAnimal( currentItema.getItem().peek() );
@@ -216,7 +216,7 @@ public class Run {
 					starta = animals.indexOf( input, 0 ) + 3;
 					enda = animals.indexOf( "\\", starta );
 				        inputBreeda = animals.substring( starta, enda );
-					while( currentItema.getContents() != inputBreed ){
+					while( currentItema.getContents() != inputBreeda ){
 					    currentItema = currentItema.getNext();
 					}
 					player.eatAnimal( currentItema.getItem().peek() );
@@ -231,7 +231,7 @@ public class Run {
 					starta = animals.indexOf( input, 0 ) + 3;
 					enda = animals.indexOf( "\\", starta );
 				        inputBreeda = animals.substring( starta, enda );
-					while( currentItema.getContents() != inputBreed ){
+					while( currentItema.getContents() != inputBreeda ){
 					    currentItema = currentItema.getNext();
 					}
 					player.eatAnimal( currentItema.getItem().peek() );
@@ -246,7 +246,7 @@ public class Run {
 					starta = animals.indexOf( input, 0 ) + 3;
 					enda = animals.indexOf( "\\", starta );
 					inputBreeda = animals.substring( starta, enda );
-					while( currentItema.getContents() != inputBreed ){
+					while( currentItema.getContents() != inputBreeda ){
 					    currentItema = currentItema.getNext();
 					}
 					player.eatAnimal( currentItema.getItem().peek() );
@@ -261,7 +261,7 @@ public class Run {
 					starta = animals.indexOf( input, 0 ) + 3;
 					enda = animals.indexOf( "\\", starta );
 				        inputBreeda = animals.substring( starta, enda );
-					while( currentItema.getContents() != inputBreed ){
+					while( currentItema.getContents() != inputBreeda ){
 					    currentItema = currentItema.getNext();
 					}
 					player.eatAnimal( currentItema.getItem().peek() );
@@ -276,7 +276,7 @@ public class Run {
 					starta = animals.indexOf( input, 0 ) + 3;
 					enda = animals.indexOf( "\\", starta );
 					inputBreeda = animals.substring( starta, enda );
-					while( currentItema.getContents() != inputBreed ){
+					while( currentItema.getContents() != inputBreeda ){
 					    currentItema = currentItema.getNext();
 					}
 					player.eatAnimal( currentItema.getItem().peek() );

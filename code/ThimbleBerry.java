@@ -11,12 +11,14 @@ public class ThimbleBerry extends Item {
 
     // INSTANCE VARIABLES
     private boolean edible;
+    private double nutrients;
     private String type = "plantFood";
     private String name = "ThimbleBerry";
 
     //Constructor(s)
     public ThimbleBerry() {
-	     edible = true;
+	edible = true;
+	nutrients = 20.0;
     }
 
 
@@ -29,6 +31,9 @@ public class ThimbleBerry extends Item {
     }
     public String getType() {
 	return type;
+    }
+    public double getNutrients() {
+	return nutrients;
     }
 
 } // end of class
