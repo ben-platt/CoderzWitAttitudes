@@ -35,7 +35,7 @@ public class Player {
     age = 17;
     height = 65.0;
     weight = 108.0;
-    health = 80;
+    health = 82;
     maxNutri = 100;
     island = new Island();
     xcor = 0;
@@ -49,8 +49,8 @@ public class Player {
     age = a;
     height = h;
     weight = w;
-    if(((weight/2.2) / (Math.pow((height/2.54), 2))) * age > 80){
-      health = 80;
+    if(((weight/2.2) / (Math.pow((height/2.54), 2))) * age > 82){
+      health = 82;
     }
     else{
       health = ((weight/2.2) / (Math.pow((height/2.54), 2))) * age; //this is BMI * age;
