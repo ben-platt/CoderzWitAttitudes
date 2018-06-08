@@ -165,13 +165,14 @@ public class Player {
     if(numBark >= 4 && numPalmLeaves >= 3){
 	hasShelter = true;
 	for(int i = 0; i < 4; i++){
-	    Item tmp = currentItemB.getItem().pop();
+	    currentItemB.pop();
 	}
 	for(int i = 0; i < 3; i++){
-	    Item blah = currentItemP.getItem().pop();
+	   currentItemP.pop();
 	}
       System.out.println("You have successfully built a shelter. You can now sleep!");
     }
+
     else{
       System.out.println("Sorry. You need "+ (4-numBark) + " more Bark and " + (3-numPalmLeaves) + " more Palm Leaves to build a shelter" );
     }
@@ -241,28 +242,36 @@ public class Player {
 
   //Attack method: Returns health after
   public double attack(){
-    int target = checkVicinity();
-    if(target == -1){
-      System.out.println("Sorry there's no more animals on the island");
-      System.out.println("Your current health: "+health);
+    if(health < 20){
+      System.out.println("You need more health before you hunt!");
+      System.out.println("You current health: "+health);
       return health;
     }
     else{
-      Animal prey = island.getAnimals().get(target);
-
-      int chance = (int) (Math.random() * 2);
-      if(chance == 0){
-        System.out.println("Darn, you didn't catch it this time!");
+      int target = checkVicinity();
+      if(target == -1){
+        System.out.println("Sorry there's no more animals on the island");
+        System.out.println("Your current health: "+health);
+        return health;
       }
       else{
-        System.out.println("Whew! You captured the " + prey);
-        island.removeAnimal(target);
-        items.add(prey);
+        Animal prey = island.getAnimals().get(target);
+
+        int chance = (int) (Math.random() * 2);
+        if(chance == 0){
+          System.out.println("Darn, you didn't catch it this time!");
+        }
+        else{
+          System.out.println("Yay! You captured the " + prey);
+          island.removeAnimal(target);
+          items.add(prey);
+        }
+        health = health - (prey.getLife() * prey.getPower());
+        System.out.println("Your current health: " + health);
+        return health;
       }
-      health -= (prey.getLife() * prey.getPower());
-      System.out.println("Your current health: " + health);
-      return health;
     }
+
   }
 
   //checkVicinity determines which animal to hunt next; based on the closest animal
