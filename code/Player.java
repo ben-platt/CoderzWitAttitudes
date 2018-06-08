@@ -338,7 +338,7 @@ public class Player {
     }
     else{
       LinkedList<ArrayList<Fish>> pond = island.getFish();
-      if (health > 10 ) {
+      if (health > 10 && health < 40 ) {
         ArrayList<Fish> dep1 = pond.get(0);
         int chance = (int) (Math.random() * 2);
         double takenhealth = 0;
@@ -355,14 +355,14 @@ public class Player {
             System.out.println("YOU DIE, not enough health to capture " + fishesgot);
           }
           else{
-            System.out.println("Yay! You captured these fish: " + fishesgot );
+            System.out.println("Yay! You captured these fish at depth: " + fishesgot );
             System.out.println("Your current health: "+ health);
           }
         }
         else{
           for(int i = 0; i < dep1.size(); i++){
             takenhealth += 20*dep1.get(i).getPower();
-            fishesdidntgot += dep1.get(i).getName() + ", ";
+            fishesgot += dep1.get(i).getName() + ", ";
           }
           health = health - takenhealth;
           if(health < 0){
@@ -375,16 +375,16 @@ public class Player {
           }
         }
       }
-      else if(health > 40){
+      else if(health > 40 && health < 70){
         ArrayList<Fish> dep2 = pond.get(1);
         int chance = (int) (Math.random() * 2);
         double takenhealth = 0;
         String fishesgot = "";
         if(chance == 0){
-          for(int i = 0; i < dep1.size(); i++){
-            items.add(dep1.get(i));
-            takenhealth += 20*dep1.get(i).getPower();
-            fishesgot += dep1.get(i).getName() + ", ";
+          for(int i = 0; i < dep2.size(); i++){
+            items.add(dep2.get(i));
+            takenhealth += 20*dep2.get(i).getPower();
+            fishesgot += dep2.get(i).getName() + ", ";
           }
           health = health - takenhealth;
           if(health < 0){
@@ -397,9 +397,9 @@ public class Player {
           }
         }
         else{
-          for(int i = 0; i < dep1.size(); i++){
-            takenhealth += 20*dep1.get(i).getPower();
-            fishesdidntgot += dep1.get(i).getName() + ", ";
+          for(int i = 0; i < dep2.size(); i++){
+            takenhealth += 20*dep2.get(i).getPower();
+            fishesgot += dep2.get(i).getName() + ", ";
           }
           health = health - takenhealth;
           if(health < 0){
@@ -412,16 +412,16 @@ public class Player {
           }
         }
       }
-      else if(health > 70){
-        ArrayList<Fish> dep1 = pond.get(2);
+      else if(health > 70 && health < 100){
+        ArrayList<Fish> dep3 = pond.get(2);
         int chance = (int) (Math.random() * 2);
         double takenhealth = 0;
         String fishesgot = "";
         if(chance == 0){
-          for(int i = 0; i < dep1.size(); i++){
-            items.add(dep1.get(i));
-            takenhealth += 20*dep1.get(i).getPower();
-            fishesgot += dep1.get(i).getName() + ", ";
+          for(int i = 0; i < dep3.size(); i++){
+            items.add(dep3.get(i));
+            takenhealth += 20*dep3.get(i).getPower();
+            fishesgot += dep3.get(i).getName() + ", ";
           }
           health = health - takenhealth;
           if(health < 0){
@@ -434,9 +434,9 @@ public class Player {
           }
         }
         else{
-          for(int i = 0; i < dep1.size(); i++){
-            takenhealth += 20*dep1.get(i).getPower();
-            fishesdidntgot += dep1.get(i).getName() + ", ";
+          for(int i = 0; i < dep3.size(); i++){
+            takenhealth += 20*dep3.get(i).getPower();
+            fishesgot += dep3.get(i).getName() + ", ";
           }
           health = health - takenhealth;
           if(health < 0){
