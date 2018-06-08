@@ -81,6 +81,10 @@ public class Player {
 	return hasShelter;
     }
 
+    public boolean hasFishNet(){
+      return hasFishNet;
+    }
+
     public ItemList getItems(){
       return items;
     }
@@ -211,7 +215,7 @@ public class Player {
     if ( currentItemPa.getContents().equals("PalmLeaf") ) {
 	numberPalmLeaves = currentItemPa.getQuantity();
     }
-    
+
     if(numberPalmLeaves >= 2){
       hasFishNet = true;
       for(int i = 0; i < 2; i++){
