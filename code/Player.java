@@ -213,7 +213,7 @@ public class Player {
   }
 
   // Eating methods
-  public void eatAnimal(Animal a){
+  public void eatAnimal(Item a){
     ItemNode currentItem = items._start;
     while(!currentItem.getContents().equals(a.getName())){
       currentItem = currentItem.getNext();
@@ -240,7 +240,7 @@ public class Player {
     }
   }
 
-  public void eatPlant(Plant plantFood){
+  public void eatPlant(Item plantFood){
     ItemNode currentItem = items._start;
     while(!currentItem.getContents().equals(plantFood.getName())){
       currentItem = currentItem.getNext();
