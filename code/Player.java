@@ -81,7 +81,7 @@ public class Player {
 	return hasShelter;
     }
 
-  public void getPlantFood(){
+  public String getPlantFood(){
     ItemNode currentItem = items._start;
     String listplants = "";
     int num = 1;
@@ -92,10 +92,15 @@ public class Player {
       currentItem = currentItem.getNext();
       num++;
     }
-    System.out.println(listplants);
+    if(listplants == ""){
+      return "Sorry you have no plants to eat";
+    }
+    else{
+      return listplants;
+    }
   }
 
-  public void getAnimalFood(){
+  public String getAnimalFood(){
     ItemNode currentItem = items._start;
     String listanimals = "";
     int num = 1;
@@ -106,7 +111,12 @@ public class Player {
       currentItem = currentItem.getNext();
       num++;
     }
-    System.out.println(listanimals);
+    if(listplants == ""){
+      return "Sorry you have no animals to eat";
+    }
+    else{
+      return listanimals;
+    }
   }
 
   // Mutator Methods
@@ -240,19 +250,18 @@ public class Player {
     }
   }
 
-  //Attack method: Returns health after
-  public double attack(){
+  //Attack method
+  public void attack(){
     if(health < 20){
       System.out.println("You need more health before you hunt!");
       System.out.println("You current health: "+health);
-      return health;
     }
     else{
       int target = checkVicinity();
       if(target == -1){
         System.out.println("Sorry there's no more animals on the island");
         System.out.println("Your current health: "+health);
-        return health;
+        break;
       }
       else{
         Animal prey = island.getAnimals().get(target);
@@ -260,15 +269,18 @@ public class Player {
         int chance = (int) (Math.random() * 2);
         if(chance == 0){
           System.out.println("Darn, you didn't catch it this time!");
+          health = health - (prey.getLife() * prey.getPower());
+          System.out.println("Your current health: " + health);
+          break;
         }
         else{
           System.out.println("Yay! You captured the " + prey);
           island.removeAnimal(target);
           items.add(prey);
+          health = health - (prey.getLife() * prey.getPower());
+          System.out.println("Your current health: " + health);
+          break;
         }
-        health = health - (prey.getLife() * prey.getPower());
-        System.out.println("Your current health: " + health);
-        return health;
       }
     }
 
