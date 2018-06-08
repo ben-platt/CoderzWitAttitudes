@@ -99,7 +99,7 @@ public class Player {
     int num = 1;
     while( currentItem != null){
       if( currentItem.getItemType() == "plantFood"){
-        listplants += num + currentItem.getContents() + "\n";
+        listplants += num + currentItem.getContents() + "\n"; //traverse through items, if it is plantFood, add to string
       }
       currentItem = currentItem.getNext();
       num++;
@@ -118,12 +118,12 @@ public class Player {
     int num = 1;
     while( currentItem != null){
       if( currentItem.getItemType() == "animalFood"){
-        listanimals += num + currentItem.getContents() + "\n";
+        listanimals += num + currentItem.getContents() + "\n"; //traverse through items, if it is animalFood add to string
       }
       currentItem = currentItem.getNext();
       num++;
     }
-    if(listanimals.equals("")){
+    if(listanimals.equals("")){ //if nothing was added, there are no animals
       return "Sorry you have no animals to eat";
     }
     else{
@@ -157,11 +157,11 @@ public class Player {
   public void sleep(){
     if(hasShelter){
       if(health + 35 > maxNutri){
-        health += maxNutri - health;
+        health += maxNutri - health; //add health up to the max health
         System.out.println("You are at maxHealth");
       }
       else{
-        health += 35;
+        health += 35; //add 35 health if player takes a schleep
         System.out.println("nice sleep");
       }
     }
@@ -170,42 +170,42 @@ public class Player {
     }
   }
   public void buildShelter(){
-      if ( items._size == 0 ) {
+      if ( items._size == 0 ) { //null exception
 	  System.out.println("Sorry. You need 4 more Bark and 3 more Palm Leaves to build a shelter." );
 	  return;
       }
     ItemNode currentItemB = items._start;
     while(!currentItemB.getContents().equals("Bark") && !currentItemB.getNext().equals(null)){
-      currentItemB = currentItemB.getNext();
+      currentItemB = currentItemB.getNext(); //traverse up to Bark stack
     }
 
     ItemNode currentItemP = items._start;
     while(!currentItemP.getContents().equals("PalmLeaf") && !currentItemB.getNext().equals(null)){
-      currentItemP = currentItemP.getNext();
+      currentItemP = currentItemP.getNext(); //traverse up to Palm leaves stack
     }
 
     int numBark = 0;
     int numPalmLeaves = 0;
     if ( currentItemB.getContents().equals("Bark") ) {
-	numBark = currentItemB.getQuantity();
+	numBark = currentItemB.getQuantity(); //get number of bark in stack
     }
     if ( currentItemP.getContents().equals("PalmLeaf") ) {
-	numPalmLeaves = currentItemP.getQuantity();
+	numPalmLeaves = currentItemP.getQuantity(); //get number of palm leaves in stack
     }
 
-    if(numBark >= 4 && numPalmLeaves >= 3){
-	     hasShelter = true;
+    if(numBark >= 4 && numPalmLeaves >= 3){ //if number of bark is at least 4 and number of palm leaves is at least 3
+	     hasShelter = true; //you can build a shelter, boolean set to true
 	for(int i = 0; i < 4; i++){
-	    currentItemB.getItem().pop();
+	    currentItemB.getItem().pop(); //take out 4 bark
 	}
 	for(int i = 0; i < 3; i++){
-	   currentItemP.getItem().pop();
+	   currentItemP.getItem().pop(); //take out 3 palm leaves
 	}
       System.out.println("You have successfully built a shelter. You can now sleep!");
     }
 
     else{
-      System.out.println("Sorry. You need "+ (4-numBark) + " more Bark and " + (3-numPalmLeaves) + " more Palm Leaves to build a shelter" );
+      System.out.println("Sorry. You need "+ (4-numBark) + " more Bark and " + (3-numPalmLeaves) + " more Palm Leaves to build a shelter" ); //print out materials you lack to build shelter
     }
   }
 
@@ -245,13 +245,13 @@ public class Player {
       System.out.println("You are full! Eat later.");
     }
     else{
-      if(a instanceof Fugu){
-        if(((Fugu) a).chanceofSurvival()){
+      if(a instanceof Fugu){ //Fugu is special case
+        if(((Fugu) a).chanceofSurvival()){ //5% of survival from eating Fugu
           items.remove(a);
           health += a.getNutrients();
         }
         else{
-          System.out.println("You died from consuming the poisonous fugu");
+          System.out.println("You died from consuming the poisonous fugu"); //otherwise die from eating Fugu
           health = 0;
         }
       }
@@ -279,9 +279,9 @@ public class Player {
 
   //Attack method
   public void attack(){
-    if(health < 20){
+    if(health < 5){ //if you have insufficient health, you print message saying you need more health before attacking
       System.out.println("You need more health before you hunt!");
-      System.out.println("You current health: "+health);
+      System.out.println("Your current health: "+health);
     }
     else{
       int target = checkVicinity();
