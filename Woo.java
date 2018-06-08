@@ -188,8 +188,8 @@ else{
 			    while(true) {
 				System.out.println("Which plant will you eat?");
 				String plants = player.getPlantFood();
-				int start = 3;
-				int end = 0;
+				int start = 0;
+				int end = plants.length();
 				ItemNode currentItem = player.getItems()._start;
 				String inputBreed = "";
 				System.out.println( plants );
@@ -197,7 +197,8 @@ else{
 				if ( input.equals("1") ) {
 				    end = plants.indexOf( "\\", start );
 				    inputBreed = plants.substring( start, end );
-				    while( currentItem.getContents() != inputBreed ){
+				    System.out.println( inputBreed );
+				    while( !currentItem.getContents().equals(inputBreed) ){
 					currentItem = currentItem.getNext();
 				    }
 				    player.eatPlant( currentItem.getItem().peek() );
@@ -274,7 +275,7 @@ else{
 			    while(true) {
 				System.out.println("Which animal will you eat?");
 				String animals = player.getAnimalFood();
-				int starta = 3;
+				int starta = 0;
 				int enda = 0;
 				ItemNode currentItema = player.getItems()._start;
 				String inputBreeda = "";
@@ -283,6 +284,7 @@ else{
 				if ( input.equals("1") ) {
 				    enda = animals.indexOf( "\\", starta );
 				    inputBreeda = animals.substring( starta, enda );
+				    
 				    while( currentItema.getContents() != inputBreeda ){
 					currentItema = currentItema.getNext();
 				    }
