@@ -28,6 +28,11 @@ public abstract class Plant extends Item {
       nutrients = inputNutrients;
     }
 
+    public Item pluck() {
+	Item newItem = new Item();
+	return newItem;
+    }
+    
     protected abstract void photosynthesize(); //specific to each type of plants
 
 } // end of class

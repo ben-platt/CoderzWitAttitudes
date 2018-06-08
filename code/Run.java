@@ -4,6 +4,7 @@
 // 2018-06-08f
 
 import java.util.Scanner;
+import java.util.ArrayList;
 //import java.io.File;
 
 public class Run {
@@ -91,7 +92,7 @@ public class Run {
 	    else if ( code == 3 ) {
 		// GATHER
 		// Generate a Random Plant from the Island
-		ArrayList plantList = player.getIsland().getPlants();
+		ArrayList<Plant> plantList = player.getIsland().getPlants();
 		int random = (int) ( Math.random() * plantList.size() );
 		Plant fionaPlant = plantList.get(random);
 		System.out.println("You found a " + fionaPlant.getName() + "!");
@@ -100,9 +101,31 @@ public class Run {
 		    while(true) {
 			System.out.println("What will you do?");
 			System.out.println("1. Pluck\n2. Leave");
+			Item kayliItem = new Item();
 			input = scanner.nextLine();
 			if ( input.equals("1") ) {
-			    fionaPlant.pluck();
+			    while(true) {
+				kayliItem = fionaPlant.pluck();
+				if ( kayliItem.equals(null) ){
+				    System.out.println("Nothing left to pluck!");
+				    break;
+				}
+				System.out.println("What will you do with this " + kayliItem.getName() + "?");
+				System.out.println("1. Add to Items and Leave\n2. Add to Items and Pluck Again\n3. Pluck Again\n4. Leave");
+				if ( input.equals("1") ) {
+				    player.addItem( kayliItem );
+				    break;
+				}
+				else if ( input.equals("2") ) {
+				    player.addItem( kayliItem );
+				}
+				else if ( input.equals("3") ) {
+				    // go again!
+				}
+				else if ( input.equals("4") ) {
+				    break;
+				}
+			    }
 			    break;
 			}
 			else if ( input.equals("2") ) {
@@ -110,7 +133,19 @@ public class Run {
 			}
 		    }
 		}
-
+		else {
+		    System.out.println( "What will you do with this " + fionaPlant.getName() + "?");
+		    Item kayliItem = fionaPlant;
+		    System.out.println("1. Gather\n2. Leave");
+		    
+		    input = scanner.nextLine();
+		    if ( input.equals("1") ) {
+			 player.addItem( kayliItem );
+		    }
+		    else {
+			// Leave
+		    }
+		}
 	    }
 	    else if ( code == 4 ) {
 		// FISH

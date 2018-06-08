@@ -7,15 +7,21 @@
  * class ItemNode
  ******************************************************/
 
-public abstract class Item {
+public class Item {
 
     private String name;
     private String type;
     private double nutrients;
 
     // ACCESSOR METHODS
-    public abstract String getName();
-    public abstract String getType();
-    public abstract double getNutrients();
+    public String getName() {
+	return name;
+    }
+    public String getType() {
+	return type;
+    }
+    public double getNutrients() {
+	return nutrients;
+    }
     
 }
