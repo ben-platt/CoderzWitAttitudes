@@ -35,8 +35,8 @@ public class Player {
     age = 17;
     height = 65.0;
     weight = 108.0;
-    health = 100;
-    maxNutri = ((weight/2.2) / (Math.pow((height/2.54), 2))) * age; //this is BMI * age
+    health = 80;
+    maxNutri = 100;
     island = new Island();
     xcor = 0;
     ycor = 0;
@@ -49,8 +49,13 @@ public class Player {
     age = a;
     height = h;
     weight = w;
-    health = heal;
-    maxNutri = ((weight/2.2) / (Math.pow((height/2.54), 2))) * age; //this is BMI * age
+    if(((weight/2.2) / (Math.pow((height/2.54), 2))) * age > 80){
+      health = 80;
+    }
+    else{
+      health = ((weight/2.2) / (Math.pow((height/2.54), 2))) * age; //this is BMI * age;
+    }
+    maxNutri = 100;
     island = new Island();
     xcor = 0;
     ycor = 0;
@@ -180,7 +185,7 @@ public class Player {
     }
 
     ItemNode currentItemP = items._start;
-    while(!currentItemP.getContents().equals("PalmLeaf") && !currentItemB.getNext().equals(null)){
+    while(!currentItemP.getContents().equals("PalmLeaf") && !currentItemP.getNext().equals(null)){
       currentItemP = currentItemP.getNext(); //traverse up to Palm leaves stack
     }
 
@@ -281,13 +286,11 @@ public class Player {
   public void attack(){
     if(health < 5){ //if you have insufficient health, you print message saying you need more health before attacking
       System.out.println("You need more health before you hunt!");
-      System.out.println("Your current health: "+health);
     }
     else{
       int target = checkVicinity();
       if(target == -1){
         System.out.println("Sorry there's no more animals on the island");
-        System.out.println("Your current health: "+health);
       }
       else{
         Animal prey = island.getAnimals().get(target);
@@ -302,7 +305,7 @@ public class Player {
           }
           else{
               System.out.println("Darn, you didn't catch the " + prey.getName()+ " this time!");
-              System.out.println("Your current health: " + health);
+
           }
 
         }
@@ -316,7 +319,7 @@ public class Player {
           }
           else{
             System.out.println("Yay! You captured the " + prey.getName());
-            System.out.println("Your current health: " + health);
+
           }
 
         }
