@@ -164,12 +164,12 @@ public class Player {
   public void buildShelter(){
 
     ItemNode currentItemB = items._start;
-    while(currentItemB.getContents() != "Bark"){
+    while(!currentItemB.getContents().equals("Bark")){
       currentItemB = currentItemB.getNext();
     }
 
     ItemNode currentItemP = items._start;
-    while(currentItemP.getContents() != "PalmLeaf"){
+    while(!currentItemP.getContents().equals("PalmLeaf")){
       currentItemP = currentItemP.getNext();
     }
 
@@ -177,7 +177,7 @@ public class Player {
     int numPalmLeaves = currentItemP.getQuantity();
 
     if(numBark >= 4 && numPalmLeaves >= 3){
-	hasShelter = true;
+	     hasShelter = true;
 	for(int i = 0; i < 4; i++){
 	    currentItemB.getItem().pop();
 	}
@@ -195,7 +195,7 @@ public class Player {
   public void buildFishNet(){
 
     ItemNode currentItemP = items._start;
-    while(currentItemP.getContents() != "PalmLeaf"){
+    while(!currentItemP.getContents().equals("PalmLeaf")){
       currentItemP = currentItemP.getNext();
     }
     int numPalmLeaves = currentItemP.getQuantity();
@@ -213,9 +213,9 @@ public class Player {
   }
 
   // Eating methods
-  public void eatAnimal( Item a){
+  public void eatAnimal(Animal a){
     ItemNode currentItem = items._start;
-    while(currentItem.getContents() != a.getName()){
+    while(!currentItem.getContents().equals(a.getName())){
       currentItem = currentItem.getNext();
     }
     if(health + a.getNutrients() > maxNutri){
@@ -240,16 +240,16 @@ public class Player {
     }
   }
 
-  public void eatPlant( Item plantFood){
+  public void eatPlant(Plant plantFood){
     ItemNode currentItem = items._start;
-    while(currentItem.getContents() != plantFood.getName()){
+    while(!currentItem.getContents().equals(plantFood.getName())){
       currentItem = currentItem.getNext();
     }
     if(health + plantFood.getNutrients() > maxNutri){
       System.out.println("You are full! Eat later.");
     }
     else{
-	items.remove( plantFood );
+	items.remove(plantFood);
       health += plantFood.getNutrients();
     }
   }
@@ -412,7 +412,7 @@ public class Player {
           }
         }
       }
-      else if(health > 70 && health < 100){
+      else if(health > 70 && health <= 100){
         ArrayList<Fish> dep3 = pond.get(2);
         int chance = (int) (Math.random() * 2);
         double takenhealth = 0;
