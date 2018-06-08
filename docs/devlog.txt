@@ -30,28 +30,35 @@ Flesh out each category whenever necessary, appropriate.
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<Wow, we so BOSS bc...>
+Discovering we could not use GUI 36 hours before our project was due was a big obstacle, because we had to change our mindset of approaching the project. Also, a group member's laptop broke Thursday June 7th, so we had to overcome that as well. We found alternative ways for this grou member to contribute in a productive manner for the trio.
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<
-blah blah pesky bug...
-maybe some of these will move into the Obs.Ovrcm section...
->
+We were not able to robustify a lot of our code because we didn't leave enough time to do that -- something to plan for in the future. We also needed to align our deliverables more with our code, because our deliverables could be too vague and outdated. We also had some struggles with data types such as linkedLists and mazes that we were unable to solve so we had to scale back our ambitions.
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<wow! oo! etc!...>
+How to make different aspects (plants and animals) work together symbiotically.
+TEAMWORK!!!
+How to use scaners
+Keyboard shortcuts
+Music tastes that differ from your own
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-We changed ___ to ___ bc...
-<etc>
-<etc>
+We changed some queues to stacks and vice versa.
+We changed from a GUI to terminal-based interaction system for the user.
+The methods of the Player class
+What term two data structures we should incorporate (no more priority queues!)
+
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<tales of wisdom gained...>
+Listen to directions closely!
+Have a clearer vision of what we want to achieve from the get-go.
+Life ain't fair and the world is mean.
+Communicate about merges on GitHub.
+In-person time is quite valuable so treat it as such.
 
 
 
@@ -129,7 +136,10 @@ Fiona:
 - Changed nutrition and power values for animals
 
 Ben:
--
+- Worked on plant functionalities
+- Created constructors
+- Worked on boolean variables and associated accessors
+
 
 ==============================================================
 
@@ -139,6 +149,10 @@ Ben:
 Fiona:
 - Worked on player class attack methods
 - fixed animal classes instance var
+
+Ben:
+- Worked on deliverables including plan and devlogs
+- Printed multiple hard copies
 
 ==============================================================
 
@@ -150,6 +164,9 @@ Fiona:
 - Implemented coor system for attack METHODS
 - Wrote plan for 6/6
 - Started GUI
+Ben:
+- Revised the plant classes to help integrate them with the Player and Island classes.
+- Outlined the progression of the game from start to end.
 
 
 ==============================================================
@@ -159,6 +176,22 @@ Fiona:
 
 Fiona:
 - GUI pop up window works with one button
+
+Ben:
+- Worked on tightening up the Player class.
+- Modified the readme to accurately reflect our project
+==============================================================
+
+2018-06-07
+--------------------------------------------------------------
+
+Fiona:
+-
+
+Ben:
+- Finished up all of the deliverables before the final pull.
+- Tested code written by other team members.
+- Troubleshooted kinks and bugs found in code.
 
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
