@@ -49,6 +49,7 @@ public class Run {
 	System.out.println("You find yourself stranded on a Tropical Island.");
         while( player.getHealth() != 0 ) {
 
+	    player.setHealth( player.getHealth() - 2 );
 	    System.out.println("You have " + player.getHealth() + " health.");
 	    for( int i = 0; i < player.getIsland().getNumPlants(); i++ ) {
 		player.getIsland().getPlants().get(i).photosynthesize();
