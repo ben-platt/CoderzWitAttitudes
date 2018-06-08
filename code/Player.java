@@ -206,7 +206,10 @@ public class Player {
   }
 
   public void buildFishNet(){
-
+      if ( items._size == 0 ) {
+	  System.out.println("Sorry. You need 2 more Palm Leaves to make a fishnet." );
+	  return;
+      }
     ItemNode currentItemPa = items._start;
     while(!currentItemPa.getContents().equals("PalmLeaf") && !currentItemPa.getNext().equals(null) ){
       currentItemPa = currentItemPa.getNext();
@@ -221,7 +224,7 @@ public class Player {
       for(int i = 0; i < 2; i++){
 	  Item blah = currentItemPa.getItem().pop();
       }
-      System.out.println("You have successfully built a fishnet. You can now fish!");
+      System.out.println("You have successfully made a fishnet. You can now fish!");
     }
     else{
       System.out.println("Sorry. You need " + (2-numberPalmLeaves) + " more Palm Leaves to build a fishnet" );

@@ -104,11 +104,11 @@ else{
     System.out.println("What will you do?");
     System.out.println("1. Build a Fishnet\n2. Nevermind...");
     input = scanner.nextLine();
-    if(input == "1"){
+    if(input.equals("1") ){
       player.buildFishNet();
       break;
     }
-    else if(input == "2"){
+    else if(input.equals("2")){
       break;
     }
   }
