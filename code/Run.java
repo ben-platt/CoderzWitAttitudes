@@ -106,10 +106,6 @@ public class Run {
 			if ( input.equals("1") ) {
 			    while(true) {
 				kayliItem = fionaPlant.pluck();
-				if ( kayliItem.equals(null) ){
-				    System.out.println("Nothing left to pluck!");
-				    break;
-				}
 				System.out.println("What will you do with this " + kayliItem.getName() + "?");
 				System.out.println("1. Add to Items and Leave\n2. Add to Items and Pluck Again\n3. Pluck Again\n4. Leave");
 				if ( input.equals("1") ) {
@@ -118,6 +114,10 @@ public class Run {
 				}
 				else if ( input.equals("2") ) {
 				    player.addItem( kayliItem );
+				    if ( fionaPlant.getQueue().isEmpty() ){
+					System.out.println("Nothing left to pluck!");
+				    break;
+				}
 				}
 				else if ( input.equals("3") ) {
 				    // go again!

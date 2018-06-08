@@ -29,9 +29,6 @@ public class ThimbleBush extends Plant {
     public boolean getAlive(){
       return alive;
     }
-    public GrowQueue getBerries() {
-	return berries;
-    }
     public boolean isEdible() {
       return edible;
     }
@@ -40,6 +37,9 @@ public class ThimbleBush extends Plant {
     }
     public String getType() {
 	return "";
+    }
+    public GrowQueue getQueue() {
+	return berries;
     }
 
     // grow

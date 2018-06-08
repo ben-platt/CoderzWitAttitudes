@@ -38,6 +38,9 @@ public class Tree extends Plant {
     public String getType() {
 	return "";
     }
+    public GrowQueue getQueue() {
+	return leaves;
+    }
 
     // grow
     public void photosynthesize(){

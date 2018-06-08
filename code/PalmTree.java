@@ -30,6 +30,9 @@ public class PalmTree extends Tree {
     public boolean getAlive(){
       return alive;
     }
+    public GrowQueue getQueue() {
+	return coconuts;
+    }
 
     // grow
     public void photosynthesize(){

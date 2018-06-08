@@ -32,6 +32,11 @@ public abstract class Plant extends Item {
 	Item newItem = new Item();
 	return newItem;
     }
+
+    public GrowQueue getQueue() {
+	GrowQueue queue = new GrowQueue();
+	return queue;
+    }
     
     protected abstract void photosynthesize(); //specific to each type of plants
 

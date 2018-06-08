@@ -24,7 +24,6 @@ public  class GuavaTree extends Tree {
       guavas = new GrowQueue();
     }
 
-
     // METHODS
     //Accessor METHODS
     public boolean getAlive(){
@@ -35,6 +34,9 @@ public  class GuavaTree extends Tree {
     }
     public boolean isEdible() {
       return edible;
+    }
+    public GrowQueue getQueue() {
+	return guavas;
     }
 
     // grow
@@ -54,6 +56,7 @@ public  class GuavaTree extends Tree {
     }
     
     public Item pluck() {
+	
 	System.out.println( "It's a " + guavas.peekFront().getName() + "!");
 	return guavas.remove();
     }
