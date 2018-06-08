@@ -1,6 +1,6 @@
 # CoderzWitAttitudes
 ### Fiona Cai, Kayli Matsuyoshi, Benjamin Platt
-Straight Outta 251 \n
+Straight Outta 251 <br />
 APCS2 pd1
 
 ## Island Survival Game
