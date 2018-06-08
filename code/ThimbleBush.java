@@ -33,7 +33,7 @@ public class ThimbleBush extends Plant {
       return edible;
     }
     public String getName() {
-	return "";
+	return "ThimbleBush";
     }
     public String getType() {
 	return "";
@@ -83,9 +83,9 @@ public class ThimbleBush extends Plant {
        System.out.println( bush.toString() );
        bush.pluck();
        System.out.println( bush.toString() );
-	
+
        }
 
     */ // end of Main Method
-    
+
 } // end of class

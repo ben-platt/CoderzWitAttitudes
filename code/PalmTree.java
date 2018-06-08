@@ -14,7 +14,7 @@ public class PalmTree extends Tree {
     private double growRate;
     private boolean edible;
     private GrowQueue coconuts;
-    
+
     //Constructor(s)
     public PalmTree() {
 	edible = false;
@@ -34,6 +34,10 @@ public class PalmTree extends Tree {
 	return coconuts;
     }
 
+    public String getName(){
+      return "PalmTree";
+    }
+    
     // grow
     public void photosynthesize(){
 	int count = 0;
@@ -74,7 +78,7 @@ public class PalmTree extends Tree {
 	System.out.println( coco.toString() );
 	coco.pluck();
 	System.out.println( coco.toString() );
-	
+
     }
 
     */ // end of Main Method

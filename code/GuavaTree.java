@@ -24,6 +24,7 @@ public  class GuavaTree extends Tree {
       guavas = new GrowQueue();
     }
 
+
     // METHODS
     //Accessor METHODS
     public boolean getAlive(){
@@ -35,9 +36,11 @@ public  class GuavaTree extends Tree {
     public boolean isEdible() {
       return edible;
     }
-    public GrowQueue getQueue() {
-	return guavas;
+
+    public String getName(){
+      return "GuavaTree";
     }
+
 
     // grow
     public void photosynthesize(){
@@ -54,9 +57,8 @@ public  class GuavaTree extends Tree {
 	    count++;
 	}
     }
-    
+
     public Item pluck() {
-	
 	System.out.println( "It's a " + guavas.peekFront().getName() + "!");
 	return guavas.remove();
     }
@@ -81,7 +83,7 @@ public  class GuavaTree extends Tree {
 	System.out.println( guav.toString() );
 	guav.pluck();
 	System.out.println( guav.toString() );
-	
+
     }
 
     */ // end of Main Method

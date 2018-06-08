@@ -137,7 +137,7 @@ public class Run {
 		    System.out.println( "What will you do with this " + fionaPlant.getName() + "?");
 		    Item kayliItem = fionaPlant;
 		    System.out.println("1. Gather\n2. Leave");
-		    
+
 		    input = scanner.nextLine();
 		    if ( input.equals("1") ) {
 			 player.addItem( kayliItem );
