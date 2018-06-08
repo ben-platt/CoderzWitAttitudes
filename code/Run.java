@@ -27,7 +27,6 @@ public class Run {
 
     public static void main( String[] args ) {
 
-	Island island = new Island();
 	Player player = new Player();
 	Scanner scanner = new Scanner(System.in);
 
@@ -91,7 +90,26 @@ public class Run {
 	    }
 	    else if ( code == 3 ) {
 		// GATHER
-    
+		// Generate a Random Plant from the Island
+		ArrayList plantList = player.getIsland().getPlants();
+		int random = (int) ( Math.random() * plantList.size() );
+		Plant fionaPlant = plantList.get(random);
+		System.out.println("You found a " + fionaPlant.getName() + "!");
+		// Plants that have Queues
+		if ( fionaPlant.getName().equals("Tree") || fionaPlant.getName().equals("GuavaTree") || fionaPlant.getName().equals("PalmTree") || fionaPlant.getName().equals("ThimbleBush") ) {
+		    while(true) {
+			System.out.println("What will you do?");
+			System.out.println("1. Pluck\n2. Leave");
+			input = scanner.nextLine();
+			if ( input.equals("1") ) {
+			    fionaPlant.pluck();
+			    break;
+			}
+			else if ( input.equals("2") ) {
+			    break;
+			}
+		    }
+		}
 
 	    }
 	    else if ( code == 4 ) {
