@@ -47,9 +47,13 @@ public class Run {
 	player.setAge( inputWeight );
 	// STARTING THE GAME
 	System.out.println("You find yourself stranded on a Tropical Island.");
-	System.out.println("You have " + player.getHealth() + " health.");
         while( player.getHealth() != 0 ) {
 
+	    System.out.println("You have " + player.getHealth() + " health.");
+	    for( int i = 0; i < player.getIsland().getNumPlants(); i++ ) {
+		player.getIsland().getPlants().get(i).photosynthesize();
+	    }
+			       
 	    System.out.println("What will you do now?");
 	    int code = mainMenu(scanner);
 
@@ -108,6 +112,7 @@ public class Run {
 				kayliItem = fionaPlant.pluck();
 				System.out.println("What will you do with this " + kayliItem.getName() + "?");
 				System.out.println("1. Add to Items and Leave\n2. Add to Items and Pluck Again\n3. Pluck Again\n4. Leave");
+				input = scanner.nextLine();
 				if ( input.equals("1") ) {
 				    player.addItem( kayliItem );
 				    break;
