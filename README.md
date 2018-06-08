@@ -1,7 +1,7 @@
 # CoderzWitAttitudes
 ### Fiona Cai, Kayli Matsuyoshi, Benjamin Platt
-### Straight Outta 251
-### APCS2 pd1
+Straight Outta 251 \n
+APCS2 pd1
 
 ## Island Survival Game
 For our final project, we decided to make an Island Survival Game. The goal of the game is to stay alive in an island setting as long as possible. The game will ask the user to do different things, such as forage for sources of food, water, shelter, and other resources. User will hunt, fish, and gather plants for food and resources.
