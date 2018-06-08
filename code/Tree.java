@@ -43,7 +43,14 @@ public class Tree extends Plant {
     public void photosynthesize(){
 	int count = 0;
 	while ( count < growRate ) {
-	    leaves.grow( new Leaf() );
+	    double chance = Math.random() * 2;
+	    System.out.println( chance );
+	    if ( chance < 1 ) {
+		leaves.grow( new Leaf() );
+	    }
+	    else {
+		leaves.grow( new Bark() );
+	    }
 	    count++;
 	}
 
