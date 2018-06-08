@@ -162,19 +162,28 @@ public class Player {
     }
   }
   public void buildShelter(){
-
+      if ( items._size == 0 ) {
+	  System.out.println("Sorry. You need 4 more Bark and 3 more Palm Leaves to build a shelter." );
+	  return;
+      }
     ItemNode currentItemB = items._start;
-    while(!currentItemB.getContents().equals("Bark")){
+    while(!currentItemB.getContents().equals("Bark") && !currentItemB.getNext().equals(null)){
       currentItemB = currentItemB.getNext();
     }
 
     ItemNode currentItemP = items._start;
-    while(!currentItemP.getContents().equals("PalmLeaf")){
+    while(!currentItemP.getContents().equals("PalmLeaf") && !currentItemB.getNext().equals(null)){
       currentItemP = currentItemP.getNext();
     }
 
-    int numBark = currentItemB.getQuantity();
-    int numPalmLeaves = currentItemP.getQuantity();
+    int numBark = 0;
+    int numPalmLeaves = 0;
+    if ( currentItemB.getContents().equals("Bark") ) {
+	numBark = currentItemB.getQuantity();
+    }
+    if ( currentItemP.getContents().equals("PalmLeaf") ) {
+	numPalmLeaves = currentItemP.getQuantity();
+    }
 
     if(numBark >= 4 && numPalmLeaves >= 3){
 	     hasShelter = true;
@@ -194,21 +203,24 @@ public class Player {
 
   public void buildFishNet(){
 
-    ItemNode currentItemP = items._start;
-    while(!currentItemP.getContents().equals("PalmLeaf")){
-      currentItemP = currentItemP.getNext();
+    ItemNode currentItemPa = items._start;
+    while(!currentItemPa.getContents().equals("PalmLeaf") && !currentItemPa.getNext().equals(null) ){
+      currentItemPa = currentItemPa.getNext();
     }
-    int numPalmLeaves = currentItemP.getQuantity();
-
-    if(numPalmLeaves >= 2){
+    int numberPalmLeaves = 0;
+    if ( currentItemPa.getContents().equals("PalmLeaf") ) {
+	numberPalmLeaves = currentItemPa.getQuantity();
+    }
+    
+    if(numberPalmLeaves >= 2){
       hasFishNet = true;
       for(int i = 0; i < 2; i++){
-	  Item blah = currentItemP.getItem().pop();
+	  Item blah = currentItemPa.getItem().pop();
       }
       System.out.println("You have successfully built a fishnet. You can now fish!");
     }
     else{
-      System.out.println("Sorry. You need " + (2-numPalmLeaves) + " more Palm Leaves to build a fishnet" );
+      System.out.println("Sorry. You need " + (2-numberPalmLeaves) + " more Palm Leaves to build a fishnet" );
     }
   }
 

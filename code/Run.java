@@ -76,8 +76,7 @@ public class Run {
 			System.out.println("1. Build a Shelter\n2. Nevermind...");
 			input = scanner.nextLine();
 			if ( input.equals("1") ) {
-			    player.buildShelter(); // this dont work...
-			    System.out.println( "please" );
+			    player.buildShelter(); 
 			    break;
 			}
 			else if ( input.equals("2") ) {
