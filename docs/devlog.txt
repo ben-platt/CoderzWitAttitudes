@@ -33,6 +33,7 @@ We also had a hard time visualizing the ItemList class, our own, specific data s
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Animal eat and plant eat does not work; Keeps throwing StringIndexOutOfBoundsException
 We were not able to robustify a lot of our code because we didn't leave enough time to do that -- something to plan for in the future. We also needed to align our deliverables more with our code, because our deliverables could be too vague and outdated. We also had some struggles with data types such as linkedLists and mazes that we were unable to solve so we had to scale back our ambitions.
 
 

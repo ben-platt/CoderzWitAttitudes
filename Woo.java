@@ -53,7 +53,7 @@ public class Woo {
 	    for( int i = 0; i < player.getIsland().getNumPlants(); i++ ) {
 		player.getIsland().getPlants().get(i).photosynthesize();
 	    }
-			       
+
 	    System.out.println("What will you do now?");
 	    int code = mainMenu(scanner);
 
@@ -195,8 +195,8 @@ else{
 				System.out.println( plants );
 				input = scanner.nextLine();
 				if ( input.equals("1") ) {
-				    end = plants.indexOf( "\\", start );
-				    inputBreed = plants.substring( start, end );
+				    end = plants.indexOf( "n", start );
+				    inputBreed = plants.substring( start, end-1 );
 				    System.out.println( inputBreed );
 				    while( !currentItem.getContents().equals(inputBreed) ){
 					currentItem = currentItem.getNext();
@@ -209,7 +209,7 @@ else{
 					start = plants.indexOf( input, 0 ) + 3;
 					end = plants.indexOf( "\\", start );
 					inputBreed = plants.substring( start, end );
-					while( currentItem.getContents() != inputBreed ){
+					while( !currentItem.getContents().equals(inputBreed) ){
 					    currentItem = currentItem.getNext();
 					}
 					player.eatPlant( currentItem.getItem().peek() );
@@ -224,7 +224,7 @@ else{
 					start = plants.indexOf( input, 0 ) + 3;
 					end = plants.indexOf( "\\", start );
 					inputBreed = plants.substring( start, end );
-					while( currentItem.getContents() != inputBreed ){
+					while( !currentItem.getContents().equals(inputBreed) ){
 					    currentItem = currentItem.getNext();
 					}
 					player.eatPlant( currentItem.getItem().peek() );
@@ -239,7 +239,7 @@ else{
 					start = plants.indexOf( input, 0 ) + 3;
 					end = plants.indexOf( "\\", start );
 					inputBreed = plants.substring( start, end );
-					while( currentItem.getContents() != inputBreed ){
+					while( !currentItem.getContents().equals(inputBreed) ){
 					    currentItem = currentItem.getNext();
 					}
 					player.eatPlant( currentItem.getItem().peek() );
@@ -254,7 +254,7 @@ else{
 					start = plants.indexOf( input, 0 ) + 3;
 					end = plants.indexOf( "\\", start );
 					inputBreed = plants.substring( start, end );
-					while( currentItem.getContents() != inputBreed ){
+					while( !currentItem.getContents().equals(inputBreed )){
 					    currentItem = currentItem.getNext();
 					}
 					player.eatPlant( currentItem.getItem().peek() );
@@ -284,8 +284,8 @@ else{
 				if ( input.equals("1") ) {
 				    enda = animals.indexOf( "\\", starta );
 				    inputBreeda = animals.substring( starta, enda );
-				    
-				    while( currentItema.getContents() != inputBreeda ){
+
+				    while( !currentItema.getContents().equals(inputBreeda) ){
 					currentItema = currentItema.getNext();
 				    }
 				    player.eatAnimal( currentItema.getItem().peek() );
@@ -296,7 +296,7 @@ else{
 					starta = animals.indexOf( input, 0 ) + 3;
 					enda = animals.indexOf( "\\", starta );
 				        inputBreeda = animals.substring( starta, enda );
-					while( currentItema.getContents() != inputBreeda ){
+					while( !currentItema.getContents().equals(inputBreeda) ){
 					    currentItema = currentItema.getNext();
 					}
 					player.eatAnimal( currentItema.getItem().peek() );
@@ -311,7 +311,7 @@ else{
 					starta = animals.indexOf( input, 0 ) + 3;
 					enda = animals.indexOf( "\\", starta );
 				        inputBreeda = animals.substring( starta, enda );
-					while( currentItema.getContents() != inputBreeda ){
+					while( !currentItema.getContents().equals(inputBreeda) ){
 					    currentItema = currentItema.getNext();
 					}
 					player.eatAnimal( currentItema.getItem().peek() );
@@ -326,7 +326,7 @@ else{
 					starta = animals.indexOf( input, 0 ) + 3;
 					enda = animals.indexOf( "\\", starta );
 					inputBreeda = animals.substring( starta, enda );
-					while( currentItema.getContents() != inputBreeda ){
+					while( !currentItema.getContents().equals(inputBreeda) ){
 					    currentItema = currentItema.getNext();
 					}
 					player.eatAnimal( currentItema.getItem().peek() );
@@ -341,7 +341,7 @@ else{
 					starta = animals.indexOf( input, 0 ) + 3;
 					enda = animals.indexOf( "\\", starta );
 				        inputBreeda = animals.substring( starta, enda );
-					while( currentItema.getContents() != inputBreeda ){
+					while( !currentItema.getContents().equals(inputBreeda )){
 					    currentItema = currentItema.getNext();
 					}
 					player.eatAnimal( currentItema.getItem().peek() );
@@ -356,7 +356,7 @@ else{
 					starta = animals.indexOf( input, 0 ) + 3;
 					enda = animals.indexOf( "\\", starta );
 					inputBreeda = animals.substring( starta, enda );
-					while( currentItema.getContents() != inputBreeda ){
+					while( !currentItema.getContents().equals(inputBreeda) ){
 					    currentItema = currentItema.getNext();
 					}
 					player.eatAnimal( currentItema.getItem().peek() );
