@@ -1,8 +1,6 @@
-CoderzWitAttitudes
-Fiona Cai
-Kayli matsuyoshi
-Ben Platt
-pd1
+CoderzWitAttitudes (Fiona Cai, Kayli Matsuyoshi, Ben Platt)
+APCS2 pd1
+2018-06-09
 ---------------------
 Island Survival Game
 
@@ -40,11 +38,14 @@ We were not able to robustify a lot of our code because we didn't leave enough t
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-How to make different aspects (plants and animals) work together symbiotically.
 TEAMWORK!!!
+Planning backend classes using very very specific UML diagrams to avoid confusion later on
 How to use scanners
 Keyboard shortcuts
 Music tastes that differ from your own
+Creating own Linkedlist of stacks
+The importance of private methods
+
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

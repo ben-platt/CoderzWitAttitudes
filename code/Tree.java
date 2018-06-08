@@ -22,7 +22,7 @@ public class Tree extends Plant {
 	growRate = 10;
 	leaves = new GrowQueue();
     }
-    
+
     // METHODS
 
     //Accessor METHODS
@@ -33,7 +33,7 @@ public class Tree extends Plant {
       return edible;
     }
     public String getName() {
-	return "";
+	return "Tree";
     }
     public String getType() {
 	return "";
@@ -46,7 +46,7 @@ public class Tree extends Plant {
 	    leaves.grow( new Leaf() );
 	    count++;
 	}
-	
+
     }
     public Item pluck() {
 	System.out.println( "It's a " + leaves.peekFront().getName() + "!");
