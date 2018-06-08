@@ -81,6 +81,10 @@ public class Player {
 	return hasShelter;
     }
 
+    public ItemList getItems(){
+      return items;
+    }
+
   public String getPlantFood(){
     ItemNode currentItem = items._start;
     String listplants = "";
@@ -92,7 +96,7 @@ public class Player {
       currentItem = currentItem.getNext();
       num++;
     }
-    if(listplants == ""){
+    if(listplants.equals("")){
       return "Sorry you have no plants to eat";
     }
     else{
@@ -111,7 +115,7 @@ public class Player {
       currentItem = currentItem.getNext();
       num++;
     }
-    if(listplants == ""){
+    if(listanimals.equals("")){
       return "Sorry you have no animals to eat";
     }
     else{
@@ -261,25 +265,37 @@ public class Player {
       if(target == -1){
         System.out.println("Sorry there's no more animals on the island");
         System.out.println("Your current health: "+health);
-        break;
       }
       else{
         Animal prey = island.getAnimals().get(target);
 
         int chance = (int) (Math.random() * 2);
         if(chance == 0){
-          System.out.println("Darn, you didn't catch it this time!");
-          health = health - (prey.getLife() * prey.getPower());
-          System.out.println("Your current health: " + health);
-          break;
+
+          health = health - (100* prey.getPower());
+          if(health < 0){
+            health = 0;
+            System.out.println("YOU DIE, not enough health to capture " + prey.getName());
+          }
+          else{
+              System.out.println("Darn, you didn't catch the " + prey.getName()+ " this time!");
+              System.out.println("Your current health: " + health);
+          }
+
         }
         else{
-          System.out.println("Yay! You captured the " + prey);
           island.removeAnimal(target);
           items.add(prey);
-          health = health - (prey.getLife() * prey.getPower());
-          System.out.println("Your current health: " + health);
-          break;
+          health = health - (100* prey.getPower());
+          if(health < 0){
+            health = 0;
+            System.out.println("YOU DIE, not enough health to capture " + prey.getName());
+          }
+          else{
+            System.out.println("Yay! You captured the " + prey.getName());
+            System.out.println("Your current health: " + health);
+          }
+
         }
       }
     }
@@ -296,27 +312,145 @@ public class Player {
       Animal tar;
       double min = distance(xcor, ycor, tmp.get(0).getXcor(), tmp.get(0).getYcor());
       int index = -1;
-      for(Animal a: tmp){
+      int minindex = 0;
+      for(int i = 0; i < tmp.size(); i++){
+        Animal a = tmp.get(i);
         double current = distance(xcor, ycor, a.getXcor(), a.getYcor());
         if (current < min){
           tar = a;
           min = current;
+          minindex = i;
         }
-        index++;
       }
-      return index;
+      return minindex;
+      }
     }
-  }
 
   private double distance(int x1, int y1, int x2, int y2){
     return (Math.sqrt(((x1-x2)*(x1-x2)) + ((y1-y2)*(y1-y2))));
   }
 
 
-/*
   public void fish(){
-    if(health > )
+    if(health < 10){
+      System.out.println("You need more health before you fish!");
+      System.out.println("Your current health: "+health);
+    }
+    else{
+      LinkedList<ArrayList<Fish>> pond = island.getFish();
+      if (health > 10 ) {
+        ArrayList<Fish> dep1 = pond.get(0);
+        int chance = (int) (Math.random() * 2);
+        double takenhealth = 0;
+        String fishesgot = "";
+        if(chance == 0){
+          for(int i = 0; i < dep1.size(); i++){
+            items.add(dep1.get(i));
+            takenhealth += 20*dep1.get(i).getPower();
+            fishesgot += dep1.get(i).getName() + ", ";
+          }
+          health = health - takenhealth;
+          if(health < 0){
+            health = 0;
+            System.out.println("YOU DIE, not enough health to capture " + fishesgot);
+          }
+          else{
+            System.out.println("Yay! You captured these fish: " + fishesgot );
+            System.out.println("Your current health: "+ health);
+          }
+        }
+        else{
+          for(int i = 0; i < dep1.size(); i++){
+            takenhealth += 20*dep1.get(i).getPower();
+            fishesdidntgot += dep1.get(i).getName() + ", ";
+          }
+          health = health - takenhealth;
+          if(health < 0){
+            health = 0;
+            System.out.println("YOU DIE, You didn't capture any of the fish");
+          }
+          else{
+            System.out.println("You didn't capture any of the fish " );
+            System.out.println("Your current health: "+ health);
+          }
+        }
+      }
+      else if(health > 40){
+        ArrayList<Fish> dep2 = pond.get(1);
+        int chance = (int) (Math.random() * 2);
+        double takenhealth = 0;
+        String fishesgot = "";
+        if(chance == 0){
+          for(int i = 0; i < dep1.size(); i++){
+            items.add(dep1.get(i));
+            takenhealth += 20*dep1.get(i).getPower();
+            fishesgot += dep1.get(i).getName() + ", ";
+          }
+          health = health - takenhealth;
+          if(health < 0){
+            health = 0;
+            System.out.println("YOU DIE");
+          }
+          else{
+            System.out.println("Yay! You captured these fish: " + fishesgot );
+            System.out.println("Your current health: "+ health);
+          }
+        }
+        else{
+          for(int i = 0; i < dep1.size(); i++){
+            takenhealth += 20*dep1.get(i).getPower();
+            fishesdidntgot += dep1.get(i).getName() + ", ";
+          }
+          health = health - takenhealth;
+          if(health < 0){
+            health = 0;
+            System.out.println("YOU DIE, You didn't capture any of the fish");
+          }
+          else{
+            System.out.println("You didn't capture any of the fish " );
+            System.out.println("Your current health: "+ health);
+          }
+        }
+      }
+      else if(health > 70){
+        ArrayList<Fish> dep1 = pond.get(2);
+        int chance = (int) (Math.random() * 2);
+        double takenhealth = 0;
+        String fishesgot = "";
+        if(chance == 0){
+          for(int i = 0; i < dep1.size(); i++){
+            items.add(dep1.get(i));
+            takenhealth += 20*dep1.get(i).getPower();
+            fishesgot += dep1.get(i).getName() + ", ";
+          }
+          health = health - takenhealth;
+          if(health < 0){
+            health = 0;
+            System.out.println("YOU DIE");
+          }
+          else{
+            System.out.println("Yay! You captured these fish: " + fishesgot );
+            System.out.println("Your current health: "+ health);
+          }
+        }
+        else{
+          for(int i = 0; i < dep1.size(); i++){
+            takenhealth += 20*dep1.get(i).getPower();
+            fishesdidntgot += dep1.get(i).getName() + ", ";
+          }
+          health = health - takenhealth;
+          if(health < 0){
+            health = 0;
+            System.out.println("YOU DIE, You didn't capture any of the fish");
+          }
+          else{
+            System.out.println("You didn't capture any of the fish " );
+            System.out.println("Your current health: "+ health);
+          }
+        }
+      }
+    }
   }
-  */
+
 
 } // end of class

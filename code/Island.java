@@ -58,50 +58,48 @@ public class Island{
   }
 
   public void addAnimals(){
-    int num = (int) (Math.random() * 20 );
+    int num = (int) (Math.random() * 30 ) + 20;
     for(int i = 0; i < num; i++){
-      if(i%5 == 0){
+      int chance = (int) (Math.random() * 3);
+      if(chance == 0){
         animals.add(new WildBoar());
       }
-      else if (i%3 == 0){
+      else if (chance == 1){
         animals.add(new Turkey());
       }
       else{
-        animals.add(new Frog()); //Frogs are most common
+        animals.add(new Frog());
       }
     }
   }
 
   public void addPlants(){
-    int num = (int) (Math.random() * 50 );
-    for(int i = 0; i < num/7; i++){
-      plants.add(new Fern());
-    }
-    for(int i = num/7; i < 2*num/7; i++){
+    int num = (int) (Math.random() * 30 ) + 20;
+    for(int i = 0; i < num/6; i++){
       plants.add(new GuavaTree());
     }
-    for(int i = 2*num/7; i < 3*num/7; i++){
+    for(int i = num/6; i < 2*num/6; i++){
       plants.add(new Mushroom());
     }
-    for(int i = 3*num/7; i < 4*num/7; i++){
+    for(int i = 2*num/6; i < 3*num/6; i++){
       plants.add(new PalmTree());
     }
-    for(int i = 4*num/7; i < 5*num/7; i++){
+    for(int i = 3*num/6; i < 4*num/6; i++){
       plants.add(new Petunia());
     }
-    for(int i = 5*num/7; i < 6*num/7; i++){
+    for(int i = 4*num/6; i < 5*num/6; i++){
       plants.add(new ThimbleBush());
     }
-    for(int i = 6*num/7; i<num; i++){
+    for(int i = 5*num/6; i < num; i++){
       plants.add(new Tree());
     }
   }
 
   public void addFish(){
-    int num = (int) (Math.random() * 10 ); //levels of depth of the pond
+    int num = 3; //levels of depth of the pond
     for(int i = 0; i < num; i++ ){
       ArrayList<Fish> currentdepth = new ArrayList<Fish>();
-      for(int j = 0; j < (int) (Math.random() * 10); j++){
+      for(int j = 0; j < (int) (Math.random() * 10) + 1; j++){
         int index = (int)( Math.random() * 3);
         if(index == 0){
           currentdepth.add(new Fugu());
