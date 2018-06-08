@@ -77,6 +77,10 @@ public class Player {
   public double getMaxNutri(){
     return maxNutri;
   }
+
+  public Island getIsland(){
+    return island;
+  }
     public boolean hasShelter() {
 	return hasShelter;
     }
