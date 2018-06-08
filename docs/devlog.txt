@@ -98,7 +98,6 @@ Kayli:
 Ben:
 - worked on UML
 - created plan 2018051
--
 
 Fiona:
 - worked on UML
@@ -127,7 +126,8 @@ Fiona:
 
 Kayli:
 - worked on UML, hashed out plant and animal subclasses and player functionality
-
+- Added accessor and mutator methods for plant classes
+- began ItemNode class
 
 ==============================================================
 
@@ -143,6 +143,10 @@ Ben:
 - Created constructors
 - Worked on boolean variables and associated accessors
 
+Kayli:
+- ItemList class and finished ItemNode class
+-
+
 
 ==============================================================
 
@@ -156,6 +160,11 @@ Fiona:
 Ben:
 - Worked on deliverables including plan and devlogs
 - Printed multiple hard copies
+- wrote plan for 6/5
+
+Kayli:
+- Modified ItemList class, debugged and Tested
+-
 
 ==============================================================
 
@@ -164,12 +173,18 @@ Ben:
 
 Fiona:
 - Wrote Island class, moved fishpond to island
-- Implemented coor system for attack METHODS
+- Implemented coordinate system for attack METHODS
 - Wrote plan for 6/6
 - Started GUI
+
 Ben:
 - Revised the plant classes to help integrate them with the Player and Island classes.
 - Outlined the progression of the game from start to end.
+
+Kayli:
+- Updated all Plant classes to accommodate Item class
+- Wrote growing methods (photosynthesize)
+- added getName methods
 
 
 ==============================================================
@@ -179,22 +194,55 @@ Ben:
 
 Fiona:
 - GUI pop up window works with one button
+- Finished eating methods for eat animal and eat plants
+- finished island generate random animals and plants
 
 Ben:
 - Worked on tightening up the Player class.
 - Modified the readme to accurately reflect our project
+
+Kayli:
+- Wrote display, add, and remove methods for ItemList
+- Edited animal and plant classes for Item
 ==============================================================
 
 2018-06-07
 --------------------------------------------------------------
 
 Fiona:
--
+- More GUI buttons, attack and checkVicinity methods
 
 Ben:
 - Finished up all of the deliverables before the final pull.
 - Tested code written by other team members.
 - Troubleshooted kinks and bugs found in code.
+
+Kayli:
+- Fixed getName methods and booleans for plant classes
+
+==============================================================
+
+2018-06-08
+--------------------------------------------------------------
+
+Fiona:
+- finished addPlants method on ISLAND
+- Wrote build fishnet, build shelter METHODS
+- Added booleans for fishnet and SHELTER
+- wrote fish method finalized eating methods
+- wrote Fish for running class
+- added missing get Methods in player class
+
+Ben:
+- Edited ReadMe
+- Edited devlog
+
+Kayli:
+- Finalized ItemList class
+- Wrote Plant queue gathering methods
+- Growing methods for plants done
+- Began final main class for running with scanners
+- wrote shelter, hunt, eat, and list items for running class
 
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
