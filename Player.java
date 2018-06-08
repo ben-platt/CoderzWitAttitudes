@@ -104,7 +104,7 @@ public class Player {
     int num = 1;
     while( currentItem != null){
       if( currentItem.getItemType() == "plantFood"){
-        listplants += num + currentItem.getContents() + "\n"; //traverse through items, if it is plantFood, add to string
+        listplants += num + ". "+ currentItem.getContents() + "\n"; //traverse through items, if it is plantFood, add to string
       }
       currentItem = currentItem.getNext();
       num++;
@@ -123,7 +123,7 @@ public class Player {
     int num = 1;
     while( currentItem != null){
       if( currentItem.getItemType() == "animalFood"){
-        listanimals += num + currentItem.getContents() + "\n"; //traverse through items, if it is animalFood add to string
+        listanimals += num + ". "+currentItem.getContents() + "\n"; //traverse through items, if it is animalFood add to string
       }
       currentItem = currentItem.getNext();
       num++;
