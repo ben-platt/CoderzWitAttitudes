@@ -31,16 +31,18 @@ Flesh out each category whenever necessary, appropriate.
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Discovering we could not use GUI 36 hours before our project was due was a big obstacle, because we had to change our mindset of approaching the project. Also, a group member's laptop broke Thursday June 7th, so we had to overcome that as well. We found alternative ways for this grou member to contribute in a productive manner for the trio.
+We also had a hard time visualizing the ItemList class, our own, specific data structure type containing stacks and queues. However, after a few diagrams on our keys to success, we were able to figure it out.
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We were not able to robustify a lot of our code because we didn't leave enough time to do that -- something to plan for in the future. We also needed to align our deliverables more with our code, because our deliverables could be too vague and outdated. We also had some struggles with data types such as linkedLists and mazes that we were unable to solve so we had to scale back our ambitions.
 
+
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 How to make different aspects (plants and animals) work together symbiotically.
 TEAMWORK!!!
-How to use scaners
+How to use scanners
 Keyboard shortcuts
 Music tastes that differ from your own
 
