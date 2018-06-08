@@ -91,7 +91,7 @@ public class Player {
     int num = 1;
     while( currentItem != null){
       if( currentItem.getItemType() == "plantFood"){
-        listplants += num + currentItem.getContents() + "/n";
+        listplants += num + currentItem.getContents() + "\n";
       }
       currentItem = currentItem.getNext();
       num++;
@@ -110,7 +110,7 @@ public class Player {
     int num = 1;
     while( currentItem != null){
       if( currentItem.getItemType() == "animalFood"){
-        listanimals += num + currentItem.getContents() + "/n";
+        listanimals += num + currentItem.getContents() + "\n";
       }
       currentItem = currentItem.getNext();
       num++;

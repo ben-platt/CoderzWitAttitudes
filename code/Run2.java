@@ -96,7 +96,10 @@ public class Run2 {
 	    }
 	    else if ( code == 4 ) {
 		// FISH
-        player.fish();
+      if(player.hasFishNet()){
+          player.fish();
+          break;
+      }
 
 	    }
 	    else if ( code == 5 ) {
