@@ -47,7 +47,6 @@ public  class GuavaTree extends Tree {
 	int count = 0;
 	while ( count < growRate ) {
 	    double chance = Math.random() * 2;
-	    System.out.println( chance );
 	    if ( chance < 1 ) {
 		guavas.grow( new Leaf() );
 	    }
